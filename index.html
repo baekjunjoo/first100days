@@ -355,6 +355,74 @@
   .footer-bottom p { font-size: 13px; font-weight: 300; color: var(--light); letter-spacing: 0.04em; }
   .footer-bottom strong { font-weight: 500; color: var(--dark); }
 
+  /* ── Support Section ── */
+  .country-tabs { display: flex; gap: 0; margin-bottom: 56px; border: 1px solid var(--rule); width: fit-content; }
+  .ctab {
+    font-size: 14px; font-weight: 400; letter-spacing: 0.06em;
+    background: none; border: none; cursor: pointer;
+    padding: 12px 28px; color: var(--mid); font-family: var(--ff);
+    transition: background .15s, color .15s; border-right: 1px solid var(--rule);
+  }
+  .ctab:last-child { border-right: none; }
+  .ctab.active { background: var(--black); color: #fff; font-weight: 500; }
+  .ctab:hover:not(.active) { background: var(--bg-off); color: var(--dark); }
+  .support-content { display: none; }
+  .support-content.active { display: block; }
+
+  /* Step flow */
+  .step-flow { display: flex; align-items: flex-start; gap: 0; margin-bottom: 56px; overflow-x: auto; padding-bottom: 8px; }
+  .step-item { display: flex; flex-direction: column; align-items: center; flex: 1; min-width: 120px; position: relative; }
+  .step-item:not(:last-child)::after {
+    content: ''; position: absolute; top: 20px; left: calc(50% + 20px);
+    width: calc(100% - 40px); height: 1px; background: var(--rule);
+  }
+  .step-num {
+    width: 40px; height: 40px; border: 1px solid var(--black); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; font-weight: 500; color: var(--black); background: #fff;
+    margin-bottom: 12px; flex-shrink: 0; position: relative; z-index: 1;
+  }
+  .step-label { font-size: 13px; font-weight: 400; color: var(--dark); text-align: center; line-height: 1.5; max-width: 100px; }
+  .step-sub { font-size: 11px; font-weight: 300; color: var(--light); text-align: center; margin-top: 4px; line-height: 1.4; max-width: 100px; }
+
+  /* Program cards */
+  .program-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0; border: 1px solid var(--rule); margin-bottom: 40px; }
+  .program-card { padding: 32px 36px; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+  .program-card:nth-child(2n) { border-right: none; }
+  .program-card:nth-last-child(-n+2) { border-bottom: none; }
+  .prog-org { font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--light); margin-bottom: 10px; }
+  .prog-name { font-size: 17px; font-weight: 400; color: var(--black); margin-bottom: 8px; line-height: 1.35; }
+  .prog-who { font-size: 14px; font-weight: 300; color: var(--mid); margin-bottom: 16px; line-height: 1.6; }
+  .prog-amount { display: flex; align-items: baseline; gap: 6px; margin-bottom: 16px; }
+  .prog-amount-num { font-size: 32px; font-weight: 200; color: var(--black); letter-spacing: -0.02em; line-height: 1; }
+  .prog-amount-unit { font-size: 13px; font-weight: 300; color: var(--mid); }
+  .prog-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .prog-tag { font-size: 11px; font-weight: 400; color: var(--dark); border: 1px solid var(--rule); padding: 3px 10px; }
+  .prog-tag.green { border-color: var(--dark); background: var(--bg-off); }
+
+  /* Device table */
+  .device-table { width: 100%; border-collapse: collapse; margin-bottom: 40px; }
+  .device-table th { font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--light); padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--rule); }
+  .device-table td { font-size: 14px; font-weight: 300; color: var(--dark); padding: 16px 16px; border-bottom: 1px solid var(--rule); line-height: 1.5; }
+  .device-table tr:last-child td { border-bottom: none; }
+  .device-table .amount-cell { font-size: 16px; font-weight: 400; color: var(--black); white-space: nowrap; }
+  .device-table tr:nth-child(even) td { background: var(--bg-off); }
+
+  /* Info callout */
+  .info-box { border: 1px solid var(--rule); border-left: 3px solid var(--dark); padding: 20px 24px; margin-bottom: 32px; background: var(--bg-off); }
+  .info-box-title { font-size: 13px; font-weight: 600; color: var(--dark); margin-bottom: 6px; }
+  .info-box-body { font-size: 14px; font-weight: 300; color: var(--mid); line-height: 1.75; }
+
+  @media (max-width: 700px) {
+    .program-grid { grid-template-columns: 1fr; }
+    .program-card { border-right: none; }
+    .program-card:nth-last-child(-n+2) { border-bottom: 1px solid var(--rule); }
+    .program-card:last-child { border-bottom: none; }
+    .step-flow { gap: 0; }
+    .step-item { min-width: 90px; }
+    .step-item::after { display: none; }
+  }
+
   /* ── Language switcher ── */
   .lang-switch {
     display: flex; align-items: center; gap: 0;
@@ -416,6 +484,7 @@
       <li><a href="#immediate" data-i18n="nav.l1">지금 도움</a></li>
       <li><a href="#journey" data-i18n="nav.l2">함께 걷는 길</a></li>
       <li><a href="#technology" data-i18n="nav.l3">보조공학</a></li>
+      <li><a href="#support" data-i18n="nav.l5">지원 제도</a></li>
       <li><a href="#stories" data-i18n="nav.l4">희망 스토리</a></li>
     </ul>
     <div style="display:flex;align-items:center;gap:16px">
@@ -747,6 +816,304 @@
   </div>
 </section>
 
+<!-- ── Section 5: Support Programs ── -->
+<section class="section" id="support" aria-labelledby="support-title">
+  <div class="section-inner">
+    <div class="section-header">
+      <p class="section-label" data-i18n="s5.label">보조기기 지원 제도</p>
+      <div class="section-right">
+        <h2 class="section-title" id="support-title" data-i18n="s5.title">지원금, 어떻게 받나요?</h2>
+        <p class="section-desc" data-i18n="s5.desc">처음 신청하는 분도 이해할 수 있도록 국가별 절차와 지원금액을 한눈에 정리했습니다.</p>
+      </div>
+    </div>
+
+    <!-- 국가 탭 -->
+    <div class="country-tabs" role="tablist">
+      <button class="ctab active" id="ctab-kr" role="tab" aria-selected="true"
+        onclick="switchCountry('kr')" data-i18n="s5.tab.kr">🇰🇷 한국</button>
+      <button class="ctab" id="ctab-us" role="tab" aria-selected="false"
+        onclick="switchCountry('us')" data-i18n="s5.tab.us">🇺🇸 미국</button>
+    </div>
+
+    <!-- ═══ 한국 ═══ -->
+    <div id="support-kr" class="support-content active" role="tabpanel">
+
+      <div class="info-box">
+        <div class="info-box-title" data-i18n="s5.kr.tip.title">💡 핵심 원칙</div>
+        <div class="info-box-body" data-i18n="s5.kr.tip.body">장애 등록이 먼저입니다. 등록 후 복지카드를 받아야 대부분의 지원을 신청할 수 있어요.
+        진단 후 주민센터 방문까지 보통 2~3개월 걸리니 빠를수록 좋습니다.</div>
+      </div>
+
+      <!-- 신청 흐름 -->
+      <h3 style="font-size:16px;font-weight:500;color:var(--dark);margin-bottom:24px;letter-spacing:0.04em" data-i18n="s5.kr.flow.title">STEP BY STEP — 처음 신청하는 순서</h3>
+      <div class="step-flow" role="list">
+        <div class="step-item" role="listitem">
+          <div class="step-num">1</div>
+          <div class="step-label" data-i18n="s5.kr.s1">안과 진단서</div>
+          <div class="step-sub" data-i18n="s5.kr.s1s">안과 방문, 장애 진단서 발급 요청</div>
+        </div>
+        <div class="step-item" role="listitem">
+          <div class="step-num">2</div>
+          <div class="step-label" data-i18n="s5.kr.s2">주민센터 신청</div>
+          <div class="step-sub" data-i18n="s5.kr.s2s">진단서 지참, 장애 등록 신청</div>
+        </div>
+        <div class="step-item" role="listitem">
+          <div class="step-num">3</div>
+          <div class="step-label" data-i18n="s5.kr.s3">국민연금 심사</div>
+          <div class="step-sub" data-i18n="s5.kr.s3s">2~3개월 소요</div>
+        </div>
+        <div class="step-item" role="listitem">
+          <div class="step-num">4</div>
+          <div class="step-label" data-i18n="s5.kr.s4">복지카드 수령</div>
+          <div class="step-sub" data-i18n="s5.kr.s4s">장애등급 확정</div>
+        </div>
+        <div class="step-item" role="listitem">
+          <div class="step-num">5</div>
+          <div class="step-label" data-i18n="s5.kr.s5">보조기기 신청</div>
+          <div class="step-sub" data-i18n="s5.kr.s5s">주민센터 또는 건강보험공단</div>
+        </div>
+        <div class="step-item" role="listitem">
+          <div class="step-num">6</div>
+          <div class="step-label" data-i18n="s5.kr.s6">기기 수령</div>
+          <div class="step-sub" data-i18n="s5.kr.s6s">심사 후 교부 또는 급여 지급</div>
+        </div>
+      </div>
+
+      <!-- 지원 프로그램 카드 -->
+      <h3 style="font-size:16px;font-weight:500;color:var(--dark);margin-bottom:24px;letter-spacing:0.04em" data-i18n="s5.kr.prog.title">주요 지원 프로그램</h3>
+      <div class="program-grid">
+
+        <div class="program-card">
+          <div class="prog-org" data-i18n="s5.kr.p1.org">보건복지부</div>
+          <div class="prog-name" data-i18n="s5.kr.p1.name">장애인 보조기기 교부사업</div>
+          <div class="prog-who" data-i18n="s5.kr.p1.who">국민기초생활수급자 · 차상위계층 시각장애인</div>
+          <div class="prog-amount">
+            <span class="prog-amount-num">100%</span>
+            <span class="prog-amount-unit" data-i18n="s5.kr.p1.unit">기준금액 지원 (수급자) / 80% (차상위)</span>
+          </div>
+          <div class="prog-tags">
+            <span class="prog-tag green" data-i18n="tag.free">무료 신청</span>
+            <span class="prog-tag" data-i18n="tag.community">주민센터</span>
+          </div>
+        </div>
+
+        <div class="program-card">
+          <div class="prog-org" data-i18n="s5.kr.p2.org">국민건강보험공단</div>
+          <div class="prog-name" data-i18n="s5.kr.p2.name">건강보험 보조기기 급여</div>
+          <div class="prog-who" data-i18n="s5.kr.p2.who">장애 등록 시각장애인 (의사 처방 필요)</div>
+          <div class="prog-amount">
+            <span class="prog-amount-num">80%</span>
+            <span class="prog-amount-unit" data-i18n="s5.kr.p2.unit">건강보험 부담 (본인 20%)</span>
+          </div>
+          <div class="prog-tags">
+            <span class="prog-tag" data-i18n="tag.nhis">건강보험공단</span>
+            <span class="prog-tag" data-i18n="tag.prescription">처방전 필요</span>
+          </div>
+        </div>
+
+        <div class="program-card">
+          <div class="prog-org" data-i18n="s5.kr.p3.org">한국장애인고용공단</div>
+          <div class="prog-name" data-i18n="s5.kr.p3.name">직업재활 보조공학기기 지원</div>
+          <div class="prog-who" data-i18n="s5.kr.p3.who">취업 희망 또는 재직 중인 시각장애인</div>
+          <div class="prog-amount">
+            <span class="prog-amount-num">100%</span>
+            <span class="prog-amount-unit" data-i18n="s5.kr.p3.unit">취업 목적 보조기기 전액 지원</span>
+          </div>
+          <div class="prog-tags">
+            <span class="prog-tag green" data-i18n="tag.employment">취업 연계</span>
+            <span class="prog-tag" data-i18n="tag.kead">KEAD</span>
+          </div>
+        </div>
+
+        <div class="program-card">
+          <div class="prog-org" data-i18n="s5.kr.p4.org">한국장애인개발원</div>
+          <div class="prog-name" data-i18n="s5.kr.p4.name">보조기기 렌탈 서비스</div>
+          <div class="prog-who" data-i18n="s5.kr.p4.who">구매 부담 없이 먼저 체험하고 싶은 분</div>
+          <div class="prog-amount">
+            <span class="prog-amount-num">월 5천~</span>
+            <span class="prog-amount-unit" data-i18n="s5.kr.p4.unit">저렴한 월 렌탈료</span>
+          </div>
+          <div class="prog-tags">
+            <span class="prog-tag green" data-i18n="tag.rental">렌탈 가능</span>
+            <span class="prog-tag" data-i18n="tag.kdit">개발원</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 품목별 지원금액 -->
+      <h3 style="font-size:16px;font-weight:500;color:var(--dark);margin-bottom:20px;letter-spacing:0.04em" data-i18n="s5.kr.device.title">품목별 기준금액 (보건복지부 기준)</h3>
+      <table class="device-table">
+        <thead>
+          <tr>
+            <th data-i18n="tbl.device">보조기기</th>
+            <th data-i18n="tbl.amount">기준금액</th>
+            <th data-i18n="tbl.support">수급자 지원</th>
+            <th data-i18n="tbl.route">신청처</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td data-i18n="dev.kr.1">독서확대기 (CCTV형)</td><td class="amount-cell">667,000원</td><td>667,000원</td><td data-i18n="route.center">주민센터</td></tr>
+          <tr><td data-i18n="dev.kr.2">점자정보단말기</td><td class="amount-cell">2,000,000원</td><td>2,000,000원</td><td data-i18n="route.center">주민센터</td></tr>
+          <tr><td data-i18n="dev.kr.3">화면낭독소프트웨어</td><td class="amount-cell">600,000원</td><td>600,000원</td><td data-i18n="route.center">주민센터</td></tr>
+          <tr><td data-i18n="dev.kr.4">점자프린터</td><td class="amount-cell">3,900,000원</td><td>3,900,000원</td><td data-i18n="route.center">주민센터</td></tr>
+          <tr><td data-i18n="dev.kr.5">저시력 보조안경</td><td class="amount-cell">117,000원</td><td class="amount-cell">93,600원 (80%)</td><td data-i18n="route.nhis">건강보험공단</td></tr>
+          <tr><td data-i18n="dev.kr.6">닷패드 (촉각 디스플레이)</td><td class="amount-cell">별도 문의</td><td>렌탈/기금 연계</td><td data-i18n="route.dotpad"><a href="#dotpad" style="color:var(--dark);text-decoration:underline">닷패드 체험</a></td></tr>
+        </tbody>
+      </table>
+
+      <div class="info-box">
+        <div class="info-box-title" data-i18n="s5.kr.contact.title">📞 바로 전화할 수 있는 곳</div>
+        <div class="info-box-body" data-i18n="s5.kr.contact.body">
+          <strong>129</strong> 보건복지상담센터 (24시간) — 장애 등록 절차, 보조기기 교부 전반 상담<br>
+          <strong>1588-1519</strong> 국민건강보험공단 — 건강보험 급여 보조기기 문의<br>
+          <strong>1544-0083</strong> 한국장애인고용공단 — 직업재활 보조기기 지원 문의
+        </div>
+      </div>
+
+    </div><!-- end support-kr -->
+
+    <!-- ═══ 미국 ═══ -->
+    <div id="support-us" class="support-content" role="tabpanel">
+
+      <div class="info-box">
+        <div class="info-box-title" data-i18n="s5.us.tip.title">💡 Key Principle</div>
+        <div class="info-box-body" data-i18n="s5.us.tip.body">There is no single national program — support comes from multiple sources (state, federal, nonprofit).
+        Start with your state's Vocational Rehabilitation agency and AT program — they are free and available to everyone.</div>
+      </div>
+
+      <!-- Step flow US -->
+      <h3 style="font-size:16px;font-weight:500;color:var(--dark);margin-bottom:24px;letter-spacing:0.04em" data-i18n="s5.us.flow.title">STEP BY STEP — First-time applicants</h3>
+      <div class="step-flow" role="list">
+        <div class="step-item" role="listitem">
+          <div class="step-num">1</div>
+          <div class="step-label" data-i18n="s5.us.s1">Get diagnosed</div>
+          <div class="step-sub" data-i18n="s5.us.s1s">Eye doctor — get a prescription/letter of medical necessity</div>
+        </div>
+        <div class="step-item" role="listitem">
+          <div class="step-num">2</div>
+          <div class="step-label" data-i18n="s5.us.s2">Contact VR</div>
+          <div class="step-sub" data-i18n="s5.us.s2s">State Vocational Rehabilitation agency — free AT for employment</div>
+        </div>
+        <div class="step-item" role="listitem">
+          <div class="step-num">3</div>
+          <div class="step-label" data-i18n="s5.us.s3">Try before buy</div>
+          <div class="step-sub" data-i18n="s5.us.s3s">State AT program — free device loans &amp; demos</div>
+        </div>
+        <div class="step-item" role="listitem">
+          <div class="step-num">4</div>
+          <div class="step-label" data-i18n="s5.us.s4">Check Medicaid</div>
+          <div class="step-sub" data-i18n="s5.us.s4s">Income-based — may cover AT devices</div>
+        </div>
+        <div class="step-item" role="listitem">
+          <div class="step-num">5</div>
+          <div class="step-label" data-i18n="s5.us.s5">Apply for SSI/SSDI</div>
+          <div class="step-sub" data-i18n="s5.us.s5s">ssa.gov — disability benefits</div>
+        </div>
+      </div>
+
+      <!-- US Programs -->
+      <h3 style="font-size:16px;font-weight:500;color:var(--dark);margin-bottom:24px;letter-spacing:0.04em" data-i18n="s5.us.prog.title">Key Support Programs</h3>
+      <div class="program-grid">
+
+        <div class="program-card">
+          <div class="prog-org" data-i18n="s5.us.p1.org">State Government</div>
+          <div class="prog-name" data-i18n="s5.us.p1.name">Vocational Rehabilitation (VR)</div>
+          <div class="prog-who" data-i18n="s5.us.p1.who">Working-age adults with vision loss seeking employment. Free to apply.</div>
+          <div class="prog-amount">
+            <span class="prog-amount-num">Up to 100%</span>
+          </div>
+          <span class="prog-amount-unit" data-i18n="s5.us.p1.unit">of AT cost for employment-related devices</span>
+          <br><br>
+          <div class="prog-tags">
+            <span class="prog-tag green" data-i18n="tag.free.en">Free</span>
+            <span class="prog-tag" data-i18n="tag.employment.en">Employment</span>
+            <span class="prog-tag">rsa.ed.gov</span>
+          </div>
+        </div>
+
+        <div class="program-card">
+          <div class="prog-org" data-i18n="s5.us.p2.org">AT Act — Every State</div>
+          <div class="prog-name" data-i18n="s5.us.p2.name">State Assistive Technology Program</div>
+          <div class="prog-who" data-i18n="s5.us.p2.who">All residents. No income requirement. Device loans, demos, and low-interest financing.</div>
+          <div class="prog-amount">
+            <span class="prog-amount-num">Free</span>
+          </div>
+          <span class="prog-amount-unit" data-i18n="s5.us.p2.unit">device loans + 0–3% financing available</span>
+          <br><br>
+          <div class="prog-tags">
+            <span class="prog-tag green" data-i18n="tag.everyone">Everyone</span>
+            <span class="prog-tag">AT3center.net</span>
+          </div>
+        </div>
+
+        <div class="program-card">
+          <div class="prog-org" data-i18n="s5.us.p3.org">Federal — Income-Based</div>
+          <div class="prog-name" data-i18n="s5.us.p3.name">Medicaid</div>
+          <div class="prog-who" data-i18n="s5.us.p3.who">Low-income individuals. Coverage varies by state — some states cover screen readers, CCTVs, and more.</div>
+          <div class="prog-amount">
+            <span class="prog-amount-num">Varies</span>
+          </div>
+          <span class="prog-amount-unit" data-i18n="s5.us.p3.unit">by state — can cover $0 out-of-pocket</span>
+          <br><br>
+          <div class="prog-tags">
+            <span class="prog-tag" data-i18n="tag.income">Income-based</span>
+            <span class="prog-tag">medicaid.gov</span>
+          </div>
+        </div>
+
+        <div class="program-card">
+          <div class="prog-org" data-i18n="s5.us.p4.org">Veterans Only</div>
+          <div class="prog-name" data-i18n="s5.us.p4.name">VA Blind Rehabilitation Service</div>
+          <div class="prog-who" data-i18n="s5.us.p4.who">U.S. military veterans with vision loss. Full AT coverage and in-person training provided.</div>
+          <div class="prog-amount">
+            <span class="prog-amount-num">100%</span>
+          </div>
+          <span class="prog-amount-unit" data-i18n="s5.us.p4.unit">covered — plus in-person rehab training</span>
+          <br><br>
+          <div class="prog-tags">
+            <span class="prog-tag green" data-i18n="tag.veteran">Veterans</span>
+            <span class="prog-tag">va.gov/blindrehab</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- US Device table -->
+      <h3 style="font-size:16px;font-weight:500;color:var(--dark);margin-bottom:20px;letter-spacing:0.04em" data-i18n="s5.us.device.title">Common AT Devices — Typical Costs &amp; Coverage</h3>
+      <table class="device-table">
+        <thead>
+          <tr>
+            <th data-i18n="tbl.device.en">Device</th>
+            <th data-i18n="tbl.retail">Retail Price</th>
+            <th data-i18n="tbl.coverage">Potential Coverage</th>
+            <th data-i18n="tbl.source">Best Source</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td data-i18n="dev.us.1">Screen Reader (JAWS)</td><td class="amount-cell">~$1,000/yr</td><td>VR, Medicaid (some states)</td><td>VR agency</td></tr>
+          <tr><td data-i18n="dev.us.2">Video Magnifier (CCTV)</td><td class="amount-cell">$1,500–$4,000</td><td>VR, Medicaid, VA</td><td>VR or AT program</td></tr>
+          <tr><td data-i18n="dev.us.3">Refreshable Braille Display</td><td class="amount-cell">$1,500–$6,000</td><td>VR, VA</td><td>VR agency</td></tr>
+          <tr><td data-i18n="dev.us.4">Talking GPS / Navigation</td><td class="amount-cell">$100–$500</td><td>VR, AT program loan</td><td>State AT program</td></tr>
+          <tr><td data-i18n="dev.us.5">Accessible Smartphone Setup</td><td class="amount-cell">$0 (built-in)</td><td class="amount-cell">Free</td><td>This guide →</td></tr>
+          <tr><td data-i18n="dev.us.6">Dot Pad (Tactile Display)</td><td class="amount-cell">Contact us</td><td>VR, AT financing</td><td><a href="#dotpad" style="color:var(--dark);text-decoration:underline">Request trial</a></td></tr>
+        </tbody>
+      </table>
+
+      <div class="info-box">
+        <div class="info-box-title" data-i18n="s5.us.contact.title">📞 Where to call first</div>
+        <div class="info-box-body" data-i18n="s5.us.contact.body">
+          <strong>Find your state VR agency:</strong> rsa.ed.gov/about/programs/vocational-rehabilitation<br>
+          <strong>Find your state AT program:</strong> AT3center.net/state-at-programs<br>
+          <strong>Social Security (SSI/SSDI):</strong> 1-800-772-1213 or ssa.gov<br>
+          <strong>Veterans (VA):</strong> 1-800-827-1000 or va.gov
+        </div>
+      </div>
+
+    </div><!-- end support-us -->
+  </div>
+</section>
+
 <!-- ── Section 4: Stories ── -->
 <section class="section" id="stories" aria-labelledby="stories-title" style="background:var(--bg-off)">
   <div class="section-inner">
@@ -845,8 +1212,8 @@
       <ul>
         <li><a href="#immediate" data-i18n="ft.g1">긴급 도움</a></li>
         <li><a href="#journey" data-i18n="ft.g2">단계별 가이드</a></li>
-        <li><a href="#" data-i18n="ft.g3">복지 &amp; 혜택</a></li>
-        <li><a href="#" data-i18n="ft.g4">센터 찾기</a></li>
+        <li><a href="#support" data-i18n="ft.g3">복지 &amp; 혜택</a></li>
+        <li><a href="#support" data-i18n="ft.g4">지원 제도</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -991,6 +1358,77 @@ const T = {
     'ft.s1': '직장인 이야기', 'ft.s2': '학생 이야기', 'ft.s3': '가족 이야기', 'ft.s4': '내 이야기 나누기',
     'ft.copy': '© 2026 첫 100일 · Dot Inc. All rights reserved.',
     'ft.crisis': '위기 상담: <strong>1393</strong> &nbsp;·&nbsp; 복지 상담: <strong>129</strong>',
+    // Support section
+    'nav.l5': '지원 제도',
+    's5.label': '보조기기 지원 제도', 's5.title': '지원금, 어떻게 받나요?',
+    's5.desc': '처음 신청하는 분도 이해할 수 있도록 국가별 절차와 지원금액을 한눈에 정리했습니다.',
+    's5.tab.kr': '🇰🇷 한국', 's5.tab.us': '🇺🇸 미국',
+    's5.kr.tip.title': '💡 핵심 원칙',
+    's5.kr.tip.body': '장애 등록이 먼저입니다. 등록 후 복지카드를 받아야 대부분의 지원을 신청할 수 있어요. 진단 후 주민센터 방문까지 보통 2~3개월 걸리니 빠를수록 좋습니다.',
+    's5.kr.flow.title': 'STEP BY STEP — 처음 신청하는 순서',
+    's5.kr.s1': '안과 진단서', 's5.kr.s1s': '안과 방문, 장애 진단서 발급 요청',
+    's5.kr.s2': '주민센터 신청', 's5.kr.s2s': '진단서 지참, 장애 등록 신청',
+    's5.kr.s3': '국민연금 심사', 's5.kr.s3s': '2~3개월 소요',
+    's5.kr.s4': '복지카드 수령', 's5.kr.s4s': '장애등급 확정',
+    's5.kr.s5': '보조기기 신청', 's5.kr.s5s': '주민센터 또는 건강보험공단',
+    's5.kr.s6': '기기 수령', 's5.kr.s6s': '심사 후 교부 또는 급여 지급',
+    's5.kr.prog.title': '주요 지원 프로그램',
+    's5.kr.p1.org': '보건복지부', 's5.kr.p1.name': '장애인 보조기기 교부사업',
+    's5.kr.p1.who': '국민기초생활수급자 · 차상위계층 시각장애인',
+    's5.kr.p1.unit': '기준금액 지원 (수급자) / 80% (차상위)',
+    's5.kr.p2.org': '국민건강보험공단', 's5.kr.p2.name': '건강보험 보조기기 급여',
+    's5.kr.p2.who': '장애 등록 시각장애인 (의사 처방 필요)',
+    's5.kr.p2.unit': '건강보험 부담 (본인 20%)',
+    's5.kr.p3.org': '한국장애인고용공단', 's5.kr.p3.name': '직업재활 보조공학기기 지원',
+    's5.kr.p3.who': '취업 희망 또는 재직 중인 시각장애인',
+    's5.kr.p3.unit': '취업 목적 보조기기 전액 지원',
+    's5.kr.p4.org': '한국장애인개발원', 's5.kr.p4.name': '보조기기 렌탈 서비스',
+    's5.kr.p4.who': '구매 부담 없이 먼저 체험하고 싶은 분',
+    's5.kr.p4.unit': '저렴한 월 렌탈료',
+    's5.kr.device.title': '품목별 기준금액 (보건복지부 기준)',
+    's5.kr.contact.title': '📞 바로 전화할 수 있는 곳',
+    's5.kr.contact.body': '<strong>129</strong> 보건복지상담센터 (24시간) — 장애 등록 절차, 보조기기 교부 전반 상담<br><strong>1588-1519</strong> 국민건강보험공단 — 건강보험 급여 보조기기 문의<br><strong>1544-0083</strong> 한국장애인고용공단 — 직업재활 보조기기 지원 문의',
+    // Table headers KO
+    'tbl.device': '보조기기', 'tbl.amount': '기준금액', 'tbl.support': '수급자 지원', 'tbl.route': '신청처',
+    'dev.kr.1': '독서확대기 (CCTV형)', 'dev.kr.2': '점자정보단말기',
+    'dev.kr.3': '화면낭독소프트웨어', 'dev.kr.4': '점자프린터',
+    'dev.kr.5': '저시력 보조안경', 'dev.kr.6': '닷패드 (촉각 디스플레이)',
+    'route.center': '주민센터', 'route.nhis': '건강보험공단', 'route.dotpad': '<a href="#dotpad" style="color:var(--dark);text-decoration:underline">닷패드 체험</a>',
+    // Tags KO
+    'tag.free': '무료 신청', 'tag.community': '주민센터', 'tag.nhis': '건강보험공단',
+    'tag.prescription': '처방전 필요', 'tag.employment': '취업 연계', 'tag.kead': 'KEAD',
+    'tag.rental': '렌탈 가능', 'tag.kdit': '개발원',
+    // US section KO labels
+    's5.us.tip.title': '💡 핵심 원칙 (미국)',
+    's5.us.tip.body': '미국은 단일 국가 프로그램이 없습니다. 주(State) 정부, 연방 정부, 비영리가 함께 지원합니다. 주 직업재활(VR) 기관과 AT 프로그램이 첫 번째 관문입니다 — 무료입니다.',
+    's5.us.flow.title': 'STEP BY STEP — 처음 신청하는 순서 (미국)',
+    's5.us.s1': '의사 진단서', 's5.us.s1s': '안과 전문의에게 의료 필요성 서류 발급',
+    's5.us.s2': 'VR 연락', 's5.us.s2s': '주 직업재활 기관 — 취업용 보조기기 무료',
+    's5.us.s3': '기기 체험', 's5.us.s3s': '주 AT 프로그램 — 무료 대여 및 시연',
+    's5.us.s4': 'Medicaid 확인', 's5.us.s4s': '소득 기반 — 보조기기 커버 가능',
+    's5.us.s5': 'SSI/SSDI 신청', 's5.us.s5s': 'ssa.gov — 장애 급여',
+    's5.us.prog.title': '주요 지원 프로그램 (미국)',
+    's5.us.p1.org': '주 정부', 's5.us.p1.name': '직업재활 (Vocational Rehabilitation)',
+    's5.us.p1.who': '취업을 원하는 시각장애인. 신청 무료.',
+    's5.us.p1.unit': '취업 관련 보조기기 비용의 최대 100% 지원',
+    's5.us.p2.org': 'AT Act — 전 주', 's5.us.p2.name': '주 보조공학 프로그램',
+    's5.us.p2.who': '모든 거주자. 소득 제한 없음. 기기 대여, 시연, 저금리 융자.',
+    's5.us.p2.unit': '기기 대여 무료 + 0~3% 융자 가능',
+    's5.us.p3.org': '연방 — 소득 기반', 's5.us.p3.name': 'Medicaid',
+    's5.us.p3.who': '저소득층. 주마다 다름 — 일부 주는 화면낭독기, CCTV 등 커버.',
+    's5.us.p3.unit': '주마다 다름 — 본인 부담 $0 가능',
+    's5.us.p4.org': '참전 용사 전용', 's5.us.p4.name': 'VA 시각 재활 서비스',
+    's5.us.p4.who': '시력 손상 미국 참전 용사. 전액 커버 및 대면 훈련 제공.',
+    's5.us.p4.unit': '100% 커버 + 대면 재활 훈련',
+    's5.us.device.title': '주요 보조기기 — 일반 가격 및 지원 현황',
+    's5.us.contact.title': '📞 처음 전화할 곳 (미국)',
+    's5.us.contact.body': '<strong>주 VR 기관 찾기:</strong> rsa.ed.gov/about/programs/vocational-rehabilitation<br><strong>주 AT 프로그램 찾기:</strong> AT3center.net/state-at-programs<br><strong>사회보장국 (SSI/SSDI):</strong> 1-800-772-1213 또는 ssa.gov<br><strong>참전 용사 (VA):</strong> 1-800-827-1000 또는 va.gov',
+    'tbl.device.en': '보조기기', 'tbl.retail': '소매가', 'tbl.coverage': '지원 가능 프로그램', 'tbl.source': '최적 경로',
+    'dev.us.1': '화면낭독소프트웨어 (JAWS)', 'dev.us.2': '독서확대기 (CCTV)',
+    'dev.us.3': '점자 디스플레이', 'dev.us.4': '음성 GPS / 내비게이션',
+    'dev.us.5': '스마트폰 접근성 설정', 'dev.us.6': '닷패드 (촉각 디스플레이)',
+    'tag.free.en': '무료', 'tag.employment.en': '취업 연계', 'tag.everyone': '모두 가능',
+    'tag.income': '소득 기반', 'tag.veteran': '참전 용사',
   },
   en: {
     'skip': 'Skip to content',
@@ -1106,6 +1544,75 @@ const T = {
     'ft.s1': 'Working Professionals', 'ft.s2': 'Students', 'ft.s3': 'Families', 'ft.s4': 'Share Your Story',
     'ft.copy': '© 2026 First 100 Days · Dot Inc. All rights reserved.',
     'ft.crisis': 'Crisis line: <strong>1393</strong> &nbsp;·&nbsp; Welfare helpline: <strong>129</strong>',
+    // Support section EN
+    'nav.l5': 'Support',
+    's5.label': 'Assistive Device Funding', 's5.title': 'How to get support',
+    's5.desc': 'A clear overview of funding programs and application steps — designed for first-time applicants and their families.',
+    's5.tab.kr': '🇰🇷 South Korea', 's5.tab.us': '🇺🇸 United States',
+    's5.kr.tip.title': '💡 Key Principle',
+    's5.kr.tip.body': 'Disability registration comes first. Most programs require a registered disability card before you can apply for device support. The process takes 2–3 months, so start as soon as possible.',
+    's5.kr.flow.title': 'STEP BY STEP — First-time applicants (Korea)',
+    's5.kr.s1': 'Eye exam', 's5.kr.s1s': 'Get a disability diagnosis letter from an ophthalmologist',
+    's5.kr.s2': 'Register at community office', 's5.kr.s2s': 'Bring diagnosis letter to your local Jumin Center',
+    's5.kr.s3': 'NPS Review', 's5.kr.s3s': 'National Pension Service review — 2–3 months',
+    's5.kr.s4': 'Receive disability card', 's5.kr.s4s': 'Disability grade confirmed',
+    's5.kr.s5': 'Apply for AT device', 's5.kr.s5s': 'Jumin Center or National Health Insurance',
+    's5.kr.s6': 'Receive device', 's5.kr.s6s': 'After review — device issued or benefit paid',
+    's5.kr.prog.title': 'Key Support Programs',
+    's5.kr.p1.org': 'Ministry of Health &amp; Welfare', 's5.kr.p1.name': 'Assistive Device Grant Program',
+    's5.kr.p1.who': 'National Basic Livelihood recipients &amp; near-poverty households with visual impairment',
+    's5.kr.p1.unit': 'of standard price (basic recipients) / 80% (near-poverty)',
+    's5.kr.p2.org': 'National Health Insurance', 's5.kr.p2.name': 'Health Insurance AT Benefit',
+    's5.kr.p2.who': 'Registered people with visual impairment (requires doctor\'s prescription)',
+    's5.kr.p2.unit': 'covered by insurance (20% out-of-pocket)',
+    's5.kr.p3.org': 'Korea Employment Agency for the Disabled', 's5.kr.p3.name': 'Vocational Rehabilitation AT Support',
+    's5.kr.p3.who': 'People with visual impairment seeking or currently in employment',
+    's5.kr.p3.unit': 'for employment-related AT devices',
+    's5.kr.p4.org': 'Korea Disabled People\'s Development Institute', 's5.kr.p4.name': 'AT Device Rental Service',
+    's5.kr.p4.who': 'Anyone who wants to try before committing to a purchase',
+    's5.kr.p4.unit': 'low monthly rental fee',
+    's5.kr.device.title': 'Device-by-Device Funding Amounts (Ministry of Health &amp; Welfare)',
+    's5.kr.contact.title': '📞 Who to call first',
+    's5.kr.contact.body': '<strong>129</strong> Health &amp; Welfare Helpline (24hr) — disability registration, AT grant inquiries<br><strong>1588-1519</strong> National Health Insurance — insurance-covered AT devices<br><strong>1544-0083</strong> Korea Employment Agency for the Disabled — employment AT support',
+    'tbl.device': 'Device', 'tbl.amount': 'Standard Price', 'tbl.support': 'Recipient Coverage', 'tbl.route': 'Apply At',
+    'dev.kr.1': 'Desktop Video Magnifier (CCTV)', 'dev.kr.2': 'Braille Notetaker',
+    'dev.kr.3': 'Screen Reading Software', 'dev.kr.4': 'Braille Printer',
+    'dev.kr.5': 'Low Vision Glasses', 'dev.kr.6': 'Dot Pad (Tactile Display)',
+    'route.center': 'Community Office', 'route.nhis': 'Health Insurance',
+    'route.dotpad': '<a href="#dotpad" style="color:var(--dark);text-decoration:underline">Dot Pad Trial</a>',
+    'tag.free': 'Free to apply', 'tag.community': 'Community Office', 'tag.nhis': 'Health Insurance',
+    'tag.prescription': 'Prescription needed', 'tag.employment': 'Employment', 'tag.kead': 'KEAD',
+    'tag.rental': 'Rental available', 'tag.kdit': 'KDDI',
+    's5.us.tip.title': '💡 Key Principle',
+    's5.us.tip.body': 'There is no single national program — support comes from multiple sources (state, federal, nonprofit). Start with your state\'s Vocational Rehabilitation agency and AT program — they are free and available to everyone.',
+    's5.us.flow.title': 'STEP BY STEP — First-time applicants',
+    's5.us.s1': 'Get diagnosed', 's5.us.s1s': 'Eye doctor — get a prescription/letter of medical necessity',
+    's5.us.s2': 'Contact VR', 's5.us.s2s': 'State Vocational Rehabilitation agency — free AT for employment',
+    's5.us.s3': 'Try before buy', 's5.us.s3s': 'State AT program — free device loans &amp; demos',
+    's5.us.s4': 'Check Medicaid', 's5.us.s4s': 'Income-based — may cover AT devices',
+    's5.us.s5': 'Apply for SSI/SSDI', 's5.us.s5s': 'ssa.gov — disability benefits',
+    's5.us.prog.title': 'Key Support Programs',
+    's5.us.p1.org': 'State Government', 's5.us.p1.name': 'Vocational Rehabilitation (VR)',
+    's5.us.p1.who': 'Working-age adults with vision loss seeking employment. Free to apply.',
+    's5.us.p1.unit': 'of AT cost for employment-related devices',
+    's5.us.p2.org': 'AT Act — Every State', 's5.us.p2.name': 'State Assistive Technology Program',
+    's5.us.p2.who': 'All residents. No income requirement. Device loans, demos, and low-interest financing.',
+    's5.us.p2.unit': 'device loans + 0–3% financing available',
+    's5.us.p3.org': 'Federal — Income-Based', 's5.us.p3.name': 'Medicaid',
+    's5.us.p3.who': 'Low-income individuals. Coverage varies by state — some states cover screen readers, CCTVs, and more.',
+    's5.us.p3.unit': 'by state — can cover $0 out-of-pocket',
+    's5.us.p4.org': 'Veterans Only', 's5.us.p4.name': 'VA Blind Rehabilitation Service',
+    's5.us.p4.who': 'U.S. military veterans with vision loss. Full AT coverage and in-person training provided.',
+    's5.us.p4.unit': 'covered — plus in-person rehab training',
+    's5.us.device.title': 'Common AT Devices — Typical Costs &amp; Coverage',
+    's5.us.contact.title': '📞 Where to call first',
+    's5.us.contact.body': '<strong>Find your state VR agency:</strong> rsa.ed.gov/about/programs/vocational-rehabilitation<br><strong>Find your state AT program:</strong> AT3center.net/state-at-programs<br><strong>Social Security (SSI/SSDI):</strong> 1-800-772-1213 or ssa.gov<br><strong>Veterans (VA):</strong> 1-800-827-1000 or va.gov',
+    'tbl.device.en': 'Device', 'tbl.retail': 'Retail Price', 'tbl.coverage': 'Potential Coverage', 'tbl.source': 'Best Source',
+    'dev.us.1': 'Screen Reader (JAWS)', 'dev.us.2': 'Video Magnifier (CCTV)',
+    'dev.us.3': 'Refreshable Braille Display', 'dev.us.4': 'Talking GPS / Navigation',
+    'dev.us.5': 'Accessible Smartphone Setup', 'dev.us.6': 'Dot Pad (Tactile Display)',
+    'tag.free.en': 'Free', 'tag.employment.en': 'Employment', 'tag.everyone': 'Everyone',
+    'tag.income': 'Income-based', 'tag.veteran': 'Veterans',
   }
 };
 
@@ -1138,6 +1645,18 @@ function setLang(lang) {
 
 // 초기 적용
 setLang(currentLang);
+
+// ── 국가 탭 전환 ────────────────────────────────────────────
+function switchCountry(country) {
+  document.querySelectorAll('.support-content').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.ctab').forEach(el => {
+    el.classList.remove('active');
+    el.setAttribute('aria-selected', 'false');
+  });
+  document.getElementById('support-' + country).classList.add('active');
+  document.getElementById('ctab-' + country).classList.add('active');
+  document.getElementById('ctab-' + country).setAttribute('aria-selected', 'true');
+}
 
 // ── 타임라인 아코디언 ───────────────────────────────────────
 function expandRow(btn) {
