@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>First 100 Days — A Guide for Acquired Visual Impairment</title>
+<title>First 100 Days â A Guide for Acquired Visual Impairment</title>
 <meta name="description" content="A guide for people with acquired visual impairment and their families. Start here.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
 <style>
-  /* ── Reset ── */
+  /* ââ Reset ââ */
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; font-size: 16px; }
 
-  /* ── Tokens ── */
+  /* ââ Tokens ââ */
   :root {
     --black:  #0A0A0A;
     --dark:   #1A1A1A;
@@ -33,12 +33,12 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  /* ── Accessibility ── */
+  /* ââ Accessibility ââ */
   .skip { position: absolute; top: -999px; left: 0; background: var(--black); color: #fff; padding: 8px 16px; font-size: 16px; text-decoration: none; z-index: 9999; }
   .skip:focus { top: 0; }
   :focus-visible { outline: 1px solid var(--black); outline-offset: 3px; }
 
-  /* ── Nav ── */
+  /* ââ Nav ââ */
   .nav {
     position: sticky; top: 0; z-index: 100;
     background: var(--bg);
@@ -54,19 +54,19 @@
     font-size: 16px; font-weight: 600; letter-spacing: 0.14em;
     color: var(--black); text-decoration: none; text-transform: uppercase;
   }
-  .nav-meta { font-size: 14px; font-weight: 300; color: var(--light); letter-spacing: 0.06em; }
+  .nav-meta { font-size: 12px; font-weight: 300; color: var(--light); letter-spacing: 0.06em; }
   .nav-links { display: flex; gap: 36px; list-style: none; align-items: center; }
-  .nav-links a { font-size: 18px; font-weight: 300; color: var(--mid); text-decoration: none; letter-spacing: 0.04em; transition: color .15s; }
+  .nav-links a { font-size: 12px; font-weight: 300; color: var(--mid); text-decoration: none; letter-spacing: 0.04em; transition: color .15s; }
   .nav-links a:hover { color: var(--black); }
   .nav-cta {
-    font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase;
+    font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase;
     color: var(--black); text-decoration: none;
     border: 1px solid var(--black); padding: 8px 18px;
     transition: background .15s, color .15s;
   }
   .nav-cta:hover { background: var(--black); color: #fff; }
 
-  /* ── Hero ── */
+  /* ââ Hero ââ */
   .hero {
     padding: 120px 48px 100px;
     border-bottom: 1px solid var(--rule);
@@ -104,7 +104,7 @@
   }
   .btn-ghost:hover { color: var(--black); border-color: var(--black); }
 
-  /* Hero right — stat block */
+  /* Hero right â stat block */
   .hero-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid var(--rule); }
   .hero-stat {
     padding: 32px 28px;
@@ -116,7 +116,7 @@
   .stat-num { font-size: 44px; font-weight: 200; color: var(--black); letter-spacing: -0.02em; line-height: 1; margin-bottom: 8px; }
   .stat-label { font-size: 14px; font-weight: 300; color: var(--light); letter-spacing: 0.06em; line-height: 1.5; }
 
-  /* ── Section wrapper ── */
+  /* ââ Section wrapper ââ */
   .section { padding: 88px 48px; border-bottom: 1px solid var(--rule); }
   .section-inner { max-width: 1200px; margin: 0 auto; }
   .section-header {
@@ -137,7 +137,7 @@
   }
   .section-desc { font-size: 20px; font-weight: 300; color: var(--mid); line-height: 1.8; max-width: 520px; }
 
-  /* ── Section 1: Immediate ── */
+  /* ââ Section 1: Immediate ââ */
   .imm-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 1px solid var(--rule); }
   .imm-cell {
     padding: 40px 36px;
@@ -152,7 +152,7 @@
   /* Checklist */
   .checklist { list-style: none; display: flex; flex-direction: column; gap: 12px; }
   .checklist li { display: flex; gap: 12px; font-size: 16px; font-weight: 300; color: var(--dark); line-height: 1.5; }
-  .checklist li::before { content: '—'; color: var(--light); flex-shrink: 0; }
+  .checklist li::before { content: 'â'; color: var(--light); flex-shrink: 0; }
 
   /* Hotline numbers */
   .hotline-list { display: flex; flex-direction: column; gap: 0; margin-top: 4px; }
@@ -197,7 +197,7 @@
   }
   .link-arrow:hover { border-color: var(--black); }
 
-  /* ── Section 2: Journey / Timeline ── */
+  /* ââ Section 2: Journey / Timeline ââ */
   .timeline { display: flex; flex-direction: column; gap: 0; }
   .t-row {
     display: grid; grid-template-columns: 200px 1fr; gap: 80px;
@@ -228,7 +228,7 @@
   .t-body { display: none; margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--rule); }
   .t-body.open { display: block; }
 
-  /* ── Section 3: Technology ── */
+  /* ââ Section 3: Technology ââ */
   .tech-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 1px solid var(--rule); margin-bottom: 64px; }
   .tech-col {
     padding: 40px 36px;
@@ -239,7 +239,7 @@
   .tech-title { font-size: 20px; font-weight: 400; color: var(--black); margin-bottom: 14px; line-height: 1.3; }
   .tech-body { font-size: 16px; font-weight: 300; color: var(--mid); line-height: 1.8; margin-bottom: 28px; }
 
-  /* Dot Pad feature — full-width editorial */
+  /* Dot Pad feature â full-width editorial */
   .dotpad-row {
     display: grid; grid-template-columns: 1fr 1fr; gap: 0;
     border: 1px solid var(--rule);
@@ -278,7 +278,7 @@
   .dp-stat-num { font-size: 34px; font-weight: 200; color: var(--black); letter-spacing: -0.02em; }
   .dp-stat-label { font-size: 13px; font-weight: 300; color: var(--light); letter-spacing: 0.06em; margin-top: 4px; }
 
-  /* ── Section 4: Stories ── */
+  /* ââ Section 4: Stories ââ */
   .story-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 1px solid var(--rule); }
   .story-card {
     border-right: 1px solid var(--rule);
@@ -312,7 +312,7 @@
   .story-person { font-size: 18px; font-weight: 300; color: var(--dark); }
   .story-dur { font-size: 14px; font-weight: 300; color: var(--light); letter-spacing: 0.06em; }
 
-  /* ── CTA row ── */
+  /* ââ CTA row ââ */
   .cta-row {
     padding: 88px 48px;
     background: var(--black);
@@ -338,7 +338,7 @@
   }
   .btn-ghost-white:hover { color: #fff; border-color: #fff; }
 
-  /* ── Footer ── */
+  /* ââ Footer ââ */
   .footer { padding: 56px 48px 40px; border-top: 1px solid var(--rule); }
   .footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px; margin-bottom: 48px; }
   .footer-brand .f-logo { font-size: 16px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--black); margin-bottom: 16px; }
@@ -355,7 +355,7 @@
   .footer-bottom p { font-size: 13px; font-weight: 300; color: var(--light); letter-spacing: 0.04em; }
   .footer-bottom strong { font-weight: 500; color: var(--dark); }
 
-  /* ── Support Section ── */
+  /* ââ Support Section ââ */
   .country-tabs { display: flex; gap: 0; margin-bottom: 56px; border: 1px solid var(--rule); width: fit-content; }
   .ctab {
     font-size: 14px; font-weight: 400; letter-spacing: 0.06em;
@@ -423,7 +423,7 @@
     .step-item::after { display: none; }
   }
 
-  /* ── Language switcher ── */
+  /* ââ Language switcher ââ */
   .lang-switch {
     display: flex; align-items: center; gap: 0;
     margin-left: 24px; flex-shrink: 0;
@@ -439,7 +439,7 @@
   .lang-btn:hover { color: var(--dark); }
   .lang-sep { font-size: 11px; color: var(--rule); user-select: none; }
 
-  /* ── Responsive ── */
+  /* ââ Responsive ââ */
   @media (max-width: 960px) {
     .nav { padding: 0 24px; }
     .hero, .section, .cta-row, .footer { padding-left: 24px; padding-right: 24px; }
@@ -473,23 +473,23 @@
 </head>
 <body>
 
-<a href="#main" class="skip" data-i18n="skip">본문 바로가기</a>
+<a href="#main" class="skip" data-i18n="skip">ë³¸ë¬¸ ë°ë¡ê°ê¸°</a>
 
-<!-- ── Navigation ── -->
+<!-- ââ Navigation ââ -->
 <nav class="nav" role="navigation" aria-label="Primary navigation">
   <div class="nav-inner">
-    <a href="#" class="nav-logo" data-i18n="nav.logo">첫 100일</a>
-    <span class="nav-meta" data-i18n="nav.meta">후천적 시각장애인을 위한 안내 가이드</span>
+    <a href="#" class="nav-logo" data-i18n="nav.logo">ì²« 100ì¼</a>
+    <span class="nav-meta" data-i18n="nav.meta">íì²ì  ìê°ì¥ì ì¸ì ìí ìë´ ê°ì´ë</span>
     <ul class="nav-links">
-      <li><a href="#immediate" data-i18n="nav.l1">지금 도움</a></li>
-      <li><a href="#journey" data-i18n="nav.l2">함께 걷는 길</a></li>
-      <li><a href="#technology" data-i18n="nav.l3">보조공학</a></li>
-      <li><a href="#support" data-i18n="nav.l5">지원 제도</a></li>
-      <li><a href="#stories" data-i18n="nav.l4">희망 스토리</a></li>
+      <li><a href="#immediate" data-i18n="nav.l1">ì§ê¸ ëì</a></li>
+      <li><a href="#journey" data-i18n="nav.l2">í¨ê» ê±·ë ê¸¸</a></li>
+      <li><a href="#technology" data-i18n="nav.l3">ë³´ì¡°ê³µí</a></li>
+      <li><a href="#support" data-i18n="nav.l5">ì§ì ì ë</a></li>
+      <li><a href="#stories" data-i18n="nav.l4">í¬ë§ ì¤í ë¦¬</a></li>
     </ul>
     <div style="display:flex;align-items:center;gap:16px">
-      <a href="#dotpad" class="nav-cta" data-i18n="nav.cta">체험 신청</a>
-      <div class="lang-switch" role="group" aria-label="언어 선택">
+      <a href="#dotpad" class="nav-cta" data-i18n="nav.cta">ì²´í ì ì²­</a>
+      <div class="lang-switch" role="group" aria-label="ì¸ì´ ì í">
         <button class="lang-btn active" id="btn-ko" onclick="setLang('ko')" aria-pressed="true">KO</button>
         <span class="lang-sep">|</span>
         <button class="lang-btn" id="btn-en" onclick="setLang('en')" aria-pressed="false">EN</button>
@@ -498,34 +498,34 @@
   </div>
 </nav>
 
-<!-- ── Hero ── -->
+<!-- ââ Hero ââ -->
 <header class="hero" role="banner">
   <div class="hero-inner">
     <div class="hero-text">
-      <p class="hero-eyebrow" data-i18n="hero.eyebrow">후천적 시각장애인과 가족을 위한 첫걸음 가이드</p>
-      <h1 class="hero-h1" data-i18n="hero.h1">당신의 시야가 바뀌었습니다.<br><em>하지만 삶이 멈출 필요는 없습니다.</em></h1>
-      <p class="hero-sub" data-i18n="hero.sub">첫 100일 가이드는 최근 시력을 잃은 분과 그 곁에 선 가족을 위한 안내 플랫폼입니다. 여기서 시작하세요.</p>
+      <p class="hero-eyebrow" data-i18n="hero.eyebrow">íì²ì  ìê°ì¥ì ì¸ê³¼ ê°ì¡±ì ìí ì²«ê±¸ì ê°ì´ë</p>
+      <h1 class="hero-h1" data-i18n="hero.h1">ë¹ì ì ìì¼ê° ë°ëììµëë¤.<br><em>íì§ë§ ì¶ì´ ë©ì¶ íìë ììµëë¤.</em></h1>
+      <p class="hero-sub" data-i18n="hero.sub">ì²« 100ì¼ ê°ì´ëë ìµê·¼ ìë ¥ì ìì ë¶ê³¼ ê·¸ ê³ì ì  ê°ì¡±ì ìí ìë´ íë«í¼ìëë¤. ì¬ê¸°ì ììíì¸ì.</p>
       <div class="hero-actions">
-        <a href="#immediate" class="btn-solid" data-i18n="hero.btn1">어디서 시작해야 하나요?</a>
-        <a href="#journey" class="btn-ghost" data-i18n="hero.btn2">단계별 가이드 보기</a>
+        <a href="#immediate" class="btn-solid" data-i18n="hero.btn1">ì´ëì ììí´ì¼ íëì?</a>
+        <a href="#journey" class="btn-ghost" data-i18n="hero.btn2">ë¨ê³ë³ ê°ì´ë ë³´ê¸°</a>
       </div>
     </div>
     <div class="hero-stats" role="region" aria-label="Key facts">
       <div class="hero-stat">
         <div class="stat-num">100</div>
-        <div class="stat-label" data-i18n="hero.s1">이 가이드가<br>다루는 일수</div>
+        <div class="stat-label" data-i18n="hero.s1">ì´ ê°ì´ëê°<br>ë¤ë£¨ë ì¼ì</div>
       </div>
       <div class="hero-stat">
         <div class="stat-num">3</div>
-        <div class="stat-label" data-i18n="hero.s2">실용 행동 항목이<br>있는 단계</div>
+        <div class="stat-label" data-i18n="hero.s2">ì¤ì© íë í­ëª©ì´<br>ìë ë¨ê³</div>
       </div>
       <div class="hero-stat">
         <div class="stat-num">10+</div>
-        <div class="stat-label" data-i18n="hero.s3">실제 회복<br>오디오 스토리</div>
+        <div class="stat-label" data-i18n="hero.s3">ì¤ì  íë³µ<br>ì¤ëì¤ ì¤í ë¦¬</div>
       </div>
       <div class="hero-stat">
         <div class="stat-num">0</div>
-        <div class="stat-label" data-i18n="hero.s4">필요한<br>사전 경험</div>
+        <div class="stat-label" data-i18n="hero.s4">íìí<br>ì¬ì  ê²½í</div>
       </div>
     </div>
   </div>
@@ -533,14 +533,14 @@
 
 <main id="main">
 
-<!-- ── Section 1: Immediate Help ── -->
+<!-- ââ Section 1: Immediate Help ââ -->
 <section class="section" id="immediate" aria-labelledby="imm-title">
   <div class="section-inner">
     <div class="section-header">
-      <p class="section-label" data-i18n="s1.label">긴급 안내</p>
+      <p class="section-label" data-i18n="s1.label">ê¸´ê¸ ìë´</p>
       <div class="section-right">
-        <h2 class="section-title" id="imm-title" data-i18n="s1.title">지금 막막하신가요?</h2>
-        <p class="section-desc" data-i18n="s1.desc">진단을 막 받으셨다면, 여기서 시작하세요. 오늘 챙겨야 할 세 가지.</p>
+        <h2 class="section-title" id="imm-title" data-i18n="s1.title">ì§ê¸ ë§ë§íì ê°ì?</h2>
+        <p class="section-desc" data-i18n="s1.desc">ì§ë¨ì ë§ ë°ì¼ì¨ë¤ë©´, ì¬ê¸°ì ììíì¸ì. ì¤ë ì±ê²¨ì¼ í  ì¸ ê°ì§.</p>
       </div>
     </div>
 
@@ -548,47 +548,47 @@
 
       <div class="imm-cell" role="listitem">
         <div class="cell-index">01</div>
-        <h3 class="cell-title" data-i18n="s1.c1.title">오늘 당장 해야 할 일 3가지</h3>
-        <p class="cell-body" data-i18n="s1.c1.body">진단 직후 24시간은 혼란스럽습니다. 가장 중요한 것들을 정리했습니다.</p>
+        <h3 class="cell-title" data-i18n="s1.c1.title">ì¤ë ë¹ì¥ í´ì¼ í  ì¼ 3ê°ì§</h3>
+        <p class="cell-body" data-i18n="s1.c1.body">ì§ë¨ ì§í 24ìê°ì í¼ëì¤ë½ìµëë¤. ê°ì¥ ì¤ìí ê²ë¤ì ì ë¦¬íìµëë¤.</p>
         <ul class="checklist">
-          <li data-i18n="s1.c1.l1">담당 의사에게 다음 진료 일정 확인하기</li>
-          <li data-i18n="s1.c1.l2">가족 중 주요 연락 담당자 1명 정하기</li>
-          <li data-i18n="s1.c1.l3">가까운 장애인복지관 상담 예약</li>
+          <li data-i18n="s1.c1.l1">ë´ë¹ ìì¬ìê² ë¤ì ì§ë£ ì¼ì  íì¸íê¸°</li>
+          <li data-i18n="s1.c1.l2">ê°ì¡± ì¤ ì£¼ì ì°ë½ ë´ë¹ì 1ëª ì íê¸°</li>
+          <li data-i18n="s1.c1.l3">ê°ê¹ì´ ì¥ì ì¸ë³µì§ê´ ìë´ ìì½</li>
         </ul>
       </div>
 
       <div class="imm-cell" role="listitem">
         <div class="cell-index">02</div>
-        <h3 class="cell-title" data-i18n="s1.c2.title">24시간 연결됩니다</h3>
-        <p class="cell-body" data-i18n="s1.c2.body">업무 시간을 기다릴 필요가 없습니다. 지금 바로 연결됩니다.</p>
+        <h3 class="cell-title" data-i18n="s1.c2.title">24ìê° ì°ê²°ë©ëë¤</h3>
+        <p class="cell-body" data-i18n="s1.c2.body">ìë¬´ ìê°ì ê¸°ë¤ë¦´ íìê° ììµëë¤. ì§ê¸ ë°ë¡ ì°ê²°ë©ëë¤.</p>
         <div class="hotline-list">
           <div class="hotline-entry">
             <div class="h-num">1393</div>
-            <div class="h-name" data-i18n="s1.h1">위기 상담 전화</div>
+            <div class="h-name" data-i18n="s1.h1">ìê¸° ìë´ ì í</div>
           </div>
           <div class="hotline-entry">
             <div class="h-num">129</div>
-            <div class="h-name" data-i18n="s1.h2">보건복지상담센터</div>
+            <div class="h-name" data-i18n="s1.h2">ë³´ê±´ë³µì§ìë´ì¼í°</div>
           </div>
         </div>
       </div>
 
       <div class="imm-cell" role="listitem">
         <div class="cell-index">03</div>
-        <h3 class="cell-title" data-i18n="s1.c3.title">초기 대응 매뉴얼</h3>
-        <p class="cell-body" data-i18n="s1.c3.body">처음 30일을 위한 오디오 가이드 — 오디오와 PDF로 제공됩니다.</p>
+        <h3 class="cell-title" data-i18n="s1.c3.title">ì´ê¸° ëì ë§¤ë´ì¼</h3>
+        <p class="cell-body" data-i18n="s1.c3.body">ì²ì 30ì¼ì ìí ì¤ëì¤ ê°ì´ë â ì¤ëì¤ì PDFë¡ ì ê³µë©ëë¤.</p>
         <div class="audio-wrap" role="region" style="margin-bottom:24px">
-          <button class="a-play" aria-label="재생" onclick="this.textContent=this.textContent==='▶'?'⏸':'▶'">▶</button>
+          <button class="a-play" aria-label="ì¬ì" onclick="this.textContent=this.textContent==='â¶'?'â¸':'â¶'">â¶</button>
           <div class="a-info">
-            <div class="a-title" data-i18n="s1.audio">초기 대응 매뉴얼 — 오디오 가이드</div>
+            <div class="a-title" data-i18n="s1.audio">ì´ê¸° ëì ë§¤ë´ì¼ â ì¤ëì¤ ê°ì´ë</div>
             <div class="a-bar" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">
               <div class="a-fill"></div>
             </div>
           </div>
           <span class="a-time">4:12</span>
-          <button class="a-speed" onclick="cycleSpeed(this)">1×</button>
+          <button class="a-speed" onclick="cycleSpeed(this)">1Ã</button>
         </div>
-        <a href="#" class="link-arrow" data-i18n="s1.pdf">PDF 다운로드 <span aria-hidden="true">→</span></a>
+        <a href="#" class="link-arrow" data-i18n="s1.pdf">PDF ë¤ì´ë¡ë <span aria-hidden="true">â</span></a>
       </div>
 
     </div>
@@ -597,23 +597,23 @@
     <div style="margin-top:0;border:1px solid var(--rule);border-top:none;display:grid;grid-template-columns:200px 1fr;gap:80px;padding:40px 36px">
       <div>
         <div class="cell-index" style="margin-bottom:0">04</div>
-        <h3 class="cell-title" style="margin-top:8px" data-i18n="s1.c4.title">가족 여러분께</h3>
+        <h3 class="cell-title" style="margin-top:8px" data-i18n="s1.c4.title">ê°ì¡± ì¬ë¬ë¶ê»</h3>
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px">
         <div>
-          <p style="font-size:17px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--light);margin-bottom:16px" data-i18n="s1.say">이렇게 말하세요</p>
+          <p style="font-size:17px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--light);margin-bottom:16px" data-i18n="s1.say">ì´ë ê² ë§íì¸ì</p>
           <ul class="checklist">
-            <li data-i18n="s1.say1">"같이 방법을 찾아보자."</li>
-            <li data-i18n="s1.say2">"아직 할 수 있는 게 정말 많아."</li>
-            <li data-i18n="s1.say3">"내가 여기 있어. 한 단계씩 같이 해결하자."</li>
+            <li data-i18n="s1.say1">"ê°ì´ ë°©ë²ì ì°¾ìë³´ì."</li>
+            <li data-i18n="s1.say2">"ìì§ í  ì ìë ê² ì ë§ ë§ì."</li>
+            <li data-i18n="s1.say3">"ë´ê° ì¬ê¸° ìì´. í ë¨ê³ì© ê°ì´ í´ê²°íì."</li>
           </ul>
         </div>
         <div>
-          <p style="font-size:17px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--light);margin-bottom:16px" data-i18n="s1.avoid">피해야 할 말</p>
+          <p style="font-size:17px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--light);margin-bottom:16px" data-i18n="s1.avoid">í¼í´ì¼ í  ë§</p>
           <ul class="checklist">
-            <li data-i18n="s1.avoid1">"왜 이렇게 됐어?" — 원인 추궁은 고통을 더합니다</li>
-            <li data-i18n="s1.avoid2">"괜찮아질 거야" — 근거 없는 위로는 신뢰를 무너뜨립니다</li>
-            <li data-i18n="s1.avoid3">침묵 — 고립이 가장 해로운 반응입니다</li>
+            <li data-i18n="s1.avoid1">"ì ì´ë ê² ëì´?" â ìì¸ ì¶ê¶ì ê³ íµì ëí©ëë¤</li>
+            <li data-i18n="s1.avoid2">"ê´ì°®ìì§ ê±°ì¼" â ê·¼ê±° ìë ìë¡ë ì ë¢°ë¥¼ ë¬´ëë¨ë¦½ëë¤</li>
+            <li data-i18n="s1.avoid3">ì¹¨ë¬µ â ê³ ë¦½ì´ ê°ì¥ í´ë¡ì´ ë°ììëë¤</li>
           </ul>
         </div>
       </div>
@@ -622,14 +622,14 @@
   </div>
 </section>
 
-<!-- ── Section 2: The Journey ── -->
+<!-- ââ Section 2: The Journey ââ -->
 <section class="section" id="journey" aria-labelledby="journey-title" style="background:var(--bg-off)">
   <div class="section-inner">
     <div class="section-header">
-      <p class="section-label" data-i18n="s2.label">단계별 가이드</p>
+      <p class="section-label" data-i18n="s2.label">ë¨ê³ë³ ê°ì´ë</p>
       <div class="section-right">
-        <h2 class="section-title" id="journey-title" data-i18n="s2.title">첫 100일</h2>
-        <p class="section-desc" data-i18n="s2.desc">여정을 세 단계로 나눴습니다. 함께 읽어보세요 — 각 항목에는 당사자와 가족을 위한 행동 항목이 있습니다.</p>
+        <h2 class="section-title" id="journey-title" data-i18n="s2.title">ì²« 100ì¼</h2>
+        <p class="section-desc" data-i18n="s2.desc">ì¬ì ì ì¸ ë¨ê³ë¡ ëë´ìµëë¤. í¨ê» ì½ì´ë³´ì¸ì â ê° í­ëª©ìë ë¹ì¬ìì ê°ì¡±ì ìí íë í­ëª©ì´ ììµëë¤.</p>
       </div>
     </div>
 
@@ -637,102 +637,102 @@
 
       <div class="t-row" role="listitem">
         <div class="t-left">
-          <div class="t-phase" data-i18n="s2.p1">1단계</div>
-          <div class="t-days" data-i18n="s2.d1">Day<br>1—7</div>
-          <div class="t-title" data-i18n="s2.t1">심리 안정 &amp; 안전한 집 만들기</div>
+          <div class="t-phase" data-i18n="s2.p1">1ë¨ê³</div>
+          <div class="t-days" data-i18n="s2.d1">Day<br>1â7</div>
+          <div class="t-title" data-i18n="s2.t1">ì¬ë¦¬ ìì  &amp; ìì í ì§ ë§ë¤ê¸°</div>
         </div>
         <div class="t-right">
           <div class="t-grid">
             <div class="t-item">
-              <div class="t-who" data-i18n="who.self">당사자</div>
-              <div class="t-text" data-i18n="s2.1.i1">스마트폰에서 VoiceOver(iOS) 또는 TalkBack(Android) 켜기 — 이 사이트에서 오디오 튜토리얼 제공</div>
+              <div class="t-who" data-i18n="who.self">ë¹ì¬ì</div>
+              <div class="t-text" data-i18n="s2.1.i1">ì¤ë§í¸í°ìì VoiceOver(iOS) ëë TalkBack(Android) ì¼ê¸° â ì´ ì¬ì´í¸ìì ì¤ëì¤ íí ë¦¬ì¼ ì ê³µ</div>
             </div>
             <div class="t-item">
-              <div class="t-who" data-i18n="who.family">가족</div>
-              <div class="t-text" data-i18n="s2.1.i2">집 안 위험물 제거: 날카로운 물건, 어두운 복도, 문턱. 균일하고 밝은 조명으로 교체</div>
+              <div class="t-who" data-i18n="who.family">ê°ì¡±</div>
+              <div class="t-text" data-i18n="s2.1.i2">ì§ ì ìíë¬¼ ì ê±°: ë ì¹´ë¡ì´ ë¬¼ê±´, ì´ëì´ ë³µë, ë¬¸í±. ê· ì¼íê³  ë°ì ì¡°ëªì¼ë¡ êµì²´</div>
             </div>
             <div class="t-item">
-              <div class="t-who" data-i18n="who.together">함께</div>
-              <div class="t-text" data-i18n="s2.1.i3">가까운 시각장애인복지관 방문 상담 예약</div>
+              <div class="t-who" data-i18n="who.together">í¨ê»</div>
+              <div class="t-text" data-i18n="s2.1.i3">ê°ê¹ì´ ìê°ì¥ì ì¸ë³µì§ê´ ë°©ë¬¸ ìë´ ìì½</div>
             </div>
             <div class="t-item">
-              <div class="t-who" data-i18n="who.family">가족</div>
-              <div class="t-text" data-i18n="s2.1.i4">장애 등록 절차 시작 — 주민센터 또는 병원 사회사업팀 연락</div>
+              <div class="t-who" data-i18n="who.family">ê°ì¡±</div>
+              <div class="t-text" data-i18n="s2.1.i4">ì¥ì  ë±ë¡ ì ì°¨ ìì â ì£¼ë¯¼ì¼í° ëë ë³ì ì¬íì¬ìí ì°ë½</div>
             </div>
           </div>
           <button class="t-expand" onclick="expandRow(this)" aria-expanded="false">
-            <span class="t-expand-icon">+</span> <span data-i18n="s2.exp1">1단계 전체 가이드</span>
+            <span class="t-expand-icon">+</span> <span data-i18n="s2.exp1">1ë¨ê³ ì ì²´ ê°ì´ë</span>
           </button>
           <div class="t-body">
-            <p style="font-size:16px;font-weight:300;color:var(--mid);line-height:1.8" data-i18n="s2.body1">첫 주의 감정적 충격은 자연스러운 반응입니다. 정보 과부하보다 신체 안전과 감정적 동행을 우선하세요. 하루에 한 번의 대화로도 충분합니다. 쉬는 것은 포기가 아니라, 다시 일어설 준비입니다.</p>
+            <p style="font-size:16px;font-weight:300;color:var(--mid);line-height:1.8" data-i18n="s2.body1">ì²« ì£¼ì ê°ì ì  ì¶©ê²©ì ìì°ì¤ë¬ì´ ë°ììëë¤. ì ë³´ ê³¼ë¶íë³´ë¤ ì ì²´ ìì ê³¼ ê°ì ì  ëíì ì°ì íì¸ì. íë£¨ì í ë²ì ëíë¡ë ì¶©ë¶í©ëë¤. ì¬ë ê²ì í¬ê¸°ê° ìëë¼, ë¤ì ì¼ì´ì¤ ì¤ë¹ìëë¤.</p>
           </div>
         </div>
       </div>
 
       <div class="t-row" role="listitem">
         <div class="t-left">
-          <div class="t-phase" data-i18n="s2.p2">2단계</div>
-          <div class="t-days" data-i18n="s2.d2">Day<br>8—30</div>
-          <div class="t-title" data-i18n="s2.t2">스마트폰 첫걸음 &amp; 행정 절차 시작</div>
+          <div class="t-phase" data-i18n="s2.p2">2ë¨ê³</div>
+          <div class="t-days" data-i18n="s2.d2">Day<br>8â30</div>
+          <div class="t-title" data-i18n="s2.t2">ì¤ë§í¸í° ì²«ê±¸ì &amp; íì  ì ì°¨ ìì</div>
         </div>
         <div class="t-right">
           <div class="t-grid">
             <div class="t-item">
-              <div class="t-who" data-i18n="who.self">당사자</div>
-              <div class="t-text" data-i18n="s2.2.i1">스크린 리더로 전화 걸기, 문자 읽기, 메신저 앱 사용 연습</div>
+              <div class="t-who" data-i18n="who.self">ë¹ì¬ì</div>
+              <div class="t-text" data-i18n="s2.2.i1">ì¤í¬ë¦° ë¦¬ëë¡ ì í ê±¸ê¸°, ë¬¸ì ì½ê¸°, ë©ì ì  ì± ì¬ì© ì°ìµ</div>
             </div>
             <div class="t-item">
-              <div class="t-who" data-i18n="who.family">가족</div>
-              <div class="t-text" data-i18n="s2.2.i2">주민센터 또는 병원 사회사업팀에 장애 등록 신청서 제출</div>
+              <div class="t-who" data-i18n="who.family">ê°ì¡±</div>
+              <div class="t-text" data-i18n="s2.2.i2">ì£¼ë¯¼ì¼í° ëë ë³ì ì¬íì¬ìíì ì¥ì  ë±ë¡ ì ì²­ì ì ì¶</div>
             </div>
             <div class="t-item">
-              <div class="t-who" data-i18n="who.together">함께</div>
-              <div class="t-text" data-i18n="s2.2.i3">지역 복지관 재활 프로그램 등록 상담</div>
+              <div class="t-who" data-i18n="who.together">í¨ê»</div>
+              <div class="t-text" data-i18n="s2.2.i3">ì§ì­ ë³µì§ê´ ì¬í íë¡ê·¸ë¨ ë±ë¡ ìë´</div>
             </div>
             <div class="t-item">
-              <div class="t-who" data-i18n="who.self">당사자</div>
-              <div class="t-text" data-i18n="s2.2.i4">AI로 사진 속 텍스트 읽기, 이미지 묘사 받기 — 실습 포함</div>
+              <div class="t-who" data-i18n="who.self">ë¹ì¬ì</div>
+              <div class="t-text" data-i18n="s2.2.i4">AIë¡ ì¬ì§ ì íì¤í¸ ì½ê¸°, ì´ë¯¸ì§ ë¬ì¬ ë°ê¸° â ì¤ìµ í¬í¨</div>
             </div>
           </div>
           <button class="t-expand" onclick="expandRow(this)" aria-expanded="false">
-            <span class="t-expand-icon">+</span> <span data-i18n="s2.exp2">2단계 전체 가이드</span>
+            <span class="t-expand-icon">+</span> <span data-i18n="s2.exp2">2ë¨ê³ ì ì²´ ê°ì´ë</span>
           </button>
           <div class="t-body">
-            <p style="font-size:16px;font-weight:300;color:var(--mid);line-height:1.8" data-i18n="s2.body2">2단계는 주도성을 되찾는 과정입니다. 음성 메시지 보내기, 혼자 부엌 가기 같은 작은 성취도 굉장히 중요합니다. 함께 축하하세요.</p>
+            <p style="font-size:16px;font-weight:300;color:var(--mid);line-height:1.8" data-i18n="s2.body2">2ë¨ê³ë ì£¼ëì±ì ëì°¾ë ê³¼ì ìëë¤. ìì± ë©ìì§ ë³´ë´ê¸°, í¼ì ë¶ì ê°ê¸° ê°ì ìì ì±ì·¨ë êµì¥í ì¤ìí©ëë¤. í¨ê» ì¶ííì¸ì.</p>
           </div>
         </div>
       </div>
 
       <div class="t-row" role="listitem">
         <div class="t-left">
-          <div class="t-phase" data-i18n="s2.p3">3단계</div>
-          <div class="t-days" data-i18n="s2.d3">Day<br>31—100</div>
-          <div class="t-title" data-i18n="s2.t3">보조공학 탐색 &amp; 사회 복귀 준비</div>
+          <div class="t-phase" data-i18n="s2.p3">3ë¨ê³</div>
+          <div class="t-days" data-i18n="s2.d3">Day<br>31â100</div>
+          <div class="t-title" data-i18n="s2.t3">ë³´ì¡°ê³µí íì &amp; ì¬í ë³µê· ì¤ë¹</div>
         </div>
         <div class="t-right">
           <div class="t-grid">
             <div class="t-item">
-              <div class="t-who" data-i18n="who.self">당사자</div>
-              <div class="t-text" data-i18n="s2.3.i1">이 가이드를 통해 닷패드 및 기타 보조기기 무료 체험 신청</div>
+              <div class="t-who" data-i18n="who.self">ë¹ì¬ì</div>
+              <div class="t-text" data-i18n="s2.3.i1">ì´ ê°ì´ëë¥¼ íµí´ ë·í¨ë ë° ê¸°í ë³´ì¡°ê¸°ê¸° ë¬´ë£ ì²´í ì ì²­</div>
             </div>
             <div class="t-item">
-              <div class="t-who" data-i18n="who.family">가족</div>
-              <div class="t-text" data-i18n="s2.3.i2">장애인복지관 및 국민건강보험을 통한 보조기기 지원금 신청</div>
+              <div class="t-who" data-i18n="who.family">ê°ì¡±</div>
+              <div class="t-text" data-i18n="s2.3.i2">ì¥ì ì¸ë³µì§ê´ ë° êµ­ë¯¼ê±´ê°ë³´íì íµí ë³´ì¡°ê¸°ê¸° ì§ìê¸ ì ì²­</div>
             </div>
             <div class="t-item">
-              <div class="t-who" data-i18n="who.together">함께</div>
-              <div class="t-text" data-i18n="s2.3.i3">취업 또는 복학을 위한 직업재활 상담 시작</div>
+              <div class="t-who" data-i18n="who.together">í¨ê»</div>
+              <div class="t-text" data-i18n="s2.3.i3">ì·¨ì ëë ë³µíì ìí ì§ìì¬í ìë´ ìì</div>
             </div>
             <div class="t-item">
-              <div class="t-who" data-i18n="who.self">당사자</div>
-              <div class="t-text" data-i18n="s2.3.i4">자조모임 참여 — 같은 경험을 가진 사람들과의 연결이 가장 강력한 한 걸음</div>
+              <div class="t-who" data-i18n="who.self">ë¹ì¬ì</div>
+              <div class="t-text" data-i18n="s2.3.i4">ìì¡°ëª¨ì ì°¸ì¬ â ê°ì ê²½íì ê°ì§ ì¬ëë¤ê³¼ì ì°ê²°ì´ ê°ì¥ ê°ë ¥í í ê±¸ì</div>
             </div>
           </div>
           <button class="t-expand" onclick="expandRow(this)" aria-expanded="false">
-            <span class="t-expand-icon">+</span> <span data-i18n="s2.exp3">3단계 전체 가이드</span>
+            <span class="t-expand-icon">+</span> <span data-i18n="s2.exp3">3ë¨ê³ ì ì²´ ê°ì´ë</span>
           </button>
           <div class="t-body">
-            <p style="font-size:16px;font-weight:300;color:var(--mid);line-height:1.8" data-i18n="s2.body3">100일째가 되면, 대부분의 분들이 자신이 얼마나 많이 배우고 적응했는지 놀라게 됩니다. 목표는 예전의 삶으로 돌아가는 것이 아닙니다 — 새로운 도구와 함께, 더 넓어진 가능성으로 새 삶을 만드는 것입니다.</p>
+            <p style="font-size:16px;font-weight:300;color:var(--mid);line-height:1.8" data-i18n="s2.body3">100ì¼ì§¸ê° ëë©´, ëë¶ë¶ì ë¶ë¤ì´ ìì ì´ ì¼ë§ë ë§ì´ ë°°ì°ê³  ì ìíëì§ ëë¼ê² ë©ëë¤. ëª©íë ìì ì ì¶ì¼ë¡ ëìê°ë ê²ì´ ìëëë¤ â ìë¡ì´ ëêµ¬ì í¨ê», ë ëì´ì§ ê°ë¥ì±ì¼ë¡ ì ì¶ì ë§ëë ê²ìëë¤.</p>
           </div>
         </div>
       </div>
@@ -741,73 +741,73 @@
   </div>
 </section>
 
-<!-- ── Section 3: Technology ── -->
+<!-- ââ Section 3: Technology ââ -->
 <section class="section" id="technology" aria-labelledby="tech-title">
   <div class="section-inner">
     <div class="section-header">
-      <p class="section-label" data-i18n="s3.label">보조공학</p>
+      <p class="section-label" data-i18n="s3.label">ë³´ì¡°ê³µí</p>
       <div class="section-right">
-        <h2 class="section-title" id="tech-title" data-i18n="s3.title">기술이 새로운<br>눈이 됩니다</h2>
-        <p class="section-desc" data-i18n="s3.desc">첫날부터 점자를 배울 필요는 없습니다. 손에 있는 도구들이 일상 기능의 대부분을 즉시 회복시켜 줄 수 있습니다.</p>
+        <h2 class="section-title" id="tech-title" data-i18n="s3.title">ê¸°ì ì´ ìë¡ì´<br>ëì´ ë©ëë¤</h2>
+        <p class="section-desc" data-i18n="s3.desc">ì²«ë ë¶í° ì ìë¥¼ ë°°ì¸ íìë ììµëë¤. ìì ìë ëêµ¬ë¤ì´ ì¼ì ê¸°ë¥ì ëë¶ë¶ì ì¦ì íë³µìì¼ ì¤ ì ììµëë¤.</p>
       </div>
     </div>
 
     <div class="tech-cols">
       <div class="tech-col">
         <div class="tech-num">01</div>
-        <h3 class="tech-title" data-i18n="s3.t1">스마트폰 접근성</h3>
-        <p class="tech-body" data-i18n="s3.b1">VoiceOver와 TalkBack은 모든 아이폰과 안드로이드 기기에 기본 탑재되어 있습니다. 오디오 튜토리얼이 처음부터 전화, 문자, 웹 브라우징까지 안내합니다.</p>
-        <button class="link-arrow" style="background:none;border-top:none;border-left:none;border-right:none;cursor:pointer;font-family:inherit" data-i18n="s3.l1">▶ &nbsp;오디오 튜토리얼 시작</button>
+        <h3 class="tech-title" data-i18n="s3.t1">ì¤ë§í¸í° ì ê·¼ì±</h3>
+        <p class="tech-body" data-i18n="s3.b1">VoiceOverì TalkBackì ëª¨ë  ìì´í°ê³¼ ìëë¡ì´ë ê¸°ê¸°ì ê¸°ë³¸ íì¬ëì´ ììµëë¤. ì¤ëì¤ íí ë¦¬ì¼ì´ ì²ìë¶í° ì í, ë¬¸ì, ì¹ ë¸ë¼ì°ì§ê¹ì§ ìë´í©ëë¤.</p>
+        <button class="link-arrow" style="background:none;border-top:none;border-left:none;border-right:none;cursor:pointer;font-family:inherit" data-i18n="s3.l1">â¶ &nbsp;ì¤ëì¤ íí ë¦¬ì¼ ìì</button>
       </div>
       <div class="tech-col">
         <div class="tech-num">02</div>
-        <h3 class="tech-title" data-i18n="s3.t2">AI 협업자</h3>
-        <p class="tech-body" data-i18n="s3.b2">현대 AI는 사진의 텍스트를 읽고, 이미지와 장면을 묘사하고, 길 안내를 제공하고, 책을 소리로 읽어줍니다. 10분 안에 설정하는 방법을 알려드립니다.</p>
-        <a href="#" class="link-arrow" data-i18n="s3.l2">AI 가이드 보기 &nbsp;→</a>
+        <h3 class="tech-title" data-i18n="s3.t2">AI íìì</h3>
+        <p class="tech-body" data-i18n="s3.b2">íë AIë ì¬ì§ì íì¤í¸ë¥¼ ì½ê³ , ì´ë¯¸ì§ì ì¥ë©´ì ë¬ì¬íê³ , ê¸¸ ìë´ë¥¼ ì ê³µíê³ , ì±ì ìë¦¬ë¡ ì½ì´ì¤ëë¤. 10ë¶ ìì ì¤ì íë ë°©ë²ì ìë ¤ëë¦½ëë¤.</p>
+        <a href="#" class="link-arrow" data-i18n="s3.l2">AI ê°ì´ë ë³´ê¸° &nbsp;â</a>
       </div>
       <div class="tech-col">
         <div class="tech-num">03</div>
-        <h3 class="tech-title" data-i18n="s3.t3">시각 세계를 손으로 만지다</h3>
-        <p class="tech-body" data-i18n="s3.b3">닷패드는 사진, 지도, 차트, 도표를 촉각 형태로 변환합니다. 보이던 공간 정보를 느낄 수 있게 해줍니다. 점자 지식이 없어도 시작할 수 있습니다.</p>
-        <a href="#dotpad" class="link-arrow" data-i18n="s3.l3">닷패드 알아보기 &nbsp;→</a>
+        <h3 class="tech-title" data-i18n="s3.t3">ìê° ì¸ê³ë¥¼ ìì¼ë¡ ë§ì§ë¤</h3>
+        <p class="tech-body" data-i18n="s3.b3">ë·í¨ëë ì¬ì§, ì§ë, ì°¨í¸, ëíë¥¼ ì´ê° ííë¡ ë³íí©ëë¤. ë³´ì´ë ê³µê° ì ë³´ë¥¼ ëë ì ìê² í´ì¤ëë¤. ì ì ì§ìì´ ìì´ë ììí  ì ììµëë¤.</p>
+        <a href="#dotpad" class="link-arrow" data-i18n="s3.l3">ë·í¨ë ììë³´ê¸° &nbsp;â</a>
       </div>
     </div>
 
     <!-- Dot Pad feature -->
     <div class="dotpad-row" id="dotpad" role="article" aria-labelledby="dp-title">
       <div class="dotpad-left">
-        <p class="dotpad-tag" data-i18n="dp.tag">추천 보조기기</p>
-        <h3 class="dotpad-title" id="dp-title" data-i18n="dp.title">닷패드 —<br>보이던 것을 다시 느끼다</h3>
-        <p class="dotpad-body" data-i18n="dp.body">닷패드는 점자 디스플레이가 아닙니다. 사진, 지도, 그래프, 도면 등 모든 시각 콘텐츠를 수천 개의 개별 이동 핀을 사용해 실시간으로 만질 수 있는 표면으로 변환하는 완전한 촉각 스마트 스크린입니다.</p>
+        <p class="dotpad-tag" data-i18n="dp.tag">ì¶ì² ë³´ì¡°ê¸°ê¸°</p>
+        <h3 class="dotpad-title" id="dp-title" data-i18n="dp.title">ë·í¨ë â<br>ë³´ì´ë ê²ì ë¤ì ëë¼ë¤</h3>
+        <p class="dotpad-body" data-i18n="dp.body">ë·í¨ëë ì ì ëì¤íë ì´ê° ìëëë¤. ì¬ì§, ì§ë, ê·¸ëí, ëë©´ ë± ëª¨ë  ìê° ì½íì¸ ë¥¼ ìì² ê°ì ê°ë³ ì´ë íì ì¬ì©í´ ì¤ìê°ì¼ë¡ ë§ì§ ì ìë íë©´ì¼ë¡ ë³ííë ìì í ì´ê° ì¤ë§í¸ ì¤í¬ë¦°ìëë¤.</p>
         <ul class="dotpad-points">
-          <li data-i18n="dp.p1">스마트폰 화면을 촉각 표면으로 미러링</li>
-          <li data-i18n="dp.p2">지하철 노선도·건물 배치도·차트를 손으로 탐색</li>
-          <li data-i18n="dp.p3">점자 지식 없이도 바로 사용 가능</li>
-          <li data-i18n="dp.p4">정부 보조금 프로그램으로 이용 가능</li>
+          <li data-i18n="dp.p1">ì¤ë§í¸í° íë©´ì ì´ê° íë©´ì¼ë¡ ë¯¸ë¬ë§</li>
+          <li data-i18n="dp.p2">ì§íì²  ë¸ì ëÂ·ê±´ë¬¼ ë°°ì¹ëÂ·ì°¨í¸ë¥¼ ìì¼ë¡ íì</li>
+          <li data-i18n="dp.p3">ì ì ì§ì ìì´ë ë°ë¡ ì¬ì© ê°ë¥</li>
+          <li data-i18n="dp.p4">ì ë¶ ë³´ì¡°ê¸ íë¡ê·¸ë¨ì¼ë¡ ì´ì© ê°ë¥</li>
         </ul>
         <div class="dotpad-actions">
-          <a href="#" class="btn-solid" data-i18n="dp.btn1">무료 체험 신청</a>
-          <a href="#" class="btn-ghost" data-i18n="dp.btn2">렌탈 &amp; 지원금 정보</a>
+          <a href="#" class="btn-solid" data-i18n="dp.btn1">ë¬´ë£ ì²´í ì ì²­</a>
+          <a href="#" class="btn-ghost" data-i18n="dp.btn2">ë í &amp; ì§ìê¸ ì ë³´</a>
         </div>
       </div>
       <div class="dotpad-right">
-        <p class="dp-label" data-i18n="dp.sim">촉각 디스플레이 시뮬레이션</p>
-        <div class="dp-grid" role="img" aria-label="닷패드 핀 그리드 시뮬레이션">
+        <p class="dp-label" data-i18n="dp.sim">ì´ê° ëì¤íë ì´ ìë®¬ë ì´ì</p>
+        <div class="dp-grid" role="img" aria-label="ë·í¨ë í ê·¸ë¦¬ë ìë®¬ë ì´ì">
           <div class="dp-dot on"></div><div class="dp-dot"></div><div class="dp-dot on"></div><div class="dp-dot on"></div><div class="dp-dot"></div>
           <div class="dp-dot"></div><div class="dp-dot on"></div><div class="dp-dot"></div><div class="dp-dot on"></div><div class="dp-dot on"></div>
           <div class="dp-dot on"></div><div class="dp-dot on"></div><div class="dp-dot"></div><div class="dp-dot"></div><div class="dp-dot on"></div>
           <div class="dp-dot"></div><div class="dp-dot on"></div><div class="dp-dot on"></div><div class="dp-dot on"></div><div class="dp-dot"></div>
           <div class="dp-dot on"></div><div class="dp-dot"></div><div class="dp-dot on"></div><div class="dp-dot"></div><div class="dp-dot on"></div>
         </div>
-        <p class="dp-caption" data-i18n="dp.caption">각 핀이 독립적으로 올라가거나 내려가며, 이미지·지도·도표를 손끝으로 읽을 수 있는 물리적 표면으로 렌더링합니다.</p>
+        <p class="dp-caption" data-i18n="dp.caption">ê° íì´ ëë¦½ì ì¼ë¡ ì¬ë¼ê°ê±°ë ë´ë ¤ê°ë©°, ì´ë¯¸ì§Â·ì§ëÂ·ëíë¥¼ ìëì¼ë¡ ì½ì ì ìë ë¬¼ë¦¬ì  íë©´ì¼ë¡ ë ëë§í©ëë¤.</p>
         <div class="dp-stat-row">
           <div>
             <div class="dp-stat-num">2,400</div>
-            <div class="dp-stat-label" data-i18n="dp.sl1">촉각 핀</div>
+            <div class="dp-stat-label" data-i18n="dp.sl1">ì´ê° í</div>
           </div>
           <div>
-            <div class="dp-stat-num" data-i18n="dp.sn2">실시간</div>
-            <div class="dp-stat-label" data-i18n="dp.sl2">렌더링 속도</div>
+            <div class="dp-stat-num" data-i18n="dp.sn2">ì¤ìê°</div>
+            <div class="dp-stat-label" data-i18n="dp.sl2">ë ëë§ ìë</div>
           </div>
         </div>
       </div>
@@ -816,199 +816,199 @@
   </div>
 </section>
 
-<!-- ── Section 5: Support Programs ── -->
+<!-- ââ Section 5: Support Programs ââ -->
 <section class="section" id="support" aria-labelledby="support-title">
   <div class="section-inner">
     <div class="section-header">
-      <p class="section-label" data-i18n="s5.label">보조기기 지원 제도</p>
+      <p class="section-label" data-i18n="s5.label">ë³´ì¡°ê¸°ê¸° ì§ì ì ë</p>
       <div class="section-right">
-        <h2 class="section-title" id="support-title" data-i18n="s5.title">지원금, 어떻게 받나요?</h2>
-        <p class="section-desc" data-i18n="s5.desc">처음 신청하는 분도 이해할 수 있도록 국가별 절차와 지원금액을 한눈에 정리했습니다.</p>
+        <h2 class="section-title" id="support-title" data-i18n="s5.title">ì§ìê¸, ì´ë»ê² ë°ëì?</h2>
+        <p class="section-desc" data-i18n="s5.desc">ì²ì ì ì²­íë ë¶ë ì´í´í  ì ìëë¡ êµ­ê°ë³ ì ì°¨ì ì§ìê¸ì¡ì íëì ì ë¦¬íìµëë¤.</p>
       </div>
     </div>
 
-    <!-- 국가 탭 -->
+    <!-- êµ­ê° í­ -->
     <div class="country-tabs" role="tablist">
       <button class="ctab active" id="ctab-kr" role="tab" aria-selected="true"
-        onclick="switchCountry('kr')" data-i18n="s5.tab.kr">🇰🇷 한국</button>
+        onclick="switchCountry('kr')" data-i18n="s5.tab.kr">ð°ð· íêµ­</button>
       <button class="ctab" id="ctab-us" role="tab" aria-selected="false"
-        onclick="switchCountry('us')" data-i18n="s5.tab.us">🇺🇸 미국</button>
+        onclick="switchCountry('us')" data-i18n="s5.tab.us">ðºð¸ ë¯¸êµ­</button>
     </div>
 
-    <!-- ═══ 한국 ═══ -->
+    <!-- âââ íêµ­ âââ -->
     <div id="support-kr" class="support-content active" role="tabpanel">
 
       <div class="info-box">
-        <div class="info-box-title" data-i18n="s5.kr.tip.title">💡 핵심 원칙</div>
-        <div class="info-box-body" data-i18n="s5.kr.tip.body">장애 등록이 먼저입니다. 등록 후 복지카드를 받아야 대부분의 지원을 신청할 수 있어요.
-        진단 후 주민센터 방문까지 보통 2~3개월 걸리니 빠를수록 좋습니다.</div>
+        <div class="info-box-title" data-i18n="s5.kr.tip.title">ð¡ íµì¬ ìì¹</div>
+        <div class="info-box-body" data-i18n="s5.kr.tip.body">ì¥ì  ë±ë¡ì´ ë¨¼ì ìëë¤. ë±ë¡ í ë³µì§ì¹´ëë¥¼ ë°ìì¼ ëë¶ë¶ì ì§ìì ì ì²­í  ì ìì´ì.
+        ì§ë¨ í ì£¼ë¯¼ì¼í° ë°©ë¬¸ê¹ì§ ë³´íµ 2~3ê°ì ê±¸ë¦¬ë ë¹ ë¥¼ìë¡ ì¢ìµëë¤.</div>
       </div>
 
-      <!-- 신청 흐름 -->
-      <h3 style="font-size:16px;font-weight:500;color:var(--dark);margin-bottom:24px;letter-spacing:0.04em" data-i18n="s5.kr.flow.title">STEP BY STEP — 처음 신청하는 순서</h3>
+      <!-- ì ì²­ íë¦ -->
+      <h3 style="font-size:16px;font-weight:500;color:var(--dark);margin-bottom:24px;letter-spacing:0.04em" data-i18n="s5.kr.flow.title">STEP BY STEP â ì²ì ì ì²­íë ìì</h3>
       <div class="step-flow" role="list">
         <div class="step-item" role="listitem">
           <div class="step-num">1</div>
-          <div class="step-label" data-i18n="s5.kr.s1">안과 진단서</div>
-          <div class="step-sub" data-i18n="s5.kr.s1s">안과 방문, 장애 진단서 발급 요청</div>
+          <div class="step-label" data-i18n="s5.kr.s1">ìê³¼ ì§ë¨ì</div>
+          <div class="step-sub" data-i18n="s5.kr.s1s">ìê³¼ ë°©ë¬¸, ì¥ì  ì§ë¨ì ë°ê¸ ìì²­</div>
         </div>
         <div class="step-item" role="listitem">
           <div class="step-num">2</div>
-          <div class="step-label" data-i18n="s5.kr.s2">주민센터 신청</div>
-          <div class="step-sub" data-i18n="s5.kr.s2s">진단서 지참, 장애 등록 신청</div>
+          <div class="step-label" data-i18n="s5.kr.s2">ì£¼ë¯¼ì¼í° ì ì²­</div>
+          <div class="step-sub" data-i18n="s5.kr.s2s">ì§ë¨ì ì§ì°¸, ì¥ì  ë±ë¡ ì ì²­</div>
         </div>
         <div class="step-item" role="listitem">
           <div class="step-num">3</div>
-          <div class="step-label" data-i18n="s5.kr.s3">국민연금 심사</div>
-          <div class="step-sub" data-i18n="s5.kr.s3s">2~3개월 소요</div>
+          <div class="step-label" data-i18n="s5.kr.s3">êµ­ë¯¼ì°ê¸ ì¬ì¬</div>
+          <div class="step-sub" data-i18n="s5.kr.s3s">2~3ê°ì ìì</div>
         </div>
         <div class="step-item" role="listitem">
           <div class="step-num">4</div>
-          <div class="step-label" data-i18n="s5.kr.s4">복지카드 수령</div>
-          <div class="step-sub" data-i18n="s5.kr.s4s">장애등급 확정</div>
+          <div class="step-label" data-i18n="s5.kr.s4">ë³µì§ì¹´ë ìë ¹</div>
+          <div class="step-sub" data-i18n="s5.kr.s4s">ì¥ì ë±ê¸ íì </div>
         </div>
         <div class="step-item" role="listitem">
           <div class="step-num">5</div>
-          <div class="step-label" data-i18n="s5.kr.s5">보조기기 신청</div>
-          <div class="step-sub" data-i18n="s5.kr.s5s">주민센터 또는 건강보험공단</div>
+          <div class="step-label" data-i18n="s5.kr.s5">ë³´ì¡°ê¸°ê¸° ì ì²­</div>
+          <div class="step-sub" data-i18n="s5.kr.s5s">ì£¼ë¯¼ì¼í° ëë ê±´ê°ë³´íê³µë¨</div>
         </div>
         <div class="step-item" role="listitem">
           <div class="step-num">6</div>
-          <div class="step-label" data-i18n="s5.kr.s6">기기 수령</div>
-          <div class="step-sub" data-i18n="s5.kr.s6s">심사 후 교부 또는 급여 지급</div>
+          <div class="step-label" data-i18n="s5.kr.s6">ê¸°ê¸° ìë ¹</div>
+          <div class="step-sub" data-i18n="s5.kr.s6s">ì¬ì¬ í êµë¶ ëë ê¸ì¬ ì§ê¸</div>
         </div>
       </div>
 
-      <!-- 지원 프로그램 카드 -->
-      <h3 style="font-size:16px;font-weight:500;color:var(--dark);margin-bottom:24px;letter-spacing:0.04em" data-i18n="s5.kr.prog.title">주요 지원 프로그램</h3>
+      <!-- ì§ì íë¡ê·¸ë¨ ì¹´ë -->
+      <h3 style="font-size:16px;font-weight:500;color:var(--dark);margin-bottom:24px;letter-spacing:0.04em" data-i18n="s5.kr.prog.title">ì£¼ì ì§ì íë¡ê·¸ë¨</h3>
       <div class="program-grid">
 
         <div class="program-card">
-          <div class="prog-org" data-i18n="s5.kr.p1.org">보건복지부</div>
-          <div class="prog-name" data-i18n="s5.kr.p1.name">장애인 보조기기 교부사업</div>
-          <div class="prog-who" data-i18n="s5.kr.p1.who">국민기초생활수급자 · 차상위계층 시각장애인</div>
+          <div class="prog-org" data-i18n="s5.kr.p1.org">ë³´ê±´ë³µì§ë¶</div>
+          <div class="prog-name" data-i18n="s5.kr.p1.name">ì¥ì ì¸ ë³´ì¡°ê¸°ê¸° êµë¶ì¬ì</div>
+          <div class="prog-who" data-i18n="s5.kr.p1.who">êµ­ë¯¼ê¸°ì´ìíìê¸ì Â· ì°¨ììê³ì¸µ ìê°ì¥ì ì¸</div>
           <div class="prog-amount">
             <span class="prog-amount-num">100%</span>
-            <span class="prog-amount-unit" data-i18n="s5.kr.p1.unit">기준금액 지원 (수급자) / 80% (차상위)</span>
+            <span class="prog-amount-unit" data-i18n="s5.kr.p1.unit">ê¸°ì¤ê¸ì¡ ì§ì (ìê¸ì) / 80% (ì°¨ìì)</span>
           </div>
           <div class="prog-tags">
-            <span class="prog-tag green" data-i18n="tag.free">무료 신청</span>
-            <span class="prog-tag" data-i18n="tag.community">주민센터</span>
+            <span class="prog-tag green" data-i18n="tag.free">ë¬´ë£ ì ì²­</span>
+            <span class="prog-tag" data-i18n="tag.community">ì£¼ë¯¼ì¼í°</span>
           </div>
         </div>
 
         <div class="program-card">
-          <div class="prog-org" data-i18n="s5.kr.p2.org">국민건강보험공단</div>
-          <div class="prog-name" data-i18n="s5.kr.p2.name">건강보험 보조기기 급여</div>
-          <div class="prog-who" data-i18n="s5.kr.p2.who">장애 등록 시각장애인 (의사 처방 필요)</div>
+          <div class="prog-org" data-i18n="s5.kr.p2.org">êµ­ë¯¼ê±´ê°ë³´íê³µë¨</div>
+          <div class="prog-name" data-i18n="s5.kr.p2.name">ê±´ê°ë³´í ë³´ì¡°ê¸°ê¸° ê¸ì¬</div>
+          <div class="prog-who" data-i18n="s5.kr.p2.who">ì¥ì  ë±ë¡ ìê°ì¥ì ì¸ (ìì¬ ì²ë°© íì)</div>
           <div class="prog-amount">
             <span class="prog-amount-num">80%</span>
-            <span class="prog-amount-unit" data-i18n="s5.kr.p2.unit">건강보험 부담 (본인 20%)</span>
+            <span class="prog-amount-unit" data-i18n="s5.kr.p2.unit">ê±´ê°ë³´í ë¶ë´ (ë³¸ì¸ 20%)</span>
           </div>
           <div class="prog-tags">
-            <span class="prog-tag" data-i18n="tag.nhis">건강보험공단</span>
-            <span class="prog-tag" data-i18n="tag.prescription">처방전 필요</span>
+            <span class="prog-tag" data-i18n="tag.nhis">ê±´ê°ë³´íê³µë¨</span>
+            <span class="prog-tag" data-i18n="tag.prescription">ì²ë°©ì  íì</span>
           </div>
         </div>
 
         <div class="program-card">
-          <div class="prog-org" data-i18n="s5.kr.p3.org">한국장애인고용공단</div>
-          <div class="prog-name" data-i18n="s5.kr.p3.name">직업재활 보조공학기기 지원</div>
-          <div class="prog-who" data-i18n="s5.kr.p3.who">취업 희망 또는 재직 중인 시각장애인</div>
+          <div class="prog-org" data-i18n="s5.kr.p3.org">íêµ­ì¥ì ì¸ê³ ì©ê³µë¨</div>
+          <div class="prog-name" data-i18n="s5.kr.p3.name">ì§ìì¬í ë³´ì¡°ê³µíê¸°ê¸° ì§ì</div>
+          <div class="prog-who" data-i18n="s5.kr.p3.who">ì·¨ì í¬ë§ ëë ì¬ì§ ì¤ì¸ ìê°ì¥ì ì¸</div>
           <div class="prog-amount">
             <span class="prog-amount-num">100%</span>
-            <span class="prog-amount-unit" data-i18n="s5.kr.p3.unit">취업 목적 보조기기 전액 지원</span>
+            <span class="prog-amount-unit" data-i18n="s5.kr.p3.unit">ì·¨ì ëª©ì  ë³´ì¡°ê¸°ê¸° ì ì¡ ì§ì</span>
           </div>
           <div class="prog-tags">
-            <span class="prog-tag green" data-i18n="tag.employment">취업 연계</span>
+            <span class="prog-tag green" data-i18n="tag.employment">ì·¨ì ì°ê³</span>
             <span class="prog-tag" data-i18n="tag.kead">KEAD</span>
           </div>
         </div>
 
         <div class="program-card">
-          <div class="prog-org" data-i18n="s5.kr.p4.org">한국장애인개발원</div>
-          <div class="prog-name" data-i18n="s5.kr.p4.name">보조기기 렌탈 서비스</div>
-          <div class="prog-who" data-i18n="s5.kr.p4.who">구매 부담 없이 먼저 체험하고 싶은 분</div>
+          <div class="prog-org" data-i18n="s5.kr.p4.org">íêµ­ì¥ì ì¸ê°ë°ì</div>
+          <div class="prog-name" data-i18n="s5.kr.p4.name">ë³´ì¡°ê¸°ê¸° ë í ìë¹ì¤</div>
+          <div class="prog-who" data-i18n="s5.kr.p4.who">êµ¬ë§¤ ë¶ë´ ìì´ ë¨¼ì  ì²´ííê³  ì¶ì ë¶</div>
           <div class="prog-amount">
-            <span class="prog-amount-num">월 5천~</span>
-            <span class="prog-amount-unit" data-i18n="s5.kr.p4.unit">저렴한 월 렌탈료</span>
+            <span class="prog-amount-num">ì 5ì²~</span>
+            <span class="prog-amount-unit" data-i18n="s5.kr.p4.unit">ì ë ´í ì ë íë£</span>
           </div>
           <div class="prog-tags">
-            <span class="prog-tag green" data-i18n="tag.rental">렌탈 가능</span>
-            <span class="prog-tag" data-i18n="tag.kdit">개발원</span>
+            <span class="prog-tag green" data-i18n="tag.rental">ë í ê°ë¥</span>
+            <span class="prog-tag" data-i18n="tag.kdit">ê°ë°ì</span>
           </div>
         </div>
 
       </div>
 
-      <!-- 품목별 지원금액 -->
-      <h3 style="font-size:16px;font-weight:500;color:var(--dark);margin-bottom:20px;letter-spacing:0.04em" data-i18n="s5.kr.device.title">품목별 기준금액 (보건복지부 기준)</h3>
+      <!-- íëª©ë³ ì§ìê¸ì¡ -->
+      <h3 style="font-size:16px;font-weight:500;color:var(--dark);margin-bottom:20px;letter-spacing:0.04em" data-i18n="s5.kr.device.title">íëª©ë³ ê¸°ì¤ê¸ì¡ (ë³´ê±´ë³µì§ë¶ ê¸°ì¤)</h3>
       <table class="device-table">
         <thead>
           <tr>
-            <th data-i18n="tbl.device">보조기기</th>
-            <th data-i18n="tbl.amount">기준금액</th>
-            <th data-i18n="tbl.support">수급자 지원</th>
-            <th data-i18n="tbl.route">신청처</th>
+            <th data-i18n="tbl.device">ë³´ì¡°ê¸°ê¸°</th>
+            <th data-i18n="tbl.amount">ê¸°ì¤ê¸ì¡</th>
+            <th data-i18n="tbl.support">ìê¸ì ì§ì</th>
+            <th data-i18n="tbl.route">ì ì²­ì²</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td data-i18n="dev.kr.1">독서확대기 (CCTV형)</td><td class="amount-cell">667,000원</td><td>667,000원</td><td data-i18n="route.center">주민센터</td></tr>
-          <tr><td data-i18n="dev.kr.2">점자정보단말기</td><td class="amount-cell">2,000,000원</td><td>2,000,000원</td><td data-i18n="route.center">주민센터</td></tr>
-          <tr><td data-i18n="dev.kr.3">화면낭독소프트웨어</td><td class="amount-cell">600,000원</td><td>600,000원</td><td data-i18n="route.center">주민센터</td></tr>
-          <tr><td data-i18n="dev.kr.4">점자프린터</td><td class="amount-cell">3,900,000원</td><td>3,900,000원</td><td data-i18n="route.center">주민센터</td></tr>
-          <tr><td data-i18n="dev.kr.5">저시력 보조안경</td><td class="amount-cell">117,000원</td><td class="amount-cell">93,600원 (80%)</td><td data-i18n="route.nhis">건강보험공단</td></tr>
-          <tr><td data-i18n="dev.kr.6">닷패드 (촉각 디스플레이)</td><td class="amount-cell">별도 문의</td><td>렌탈/기금 연계</td><td data-i18n="route.dotpad"><a href="#dotpad" style="color:var(--dark);text-decoration:underline">닷패드 체험</a></td></tr>
+          <tr><td data-i18n="dev.kr.1">ëìíëê¸° (CCTVí)</td><td class="amount-cell">667,000ì</td><td>667,000ì</td><td data-i18n="route.center">ì£¼ë¯¼ì¼í°</td></tr>
+          <tr><td data-i18n="dev.kr.2">ì ìì ë³´ë¨ë§ê¸°</td><td class="amount-cell">2,000,000ì</td><td>2,000,000ì</td><td data-i18n="route.center">ì£¼ë¯¼ì¼í°</td></tr>
+          <tr><td data-i18n="dev.kr.3">íë©´ë­ëìíí¸ì¨ì´</td><td class="amount-cell">600,000ì</td><td>600,000ì</td><td data-i18n="route.center">ì£¼ë¯¼ì¼í°</td></tr>
+          <tr><td data-i18n="dev.kr.4">ì ìíë¦°í°</td><td class="amount-cell">3,900,000ì</td><td>3,900,000ì</td><td data-i18n="route.center">ì£¼ë¯¼ì¼í°</td></tr>
+          <tr><td data-i18n="dev.kr.5">ì ìë ¥ ë³´ì¡°ìê²½</td><td class="amount-cell">117,000ì</td><td class="amount-cell">93,600ì (80%)</td><td data-i18n="route.nhis">ê±´ê°ë³´íê³µë¨</td></tr>
+          <tr><td data-i18n="dev.kr.6">ë·í¨ë (ì´ê° ëì¤íë ì´)</td><td class="amount-cell">ë³ë ë¬¸ì</td><td>ë í/ê¸°ê¸ ì°ê³</td><td data-i18n="route.dotpad"><a href="#dotpad" style="color:var(--dark);text-decoration:underline">ë·í¨ë ì²´í</a></td></tr>
         </tbody>
       </table>
 
       <div class="info-box">
-        <div class="info-box-title" data-i18n="s5.kr.contact.title">📞 바로 전화할 수 있는 곳</div>
+        <div class="info-box-title" data-i18n="s5.kr.contact.title">ð ë°ë¡ ì íí  ì ìë ê³³</div>
         <div class="info-box-body" data-i18n="s5.kr.contact.body">
-          <strong>129</strong> 보건복지상담센터 (24시간) — 장애 등록 절차, 보조기기 교부 전반 상담<br>
-          <strong>1588-1519</strong> 국민건강보험공단 — 건강보험 급여 보조기기 문의<br>
-          <strong>1544-0083</strong> 한국장애인고용공단 — 직업재활 보조기기 지원 문의
+          <strong>129</strong> ë³´ê±´ë³µì§ìë´ì¼í° (24ìê°) â ì¥ì  ë±ë¡ ì ì°¨, ë³´ì¡°ê¸°ê¸° êµë¶ ì ë° ìë´<br>
+          <strong>1588-1519</strong> êµ­ë¯¼ê±´ê°ë³´íê³µë¨ â ê±´ê°ë³´í ê¸ì¬ ë³´ì¡°ê¸°ê¸° ë¬¸ì<br>
+          <strong>1544-0083</strong> íêµ­ì¥ì ì¸ê³ ì©ê³µë¨ â ì§ìì¬í ë³´ì¡°ê¸°ê¸° ì§ì ë¬¸ì
         </div>
       </div>
 
     </div><!-- end support-kr -->
 
-    <!-- ═══ 미국 ═══ -->
+    <!-- âââ ë¯¸êµ­ âââ -->
     <div id="support-us" class="support-content" role="tabpanel">
 
       <div class="info-box">
-        <div class="info-box-title" data-i18n="s5.us.tip.title">💡 Key Principle</div>
-        <div class="info-box-body" data-i18n="s5.us.tip.body">There is no single national program — support comes from multiple sources (state, federal, nonprofit).
-        Start with your state's Vocational Rehabilitation agency and AT program — they are free and available to everyone.</div>
+        <div class="info-box-title" data-i18n="s5.us.tip.title">ð¡ Key Principle</div>
+        <div class="info-box-body" data-i18n="s5.us.tip.body">There is no single national program â support comes from multiple sources (state, federal, nonprofit).
+        Start with your state's Vocational Rehabilitation agency and AT program â they are free and available to everyone.</div>
       </div>
 
       <!-- Step flow US -->
-      <h3 style="font-size:16px;font-weight:500;color:var(--dark);margin-bottom:24px;letter-spacing:0.04em" data-i18n="s5.us.flow.title">STEP BY STEP — First-time applicants</h3>
+      <h3 style="font-size:16px;font-weight:500;color:var(--dark);margin-bottom:24px;letter-spacing:0.04em" data-i18n="s5.us.flow.title">STEP BY STEP â First-time applicants</h3>
       <div class="step-flow" role="list">
         <div class="step-item" role="listitem">
           <div class="step-num">1</div>
           <div class="step-label" data-i18n="s5.us.s1">Get diagnosed</div>
-          <div class="step-sub" data-i18n="s5.us.s1s">Eye doctor — get a prescription/letter of medical necessity</div>
+          <div class="step-sub" data-i18n="s5.us.s1s">Eye doctor â get a prescription/letter of medical necessity</div>
         </div>
         <div class="step-item" role="listitem">
           <div class="step-num">2</div>
           <div class="step-label" data-i18n="s5.us.s2">Contact VR</div>
-          <div class="step-sub" data-i18n="s5.us.s2s">State Vocational Rehabilitation agency — free AT for employment</div>
+          <div class="step-sub" data-i18n="s5.us.s2s">State Vocational Rehabilitation agency â free AT for employment</div>
         </div>
         <div class="step-item" role="listitem">
           <div class="step-num">3</div>
           <div class="step-label" data-i18n="s5.us.s3">Try before buy</div>
-          <div class="step-sub" data-i18n="s5.us.s3s">State AT program — free device loans &amp; demos</div>
+          <div class="step-sub" data-i18n="s5.us.s3s">State AT program â free device loans &amp; demos</div>
         </div>
         <div class="step-item" role="listitem">
           <div class="step-num">4</div>
           <div class="step-label" data-i18n="s5.us.s4">Check Medicaid</div>
-          <div class="step-sub" data-i18n="s5.us.s4s">Income-based — may cover AT devices</div>
+          <div class="step-sub" data-i18n="s5.us.s4s">Income-based â may cover AT devices</div>
         </div>
         <div class="step-item" role="listitem">
           <div class="step-num">5</div>
           <div class="step-label" data-i18n="s5.us.s5">Apply for SSI/SSDI</div>
-          <div class="step-sub" data-i18n="s5.us.s5s">ssa.gov — disability benefits</div>
+          <div class="step-sub" data-i18n="s5.us.s5s">ssa.gov â disability benefits</div>
         </div>
       </div>
 
@@ -1033,13 +1033,13 @@
         </div>
 
         <div class="program-card">
-          <div class="prog-org" data-i18n="s5.us.p2.org">AT Act — Every State</div>
+          <div class="prog-org" data-i18n="s5.us.p2.org">AT Act â Every State</div>
           <div class="prog-name" data-i18n="s5.us.p2.name">State Assistive Technology Program</div>
           <div class="prog-who" data-i18n="s5.us.p2.who">All residents. No income requirement. Device loans, demos, and low-interest financing.</div>
           <div class="prog-amount">
             <span class="prog-amount-num">Free</span>
           </div>
-          <span class="prog-amount-unit" data-i18n="s5.us.p2.unit">device loans + 0–3% financing available</span>
+          <span class="prog-amount-unit" data-i18n="s5.us.p2.unit">device loans + 0â3% financing available</span>
           <br><br>
           <div class="prog-tags">
             <span class="prog-tag green" data-i18n="tag.everyone">Everyone</span>
@@ -1048,13 +1048,13 @@
         </div>
 
         <div class="program-card">
-          <div class="prog-org" data-i18n="s5.us.p3.org">Federal — Income-Based</div>
+          <div class="prog-org" data-i18n="s5.us.p3.org">Federal â Income-Based</div>
           <div class="prog-name" data-i18n="s5.us.p3.name">Medicaid</div>
-          <div class="prog-who" data-i18n="s5.us.p3.who">Low-income individuals. Coverage varies by state — some states cover screen readers, CCTVs, and more.</div>
+          <div class="prog-who" data-i18n="s5.us.p3.who">Low-income individuals. Coverage varies by state â some states cover screen readers, CCTVs, and more.</div>
           <div class="prog-amount">
             <span class="prog-amount-num">Varies</span>
           </div>
-          <span class="prog-amount-unit" data-i18n="s5.us.p3.unit">by state — can cover $0 out-of-pocket</span>
+          <span class="prog-amount-unit" data-i18n="s5.us.p3.unit">by state â can cover $0 out-of-pocket</span>
           <br><br>
           <div class="prog-tags">
             <span class="prog-tag" data-i18n="tag.income">Income-based</span>
@@ -1069,7 +1069,7 @@
           <div class="prog-amount">
             <span class="prog-amount-num">100%</span>
           </div>
-          <span class="prog-amount-unit" data-i18n="s5.us.p4.unit">covered — plus in-person rehab training</span>
+          <span class="prog-amount-unit" data-i18n="s5.us.p4.unit">covered â plus in-person rehab training</span>
           <br><br>
           <div class="prog-tags">
             <span class="prog-tag green" data-i18n="tag.veteran">Veterans</span>
@@ -1080,7 +1080,7 @@
       </div>
 
       <!-- US Device table -->
-      <h3 style="font-size:16px;font-weight:500;color:var(--dark);margin-bottom:20px;letter-spacing:0.04em" data-i18n="s5.us.device.title">Common AT Devices — Typical Costs &amp; Coverage</h3>
+      <h3 style="font-size:16px;font-weight:500;color:var(--dark);margin-bottom:20px;letter-spacing:0.04em" data-i18n="s5.us.device.title">Common AT Devices â Typical Costs &amp; Coverage</h3>
       <table class="device-table">
         <thead>
           <tr>
@@ -1092,16 +1092,16 @@
         </thead>
         <tbody>
           <tr><td data-i18n="dev.us.1">Screen Reader (JAWS)</td><td class="amount-cell">~$1,000/yr</td><td>VR, Medicaid (some states)</td><td>VR agency</td></tr>
-          <tr><td data-i18n="dev.us.2">Video Magnifier (CCTV)</td><td class="amount-cell">$1,500–$4,000</td><td>VR, Medicaid, VA</td><td>VR or AT program</td></tr>
-          <tr><td data-i18n="dev.us.3">Refreshable Braille Display</td><td class="amount-cell">$1,500–$6,000</td><td>VR, VA</td><td>VR agency</td></tr>
-          <tr><td data-i18n="dev.us.4">Talking GPS / Navigation</td><td class="amount-cell">$100–$500</td><td>VR, AT program loan</td><td>State AT program</td></tr>
-          <tr><td data-i18n="dev.us.5">Accessible Smartphone Setup</td><td class="amount-cell">$0 (built-in)</td><td class="amount-cell">Free</td><td>This guide →</td></tr>
+          <tr><td data-i18n="dev.us.2">Video Magnifier (CCTV)</td><td class="amount-cell">$1,500â$4,000</td><td>VR, Medicaid, VA</td><td>VR or AT program</td></tr>
+          <tr><td data-i18n="dev.us.3">Refreshable Braille Display</td><td class="amount-cell">$1,500â$6,000</td><td>VR, VA</td><td>VR agency</td></tr>
+          <tr><td data-i18n="dev.us.4">Talking GPS / Navigation</td><td class="amount-cell">$100â$500</td><td>VR, AT program loan</td><td>State AT program</td></tr>
+          <tr><td data-i18n="dev.us.5">Accessible Smartphone Setup</td><td class="amount-cell">$0 (built-in)</td><td class="amount-cell">Free</td><td>This guide â</td></tr>
           <tr><td data-i18n="dev.us.6">Dot Pad (Tactile Display)</td><td class="amount-cell">Contact us</td><td>VR, AT financing</td><td><a href="#dotpad" style="color:var(--dark);text-decoration:underline">Request trial</a></td></tr>
         </tbody>
       </table>
 
       <div class="info-box">
-        <div class="info-box-title" data-i18n="s5.us.contact.title">📞 Where to call first</div>
+        <div class="info-box-title" data-i18n="s5.us.contact.title">ð Where to call first</div>
         <div class="info-box-body" data-i18n="s5.us.contact.body">
           <strong>Find your state VR agency:</strong> rsa.ed.gov/about/programs/vocational-rehabilitation<br>
           <strong>Find your state AT program:</strong> AT3center.net/state-at-programs<br>
@@ -1114,14 +1114,14 @@
   </div>
 </section>
 
-<!-- ── Section 4: Stories ── -->
+<!-- ââ Section 4: Stories ââ -->
 <section class="section" id="stories" aria-labelledby="stories-title" style="background:var(--bg-off)">
   <div class="section-inner">
     <div class="section-header">
-      <p class="section-label" data-i18n="s4.label">희망 스토리</p>
+      <p class="section-label" data-i18n="s4.label">í¬ë§ ì¤í ë¦¬</p>
       <div class="section-right">
-        <h2 class="section-title" id="stories-title" data-i18n="s4.title">"나처럼 된 사람들이<br>지금 어떻게 살고 있나요?"</h2>
-        <p class="section-desc" data-i18n="s4.desc">후천적 시각장애를 헤쳐나가고 삶을 다시 세운 분들의 이야기를 직접 들어보세요. 그들의 목소리로 전하는 오디오 인터뷰.</p>
+        <h2 class="section-title" id="stories-title" data-i18n="s4.title">"ëì²ë¼ ë ì¬ëë¤ì´<br>ì§ê¸ ì´ë»ê² ì´ê³  ìëì?"</h2>
+        <p class="section-desc" data-i18n="s4.desc">íì²ì  ìê°ì¥ì ë¥¼ í¤ì³ëê°ê³  ì¶ì ë¤ì ì¸ì´ ë¶ë¤ì ì´ì¼ê¸°ë¥¼ ì§ì  ë¤ì´ë³´ì¸ì. ê·¸ë¤ì ëª©ìë¦¬ë¡ ì íë ì¤ëì¤ ì¸í°ë·°.</p>
       </div>
     </div>
 
@@ -1129,48 +1129,48 @@
 
       <article class="story-card" role="listitem">
         <div class="story-img" aria-hidden="true">
-          <span class="story-img-placeholder" data-i18n="s4.iv1">인터뷰 01</span>
-          <button class="story-play-btn" aria-label="재생 — 김재원 인터뷰">▶</button>
+          <span class="story-img-placeholder" data-i18n="s4.iv1">ì¸í°ë·° 01</span>
+          <button class="story-play-btn" aria-label="ì¬ì â ê¹ì¬ì ì¸í°ë·°">â¶</button>
         </div>
         <div class="story-body">
-          <p class="story-tag" data-i18n="s4.tag1">소프트웨어 엔지니어 — 망막색소변성증</p>
-          <h3 class="story-title" data-i18n="s4.st1">시력을 잃은 지 2년 후, 개발자로 복직했습니다</h3>
-          <p class="story-excerpt" data-i18n="s4.se1">"처음에는 모든 게 끝난 줄 알았어요. 지금은 스크린 리더로 코드를 짜고, 회의에 참석하고, 풀 리퀘스트를 리뷰합니다. 도구가 바뀌었을 뿐, 일은 바뀌지 않았어요."</p>
+          <p class="story-tag" data-i18n="s4.tag1">ìíí¸ì¨ì´ ìì§ëì´ â ë§ë§ììë³ì±ì¦</p>
+          <h3 class="story-title" data-i18n="s4.st1">ìë ¥ì ìì ì§ 2ë í, ê°ë°ìë¡ ë³µì§íìµëë¤</h3>
+          <p class="story-excerpt" data-i18n="s4.se1">"ì²ììë ëª¨ë  ê² ëë ì¤ ììì´ì. ì§ê¸ì ì¤í¬ë¦° ë¦¬ëë¡ ì½ëë¥¼ ì§ê³ , íìì ì°¸ìíê³ , í ë¦¬íì¤í¸ë¥¼ ë¦¬ë·°í©ëë¤. ëêµ¬ê° ë°ëìì ë¿, ì¼ì ë°ëì§ ììì´ì."</p>
           <div class="story-footer">
-            <span class="story-person" data-i18n="s4.sp1">김재원, 34세</span>
-            <span class="story-dur" data-i18n="s4.sd1">12분</span>
+            <span class="story-person" data-i18n="s4.sp1">ê¹ì¬ì, 34ì¸</span>
+            <span class="story-dur" data-i18n="s4.sd1">12ë¶</span>
           </div>
         </div>
       </article>
 
       <article class="story-card" role="listitem">
         <div class="story-img" aria-hidden="true">
-          <span class="story-img-placeholder" data-i18n="s4.iv2">인터뷰 02</span>
-          <button class="story-play-btn" aria-label="재생 — 박소희 인터뷰">▶</button>
+          <span class="story-img-placeholder" data-i18n="s4.iv2">ì¸í°ë·° 02</span>
+          <button class="story-play-btn" aria-label="ì¬ì â ë°ìí¬ ì¸í°ë·°">â¶</button>
         </div>
         <div class="story-body">
-          <p class="story-tag" data-i18n="s4.tag2">전업주부 — 녹내장</p>
-          <h3 class="story-title" data-i18n="s4.st2">혼자 요리하고, 혼자 장을 봅니다</h3>
-          <p class="story-excerpt" data-i18n="s4.se2">"AI가 냉장고 재료를 읽어줘요. 닷패드로 레시피 도표를 손으로 느낄 수 있어요. 제가 할 수 있는 것들이 생각보다 훨씬 많더라고요."</p>
+          <p class="story-tag" data-i18n="s4.tag2">ì ìì£¼ë¶ â ë¹ë´ì¥</p>
+          <h3 class="story-title" data-i18n="s4.st2">í¼ì ìë¦¬íê³ , í¼ì ì¥ì ë´ëë¤</h3>
+          <p class="story-excerpt" data-i18n="s4.se2">"AIê° ëì¥ê³  ì¬ë£ë¥¼ ì½ì´ì¤ì. ë·í¨ëë¡ ë ìí¼ ëíë¥¼ ìì¼ë¡ ëë ì ìì´ì. ì ê° í  ì ìë ê²ë¤ì´ ìê°ë³´ë¤ í¨ì¬ ë§ëë¼ê³ ì."</p>
           <div class="story-footer">
-            <span class="story-person" data-i18n="s4.sp2">박소희, 51세</span>
-            <span class="story-dur" data-i18n="s4.sd2">9분</span>
+            <span class="story-person" data-i18n="s4.sp2">ë°ìí¬, 51ì¸</span>
+            <span class="story-dur" data-i18n="s4.sd2">9ë¶</span>
           </div>
         </div>
       </article>
 
       <article class="story-card" role="listitem">
         <div class="story-img" aria-hidden="true">
-          <span class="story-img-placeholder" data-i18n="s4.iv3">인터뷰 03</span>
-          <button class="story-play-btn" aria-label="재생 — 이준혁 인터뷰">▶</button>
+          <span class="story-img-placeholder" data-i18n="s4.iv3">ì¸í°ë·° 03</span>
+          <button class="story-play-btn" aria-label="ì¬ì â ì´ì¤í ì¸í°ë·°">â¶</button>
         </div>
         <div class="story-body">
-          <p class="story-tag" data-i18n="s4.tag3">대학생 — 당뇨망막병증</p>
-          <h3 class="story-title" data-i18n="s4.st3">3학년에 복학해서 수석으로 졸업했습니다</h3>
-          <p class="story-excerpt" data-i18n="s4.se3">"AI가 강의와 판서 내용을 실시간으로 텍스트로 변환해줘요. 솔직히 집중력이 더 좋아졌어요. 이제 모든 걸 들을 수 있으니까요."</p>
+          <p class="story-tag" data-i18n="s4.tag3">ëíì â ë¹ë¨ë§ë§ë³ì¦</p>
+          <h3 class="story-title" data-i18n="s4.st3">3íëì ë³µíí´ì ììì¼ë¡ ì¡¸ìíìµëë¤</h3>
+          <p class="story-excerpt" data-i18n="s4.se3">"AIê° ê°ìì íì ë´ì©ì ì¤ìê°ì¼ë¡ íì¤í¸ë¡ ë³íí´ì¤ì. ìì§í ì§ì¤ë ¥ì´ ë ì¢ìì¡ì´ì. ì´ì  ëª¨ë  ê±¸ ë¤ì ì ìì¼ëê¹ì."</p>
           <div class="story-footer">
-            <span class="story-person" data-i18n="s4.sp3">이준혁, 24세</span>
-            <span class="story-dur" data-i18n="s4.sd3">15분</span>
+            <span class="story-person" data-i18n="s4.sp3">ì´ì¤í, 24ì¸</span>
+            <span class="story-dur" data-i18n="s4.sd3">15ë¶</span>
           </div>
         </div>
       </article>
@@ -1178,21 +1178,21 @@
     </div>
 
     <div style="margin-top:40px;padding-top:32px;border-top:1px solid var(--rule);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px">
-      <p style="font-size:16px;font-weight:300;color:var(--mid)" data-i18n="s4.more">매월 새 인터뷰가 추가됩니다.</p>
-      <a href="#" class="link-arrow" data-i18n="s4.all">전체 스토리 보기 &nbsp;→</a>
+      <p style="font-size:16px;font-weight:300;color:var(--mid)" data-i18n="s4.more">ë§¤ì ì ì¸í°ë·°ê° ì¶ê°ë©ëë¤.</p>
+      <a href="#" class="link-arrow" data-i18n="s4.all">ì ì²´ ì¤í ë¦¬ ë³´ê¸° &nbsp;â</a>
     </div>
   </div>
 </section>
 
-<!-- ── CTA ── -->
+<!-- ââ CTA ââ -->
 <section class="cta-row" aria-labelledby="cta-title">
   <div class="cta-inner">
-    <h2 class="cta-title" id="cta-title" data-i18n="cta.title">첫걸음, 혼자 내딛지 않아도 됩니다</h2>
+    <h2 class="cta-title" id="cta-title" data-i18n="cta.title">ì²«ê±¸ì, í¼ì ë´ëì§ ììë ë©ëë¤</h2>
     <div class="cta-right">
-      <p class="cta-body" data-i18n="cta.body">닷패드 무료 체험부터 시작하세요. 전문 상담사가 기기 사용법과 이용 가능한 복지 지원 프로그램을 함께 안내해 드립니다.</p>
+      <p class="cta-body" data-i18n="cta.body">ë·í¨ë ë¬´ë£ ì²´íë¶í° ììíì¸ì. ì ë¬¸ ìë´ì¬ê° ê¸°ê¸° ì¬ì©ë²ê³¼ ì´ì© ê°ë¥í ë³µì§ ì§ì íë¡ê·¸ë¨ì í¨ê» ìë´í´ ëë¦½ëë¤.</p>
       <div class="cta-btns">
-        <a href="#" class="btn-white" data-i18n="cta.btn1">무료 체험 신청</a>
-        <a href="#" class="btn-ghost-white" data-i18n="cta.btn2">전문가 상담</a>
+        <a href="#" class="btn-white" data-i18n="cta.btn1">ë¬´ë£ ì²´í ì ì²­</a>
+        <a href="#" class="btn-ghost-white" data-i18n="cta.btn2">ì ë¬¸ê° ìë´</a>
       </div>
     </div>
   </div>
@@ -1200,235 +1200,235 @@
 
 </main>
 
-<!-- ── Footer ── -->
+<!-- ââ Footer ââ -->
 <footer class="footer" role="contentinfo">
   <div class="footer-inner">
     <div class="footer-brand">
-      <div class="f-logo" data-i18n="nav.logo">첫 100일</div>
-      <p data-i18n="ft.desc">후천적 시각장애인과 가족을 위한 플랫폼 — 첫날부터 방향을 찾을 수 있도록 돕습니다. Dot Inc. 제공.</p>
+      <div class="f-logo" data-i18n="nav.logo">ì²« 100ì¼</div>
+      <p data-i18n="ft.desc">íì²ì  ìê°ì¥ì ì¸ê³¼ ê°ì¡±ì ìí íë«í¼ â ì²«ë ë¶í° ë°©í¥ì ì°¾ì ì ìëë¡ ëìµëë¤. Dot Inc. ì ê³µ.</p>
     </div>
     <div class="footer-col">
-      <h4 data-i18n="ft.h1">가이드</h4>
+      <h4 data-i18n="ft.h1">ê°ì´ë</h4>
       <ul>
-        <li><a href="#immediate" data-i18n="ft.g1">긴급 도움</a></li>
-        <li><a href="#journey" data-i18n="ft.g2">단계별 가이드</a></li>
-        <li><a href="#support" data-i18n="ft.g3">복지 &amp; 혜택</a></li>
-        <li><a href="#support" data-i18n="ft.g4">지원 제도</a></li>
+        <li><a href="#immediate" data-i18n="ft.g1">ê¸´ê¸ ëì</a></li>
+        <li><a href="#journey" data-i18n="ft.g2">ë¨ê³ë³ ê°ì´ë</a></li>
+        <li><a href="#support" data-i18n="ft.g3">ë³µì§ &amp; íí</a></li>
+        <li><a href="#support" data-i18n="ft.g4">ì§ì ì ë</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4 data-i18n="ft.h2">기술</h4>
+      <h4 data-i18n="ft.h2">ê¸°ì </h4>
       <ul>
-        <li><a href="#" data-i18n="ft.t1">스마트폰 접근성</a></li>
-        <li><a href="#dotpad" data-i18n="ft.t2">닷패드 소개</a></li>
-        <li><a href="#" data-i18n="ft.t3">체험 신청</a></li>
-        <li><a href="#" data-i18n="ft.t4">렌탈 &amp; 지원금</a></li>
+        <li><a href="#" data-i18n="ft.t1">ì¤ë§í¸í° ì ê·¼ì±</a></li>
+        <li><a href="#dotpad" data-i18n="ft.t2">ë·í¨ë ìê°</a></li>
+        <li><a href="#" data-i18n="ft.t3">ì²´í ì ì²­</a></li>
+        <li><a href="#" data-i18n="ft.t4">ë í &amp; ì§ìê¸</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4 data-i18n="ft.h3">스토리</h4>
+      <h4 data-i18n="ft.h3">ì¤í ë¦¬</h4>
       <ul>
-        <li><a href="#" data-i18n="ft.s1">직장인 이야기</a></li>
-        <li><a href="#" data-i18n="ft.s2">학생 이야기</a></li>
-        <li><a href="#" data-i18n="ft.s3">가족 이야기</a></li>
-        <li><a href="#" data-i18n="ft.s4">내 이야기 나누기</a></li>
+        <li><a href="#" data-i18n="ft.s1">ì§ì¥ì¸ ì´ì¼ê¸°</a></li>
+        <li><a href="#" data-i18n="ft.s2">íì ì´ì¼ê¸°</a></li>
+        <li><a href="#" data-i18n="ft.s3">ê°ì¡± ì´ì¼ê¸°</a></li>
+        <li><a href="#" data-i18n="ft.s4">ë´ ì´ì¼ê¸° ëëê¸°</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <p data-i18n="ft.copy">© 2026 첫 100일 · Dot Inc. All rights reserved.</p>
-    <p data-i18n="ft.crisis">위기 상담: <strong>1393</strong> &nbsp;·&nbsp; 복지 상담: <strong>129</strong></p>
+    <p data-i18n="ft.copy">Â© 2026 ì²« 100ì¼ Â· Dot Inc. All rights reserved.</p>
+    <p data-i18n="ft.crisis">ìê¸° ìë´: <strong>1393</strong> &nbsp;Â·&nbsp; ë³µì§ ìë´: <strong>129</strong></p>
   </div>
 </footer>
 
 <script>
-// ── 번역 딕셔너리 ──────────────────────────────────────────
+// ââ ë²ì­ ëìëë¦¬ ââââââââââââââââââââââââââââââââââââââââââ
 const T = {
   ko: {
-    'skip': '본문 바로가기',
-    'nav.logo': '첫 100일',
-    'nav.meta': '후천적 시각장애인을 위한 안내 가이드',
-    'nav.l1': '지금 도움', 'nav.l2': '함께 걷는 길',
-    'nav.l3': '보조공학', 'nav.l4': '희망 스토리',
-    'nav.cta': '체험 신청',
-    'hero.eyebrow': '후천적 시각장애인과 가족을 위한 첫걸음 가이드',
-    'hero.h1': '당신의 시야가 바뀌었습니다.<br><em>하지만 삶이 멈출 필요는 없습니다.</em>',
-    'hero.sub': '첫 100일 가이드는 최근 시력을 잃은 분과 그 곁에 선 가족을 위한 안내 플랫폼입니다. 여기서 시작하세요.',
-    'hero.btn1': '어디서 시작해야 하나요?',
-    'hero.btn2': '단계별 가이드 보기',
-    'hero.s1': '이 가이드가<br>다루는 일수',
-    'hero.s2': '실용 행동 항목이<br>있는 단계',
-    'hero.s3': '실제 회복<br>오디오 스토리',
-    'hero.s4': '필요한<br>사전 경험',
-    's1.label': '긴급 안내',
-    's1.title': '지금 막막하신가요?',
-    's1.desc': '진단을 막 받으셨다면, 여기서 시작하세요. 오늘 챙겨야 할 세 가지.',
-    's1.c1.title': '오늘 당장 해야 할 일 3가지',
-    's1.c1.body': '진단 직후 24시간은 혼란스럽습니다. 가장 중요한 것들을 정리했습니다.',
-    's1.c1.l1': '담당 의사에게 다음 진료 일정 확인하기',
-    's1.c1.l2': '가족 중 주요 연락 담당자 1명 정하기',
-    's1.c1.l3': '가까운 장애인복지관 상담 예약',
-    's1.c2.title': '24시간 연결됩니다',
-    's1.c2.body': '업무 시간을 기다릴 필요가 없습니다. 지금 바로 연결됩니다.',
-    's1.h1': '위기 상담 전화', 's1.h2': '보건복지상담센터',
-    's1.c3.title': '초기 대응 매뉴얼',
-    's1.c3.body': '처음 30일을 위한 오디오 가이드 — 오디오와 PDF로 제공됩니다.',
-    's1.audio': '초기 대응 매뉴얼 — 오디오 가이드',
-    's1.pdf': 'PDF 다운로드 →',
-    's1.c4.title': '가족 여러분께',
-    's1.say': '이렇게 말하세요', 's1.avoid': '피해야 할 말',
-    's1.say1': '"같이 방법을 찾아보자."',
-    's1.say2': '"아직 할 수 있는 게 정말 많아."',
-    's1.say3': '"내가 여기 있어. 한 단계씩 같이 해결하자."',
-    's1.avoid1': '"왜 이렇게 됐어?" — 원인 추궁은 고통을 더합니다',
-    's1.avoid2': '"괜찮아질 거야" — 근거 없는 위로는 신뢰를 무너뜨립니다',
-    's1.avoid3': '침묵 — 고립이 가장 해로운 반응입니다',
-    's2.label': '단계별 가이드', 's2.title': '첫 100일',
-    's2.desc': '여정을 세 단계로 나눴습니다. 함께 읽어보세요 — 각 항목에는 당사자와 가족을 위한 행동 항목이 있습니다.',
-    's2.p1': '1단계', 's2.d1': 'Day<br>1—7', 's2.t1': '심리 안정 &amp; 안전한 집 만들기',
-    's2.p2': '2단계', 's2.d2': 'Day<br>8—30', 's2.t2': '스마트폰 첫걸음 &amp; 행정 절차 시작',
-    's2.p3': '3단계', 's2.d3': 'Day<br>31—100', 's2.t3': '보조공학 탐색 &amp; 사회 복귀 준비',
-    'who.self': '당사자', 'who.family': '가족', 'who.together': '함께',
-    's2.1.i1': '스마트폰에서 VoiceOver(iOS) 또는 TalkBack(Android) 켜기 — 이 사이트에서 오디오 튜토리얼 제공',
-    's2.1.i2': '집 안 위험물 제거: 날카로운 물건, 어두운 복도, 문턱. 균일하고 밝은 조명으로 교체',
-    's2.1.i3': '가까운 시각장애인복지관 방문 상담 예약',
-    's2.1.i4': '장애 등록 절차 시작 — 주민센터 또는 병원 사회사업팀 연락',
-    's2.exp1': '1단계 전체 가이드',
-    's2.body1': '첫 주의 감정적 충격은 자연스러운 반응입니다. 정보 과부하보다 신체 안전과 감정적 동행을 우선하세요. 하루에 한 번의 대화로도 충분합니다. 쉬는 것은 포기가 아니라, 다시 일어설 준비입니다.',
-    's2.2.i1': '스크린 리더로 전화 걸기, 문자 읽기, 메신저 앱 사용 연습',
-    's2.2.i2': '주민센터 또는 병원 사회사업팀에 장애 등록 신청서 제출',
-    's2.2.i3': '지역 복지관 재활 프로그램 등록 상담',
-    's2.2.i4': 'AI로 사진 속 텍스트 읽기, 이미지 묘사 받기 — 실습 포함',
-    's2.exp2': '2단계 전체 가이드',
-    's2.body2': '2단계는 주도성을 되찾는 과정입니다. 음성 메시지 보내기, 혼자 부엌 가기 같은 작은 성취도 굉장히 중요합니다. 함께 축하하세요.',
-    's2.3.i1': '이 가이드를 통해 닷패드 및 기타 보조기기 무료 체험 신청',
-    's2.3.i2': '장애인복지관 및 국민건강보험을 통한 보조기기 지원금 신청',
-    's2.3.i3': '취업 또는 복학을 위한 직업재활 상담 시작',
-    's2.3.i4': '자조모임 참여 — 같은 경험을 가진 사람들과의 연결이 가장 강력한 한 걸음',
-    's2.exp3': '3단계 전체 가이드',
-    's2.body3': '100일째가 되면, 대부분의 분들이 자신이 얼마나 많이 배우고 적응했는지 놀라게 됩니다. 목표는 예전의 삶으로 돌아가는 것이 아닙니다 — 새로운 도구와 함께, 더 넓어진 가능성으로 새 삶을 만드는 것입니다.',
-    's3.label': '보조공학',
-    's3.title': '기술이 새로운<br>눈이 됩니다',
-    's3.desc': '첫날부터 점자를 배울 필요는 없습니다. 손에 있는 도구들이 일상 기능의 대부분을 즉시 회복시켜 줄 수 있습니다.',
-    's3.t1': '스마트폰 접근성',
-    's3.b1': 'VoiceOver와 TalkBack은 모든 아이폰과 안드로이드 기기에 기본 탑재되어 있습니다. 오디오 튜토리얼이 처음부터 전화, 문자, 웹 브라우징까지 안내합니다.',
-    's3.l1': '▶ &nbsp;오디오 튜토리얼 시작',
-    's3.t2': 'AI 협업자',
-    's3.b2': '현대 AI는 사진의 텍스트를 읽고, 이미지와 장면을 묘사하고, 길 안내를 제공하고, 책을 소리로 읽어줍니다. 10분 안에 설정하는 방법을 알려드립니다.',
-    's3.l2': 'AI 가이드 보기 &nbsp;→',
-    's3.t3': '시각 세계를 손으로 만지다',
-    's3.b3': '닷패드는 사진, 지도, 차트, 도표를 촉각 형태로 변환합니다. 보이던 공간 정보를 느낄 수 있게 해줍니다. 점자 지식이 없어도 시작할 수 있습니다.',
-    's3.l3': '닷패드 알아보기 &nbsp;→',
-    'dp.tag': '추천 보조기기',
-    'dp.title': '닷패드 —<br>보이던 것을 다시 느끼다',
-    'dp.body': '닷패드는 점자 디스플레이가 아닙니다. 사진, 지도, 그래프, 도면 등 모든 시각 콘텐츠를 수천 개의 개별 이동 핀을 사용해 실시간으로 만질 수 있는 표면으로 변환하는 완전한 촉각 스마트 스크린입니다.',
-    'dp.p1': '스마트폰 화면을 촉각 표면으로 미러링',
-    'dp.p2': '지하철 노선도·건물 배치도·차트를 손으로 탐색',
-    'dp.p3': '점자 지식 없이도 바로 사용 가능',
-    'dp.p4': '정부 보조금 프로그램으로 이용 가능',
-    'dp.btn1': '무료 체험 신청', 'dp.btn2': '렌탈 &amp; 지원금 정보',
-    'dp.sim': '촉각 디스플레이 시뮬레이션',
-    'dp.caption': '각 핀이 독립적으로 올라가거나 내려가며, 이미지·지도·도표를 손끝으로 읽을 수 있는 물리적 표면으로 렌더링합니다.',
-    'dp.sl1': '촉각 핀', 'dp.sn2': '실시간', 'dp.sl2': '렌더링 속도',
-    's4.label': '희망 스토리',
-    's4.title': '"나처럼 된 사람들이<br>지금 어떻게 살고 있나요?"',
-    's4.desc': '후천적 시각장애를 헤쳐나가고 삶을 다시 세운 분들의 이야기를 직접 들어보세요. 그들의 목소리로 전하는 오디오 인터뷰.',
-    's4.iv1': '인터뷰 01', 's4.iv2': '인터뷰 02', 's4.iv3': '인터뷰 03',
-    's4.tag1': '소프트웨어 엔지니어 — 망막색소변성증',
-    's4.st1': '시력을 잃은 지 2년 후, 개발자로 복직했습니다',
-    's4.se1': '"처음에는 모든 게 끝난 줄 알았어요. 지금은 스크린 리더로 코드를 짜고, 회의에 참석하고, 풀 리퀘스트를 리뷰합니다. 도구가 바뀌었을 뿐, 일은 바뀌지 않았어요."',
-    's4.sp1': '김재원, 34세', 's4.sd1': '12분',
-    's4.tag2': '전업주부 — 녹내장',
-    's4.st2': '혼자 요리하고, 혼자 장을 봅니다',
-    's4.se2': '"AI가 냉장고 재료를 읽어줘요. 닷패드로 레시피 도표를 손으로 느낄 수 있어요. 제가 할 수 있는 것들이 생각보다 훨씬 많더라고요."',
-    's4.sp2': '박소희, 51세', 's4.sd2': '9분',
-    's4.tag3': '대학생 — 당뇨망막병증',
-    's4.st3': '3학년에 복학해서 수석으로 졸업했습니다',
-    's4.se3': '"AI가 강의와 판서 내용을 실시간으로 텍스트로 변환해줘요. 솔직히 집중력이 더 좋아졌어요. 이제 모든 걸 들을 수 있으니까요."',
-    's4.sp3': '이준혁, 24세', 's4.sd3': '15분',
-    's4.more': '매월 새 인터뷰가 추가됩니다.',
-    's4.all': '전체 스토리 보기 &nbsp;→',
-    'cta.title': '첫걸음, 혼자 내딛지 않아도 됩니다',
-    'cta.body': '닷패드 무료 체험부터 시작하세요. 전문 상담사가 기기 사용법과 이용 가능한 복지 지원 프로그램을 함께 안내해 드립니다.',
-    'cta.btn1': '무료 체험 신청', 'cta.btn2': '전문가 상담',
-    'ft.desc': '후천적 시각장애인과 가족을 위한 플랫폼 — 첫날부터 방향을 찾을 수 있도록 돕습니다. Dot Inc. 제공.',
-    'ft.h1': '가이드', 'ft.h2': '기술', 'ft.h3': '스토리',
-    'ft.g1': '긴급 도움', 'ft.g2': '단계별 가이드', 'ft.g3': '복지 &amp; 혜택', 'ft.g4': '센터 찾기',
-    'ft.t1': '스마트폰 접근성', 'ft.t2': '닷패드 소개', 'ft.t3': '체험 신청', 'ft.t4': '렌탈 &amp; 지원금',
-    'ft.s1': '직장인 이야기', 'ft.s2': '학생 이야기', 'ft.s3': '가족 이야기', 'ft.s4': '내 이야기 나누기',
-    'ft.copy': '© 2026 첫 100일 · Dot Inc. All rights reserved.',
-    'ft.crisis': '위기 상담: <strong>1393</strong> &nbsp;·&nbsp; 복지 상담: <strong>129</strong>',
+    'skip': 'ë³¸ë¬¸ ë°ë¡ê°ê¸°',
+    'nav.logo': 'ì²« 100ì¼',
+    'nav.meta': 'íì²ì  ìê°ì¥ì ì¸ì ìí ìë´ ê°ì´ë',
+    'nav.l1': 'ì§ê¸ ëì', 'nav.l2': 'í¨ê» ê±·ë ê¸¸',
+    'nav.l3': 'ë³´ì¡°ê³µí', 'nav.l4': 'í¬ë§ ì¤í ë¦¬',
+    'nav.cta': 'ì²´í ì ì²­',
+    'hero.eyebrow': 'íì²ì  ìê°ì¥ì ì¸ê³¼ ê°ì¡±ì ìí ì²«ê±¸ì ê°ì´ë',
+    'hero.h1': 'ë¹ì ì ìì¼ê° ë°ëììµëë¤.<br><em>íì§ë§ ì¶ì´ ë©ì¶ íìë ììµëë¤.</em>',
+    'hero.sub': 'ì²« 100ì¼ ê°ì´ëë ìµê·¼ ìë ¥ì ìì ë¶ê³¼ ê·¸ ê³ì ì  ê°ì¡±ì ìí ìë´ íë«í¼ìëë¤. ì¬ê¸°ì ììíì¸ì.',
+    'hero.btn1': 'ì´ëì ììí´ì¼ íëì?',
+    'hero.btn2': 'ë¨ê³ë³ ê°ì´ë ë³´ê¸°',
+    'hero.s1': 'ì´ ê°ì´ëê°<br>ë¤ë£¨ë ì¼ì',
+    'hero.s2': 'ì¤ì© íë í­ëª©ì´<br>ìë ë¨ê³',
+    'hero.s3': 'ì¤ì  íë³µ<br>ì¤ëì¤ ì¤í ë¦¬',
+    'hero.s4': 'íìí<br>ì¬ì  ê²½í',
+    's1.label': 'ê¸´ê¸ ìë´',
+    's1.title': 'ì§ê¸ ë§ë§íì ê°ì?',
+    's1.desc': 'ì§ë¨ì ë§ ë°ì¼ì¨ë¤ë©´, ì¬ê¸°ì ììíì¸ì. ì¤ë ì±ê²¨ì¼ í  ì¸ ê°ì§.',
+    's1.c1.title': 'ì¤ë ë¹ì¥ í´ì¼ í  ì¼ 3ê°ì§',
+    's1.c1.body': 'ì§ë¨ ì§í 24ìê°ì í¼ëì¤ë½ìµëë¤. ê°ì¥ ì¤ìí ê²ë¤ì ì ë¦¬íìµëë¤.',
+    's1.c1.l1': 'ë´ë¹ ìì¬ìê² ë¤ì ì§ë£ ì¼ì  íì¸íê¸°',
+    's1.c1.l2': 'ê°ì¡± ì¤ ì£¼ì ì°ë½ ë´ë¹ì 1ëª ì íê¸°',
+    's1.c1.l3': 'ê°ê¹ì´ ì¥ì ì¸ë³µì§ê´ ìë´ ìì½',
+    's1.c2.title': '24ìê° ì°ê²°ë©ëë¤',
+    's1.c2.body': 'ìë¬´ ìê°ì ê¸°ë¤ë¦´ íìê° ììµëë¤. ì§ê¸ ë°ë¡ ì°ê²°ë©ëë¤.',
+    's1.h1': 'ìê¸° ìë´ ì í', 's1.h2': 'ë³´ê±´ë³µì§ìë´ì¼í°',
+    's1.c3.title': 'ì´ê¸° ëì ë§¤ë´ì¼',
+    's1.c3.body': 'ì²ì 30ì¼ì ìí ì¤ëì¤ ê°ì´ë â ì¤ëì¤ì PDFë¡ ì ê³µë©ëë¤.',
+    's1.audio': 'ì´ê¸° ëì ë§¤ë´ì¼ â ì¤ëì¤ ê°ì´ë',
+    's1.pdf': 'PDF ë¤ì´ë¡ë â',
+    's1.c4.title': 'ê°ì¡± ì¬ë¬ë¶ê»',
+    's1.say': 'ì´ë ê² ë§íì¸ì', 's1.avoid': 'í¼í´ì¼ í  ë§',
+    's1.say1': '"ê°ì´ ë°©ë²ì ì°¾ìë³´ì."',
+    's1.say2': '"ìì§ í  ì ìë ê² ì ë§ ë§ì."',
+    's1.say3': '"ë´ê° ì¬ê¸° ìì´. í ë¨ê³ì© ê°ì´ í´ê²°íì."',
+    's1.avoid1': '"ì ì´ë ê² ëì´?" â ìì¸ ì¶ê¶ì ê³ íµì ëí©ëë¤',
+    's1.avoid2': '"ê´ì°®ìì§ ê±°ì¼" â ê·¼ê±° ìë ìë¡ë ì ë¢°ë¥¼ ë¬´ëë¨ë¦½ëë¤',
+    's1.avoid3': 'ì¹¨ë¬µ â ê³ ë¦½ì´ ê°ì¥ í´ë¡ì´ ë°ììëë¤',
+    's2.label': 'ë¨ê³ë³ ê°ì´ë', 's2.title': 'ì²« 100ì¼',
+    's2.desc': 'ì¬ì ì ì¸ ë¨ê³ë¡ ëë´ìµëë¤. í¨ê» ì½ì´ë³´ì¸ì â ê° í­ëª©ìë ë¹ì¬ìì ê°ì¡±ì ìí íë í­ëª©ì´ ììµëë¤.',
+    's2.p1': '1ë¨ê³', 's2.d1': 'Day<br>1â7', 's2.t1': 'ì¬ë¦¬ ìì  &amp; ìì í ì§ ë§ë¤ê¸°',
+    's2.p2': '2ë¨ê³', 's2.d2': 'Day<br>8â30', 's2.t2': 'ì¤ë§í¸í° ì²«ê±¸ì &amp; íì  ì ì°¨ ìì',
+    's2.p3': '3ë¨ê³', 's2.d3': 'Day<br>31â100', 's2.t3': 'ë³´ì¡°ê³µí íì &amp; ì¬í ë³µê· ì¤ë¹',
+    'who.self': 'ë¹ì¬ì', 'who.family': 'ê°ì¡±', 'who.together': 'í¨ê»',
+    's2.1.i1': 'ì¤ë§í¸í°ìì VoiceOver(iOS) ëë TalkBack(Android) ì¼ê¸° â ì´ ì¬ì´í¸ìì ì¤ëì¤ íí ë¦¬ì¼ ì ê³µ',
+    's2.1.i2': 'ì§ ì ìíë¬¼ ì ê±°: ë ì¹´ë¡ì´ ë¬¼ê±´, ì´ëì´ ë³µë, ë¬¸í±. ê· ì¼íê³  ë°ì ì¡°ëªì¼ë¡ êµì²´',
+    's2.1.i3': 'ê°ê¹ì´ ìê°ì¥ì ì¸ë³µì§ê´ ë°©ë¬¸ ìë´ ìì½',
+    's2.1.i4': 'ì¥ì  ë±ë¡ ì ì°¨ ìì â ì£¼ë¯¼ì¼í° ëë ë³ì ì¬íì¬ìí ì°ë½',
+    's2.exp1': '1ë¨ê³ ì ì²´ ê°ì´ë',
+    's2.body1': 'ì²« ì£¼ì ê°ì ì  ì¶©ê²©ì ìì°ì¤ë¬ì´ ë°ììëë¤. ì ë³´ ê³¼ë¶íë³´ë¤ ì ì²´ ìì ê³¼ ê°ì ì  ëíì ì°ì íì¸ì. íë£¨ì í ë²ì ëíë¡ë ì¶©ë¶í©ëë¤. ì¬ë ê²ì í¬ê¸°ê° ìëë¼, ë¤ì ì¼ì´ì¤ ì¤ë¹ìëë¤.',
+    's2.2.i1': 'ì¤í¬ë¦° ë¦¬ëë¡ ì í ê±¸ê¸°, ë¬¸ì ì½ê¸°, ë©ì ì  ì± ì¬ì© ì°ìµ',
+    's2.2.i2': 'ì£¼ë¯¼ì¼í° ëë ë³ì ì¬íì¬ìíì ì¥ì  ë±ë¡ ì ì²­ì ì ì¶',
+    's2.2.i3': 'ì§ì­ ë³µì§ê´ ì¬í íë¡ê·¸ë¨ ë±ë¡ ìë´',
+    's2.2.i4': 'AIë¡ ì¬ì§ ì íì¤í¸ ì½ê¸°, ì´ë¯¸ì§ ë¬ì¬ ë°ê¸° â ì¤ìµ í¬í¨',
+    's2.exp2': '2ë¨ê³ ì ì²´ ê°ì´ë',
+    's2.body2': '2ë¨ê³ë ì£¼ëì±ì ëì°¾ë ê³¼ì ìëë¤. ìì± ë©ìì§ ë³´ë´ê¸°, í¼ì ë¶ì ê°ê¸° ê°ì ìì ì±ì·¨ë êµì¥í ì¤ìí©ëë¤. í¨ê» ì¶ííì¸ì.',
+    's2.3.i1': 'ì´ ê°ì´ëë¥¼ íµí´ ë·í¨ë ë° ê¸°í ë³´ì¡°ê¸°ê¸° ë¬´ë£ ì²´í ì ì²­',
+    's2.3.i2': 'ì¥ì ì¸ë³µì§ê´ ë° êµ­ë¯¼ê±´ê°ë³´íì íµí ë³´ì¡°ê¸°ê¸° ì§ìê¸ ì ì²­',
+    's2.3.i3': 'ì·¨ì ëë ë³µíì ìí ì§ìì¬í ìë´ ìì',
+    's2.3.i4': 'ìì¡°ëª¨ì ì°¸ì¬ â ê°ì ê²½íì ê°ì§ ì¬ëë¤ê³¼ì ì°ê²°ì´ ê°ì¥ ê°ë ¥í í ê±¸ì',
+    's2.exp3': '3ë¨ê³ ì ì²´ ê°ì´ë',
+    's2.body3': '100ì¼ì§¸ê° ëë©´, ëë¶ë¶ì ë¶ë¤ì´ ìì ì´ ì¼ë§ë ë§ì´ ë°°ì°ê³  ì ìíëì§ ëë¼ê² ë©ëë¤. ëª©íë ìì ì ì¶ì¼ë¡ ëìê°ë ê²ì´ ìëëë¤ â ìë¡ì´ ëêµ¬ì í¨ê», ë ëì´ì§ ê°ë¥ì±ì¼ë¡ ì ì¶ì ë§ëë ê²ìëë¤.',
+    's3.label': 'ë³´ì¡°ê³µí',
+    's3.title': 'ê¸°ì ì´ ìë¡ì´<br>ëì´ ë©ëë¤',
+    's3.desc': 'ì²«ë ë¶í° ì ìë¥¼ ë°°ì¸ íìë ììµëë¤. ìì ìë ëêµ¬ë¤ì´ ì¼ì ê¸°ë¥ì ëë¶ë¶ì ì¦ì íë³µìì¼ ì¤ ì ììµëë¤.',
+    's3.t1': 'ì¤ë§í¸í° ì ê·¼ì±',
+    's3.b1': 'VoiceOverì TalkBackì ëª¨ë  ìì´í°ê³¼ ìëë¡ì´ë ê¸°ê¸°ì ê¸°ë³¸ íì¬ëì´ ììµëë¤. ì¤ëì¤ íí ë¦¬ì¼ì´ ì²ìë¶í° ì í, ë¬¸ì, ì¹ ë¸ë¼ì°ì§ê¹ì§ ìë´í©ëë¤.',
+    's3.l1': 'â¶ &nbsp;ì¤ëì¤ íí ë¦¬ì¼ ìì',
+    's3.t2': 'AI íìì',
+    's3.b2': 'íë AIë ì¬ì§ì íì¤í¸ë¥¼ ì½ê³ , ì´ë¯¸ì§ì ì¥ë©´ì ë¬ì¬íê³ , ê¸¸ ìë´ë¥¼ ì ê³µíê³ , ì±ì ìë¦¬ë¡ ì½ì´ì¤ëë¤. 10ë¶ ìì ì¤ì íë ë°©ë²ì ìë ¤ëë¦½ëë¤.',
+    's3.l2': 'AI ê°ì´ë ë³´ê¸° &nbsp;â',
+    's3.t3': 'ìê° ì¸ê³ë¥¼ ìì¼ë¡ ë§ì§ë¤',
+    's3.b3': 'ë·í¨ëë ì¬ì§, ì§ë, ì°¨í¸, ëíë¥¼ ì´ê° ííë¡ ë³íí©ëë¤. ë³´ì´ë ê³µê° ì ë³´ë¥¼ ëë ì ìê² í´ì¤ëë¤. ì ì ì§ìì´ ìì´ë ììí  ì ììµëë¤.',
+    's3.l3': 'ë·í¨ë ììë³´ê¸° &nbsp;â',
+    'dp.tag': 'ì¶ì² ë³´ì¡°ê¸°ê¸°',
+    'dp.title': 'ë·í¨ë â<br>ë³´ì´ë ê²ì ë¤ì ëë¼ë¤',
+    'dp.body': 'ë·í¨ëë ì ì ëì¤íë ì´ê° ìëëë¤. ì¬ì§, ì§ë, ê·¸ëí, ëë©´ ë± ëª¨ë  ìê° ì½íì¸ ë¥¼ ìì² ê°ì ê°ë³ ì´ë íì ì¬ì©í´ ì¤ìê°ì¼ë¡ ë§ì§ ì ìë íë©´ì¼ë¡ ë³ííë ìì í ì´ê° ì¤ë§í¸ ì¤í¬ë¦°ìëë¤.',
+    'dp.p1': 'ì¤ë§í¸í° íë©´ì ì´ê° íë©´ì¼ë¡ ë¯¸ë¬ë§',
+    'dp.p2': 'ì§íì²  ë¸ì ëÂ·ê±´ë¬¼ ë°°ì¹ëÂ·ì°¨í¸ë¥¼ ìì¼ë¡ íì',
+    'dp.p3': 'ì ì ì§ì ìì´ë ë°ë¡ ì¬ì© ê°ë¥',
+    'dp.p4': 'ì ë¶ ë³´ì¡°ê¸ íë¡ê·¸ë¨ì¼ë¡ ì´ì© ê°ë¥',
+    'dp.btn1': 'ë¬´ë£ ì²´í ì ì²­', 'dp.btn2': 'ë í &amp; ì§ìê¸ ì ë³´',
+    'dp.sim': 'ì´ê° ëì¤íë ì´ ìë®¬ë ì´ì',
+    'dp.caption': 'ê° íì´ ëë¦½ì ì¼ë¡ ì¬ë¼ê°ê±°ë ë´ë ¤ê°ë©°, ì´ë¯¸ì§Â·ì§ëÂ·ëíë¥¼ ìëì¼ë¡ ì½ì ì ìë ë¬¼ë¦¬ì  íë©´ì¼ë¡ ë ëë§í©ëë¤.',
+    'dp.sl1': 'ì´ê° í', 'dp.sn2': 'ì¤ìê°', 'dp.sl2': 'ë ëë§ ìë',
+    's4.label': 'í¬ë§ ì¤í ë¦¬',
+    's4.title': '"ëì²ë¼ ë ì¬ëë¤ì´<br>ì§ê¸ ì´ë»ê² ì´ê³  ìëì?"',
+    's4.desc': 'íì²ì  ìê°ì¥ì ë¥¼ í¤ì³ëê°ê³  ì¶ì ë¤ì ì¸ì´ ë¶ë¤ì ì´ì¼ê¸°ë¥¼ ì§ì  ë¤ì´ë³´ì¸ì. ê·¸ë¤ì ëª©ìë¦¬ë¡ ì íë ì¤ëì¤ ì¸í°ë·°.',
+    's4.iv1': 'ì¸í°ë·° 01', 's4.iv2': 'ì¸í°ë·° 02', 's4.iv3': 'ì¸í°ë·° 03',
+    's4.tag1': 'ìíí¸ì¨ì´ ìì§ëì´ â ë§ë§ììë³ì±ì¦',
+    's4.st1': 'ìë ¥ì ìì ì§ 2ë í, ê°ë°ìë¡ ë³µì§íìµëë¤',
+    's4.se1': '"ì²ììë ëª¨ë  ê² ëë ì¤ ììì´ì. ì§ê¸ì ì¤í¬ë¦° ë¦¬ëë¡ ì½ëë¥¼ ì§ê³ , íìì ì°¸ìíê³ , í ë¦¬íì¤í¸ë¥¼ ë¦¬ë·°í©ëë¤. ëêµ¬ê° ë°ëìì ë¿, ì¼ì ë°ëì§ ììì´ì."',
+    's4.sp1': 'ê¹ì¬ì, 34ì¸', 's4.sd1': '12ë¶',
+    's4.tag2': 'ì ìì£¼ë¶ â ë¹ë´ì¥',
+    's4.st2': 'í¼ì ìë¦¬íê³ , í¼ì ì¥ì ë´ëë¤',
+    's4.se2': '"AIê° ëì¥ê³  ì¬ë£ë¥¼ ì½ì´ì¤ì. ë·í¨ëë¡ ë ìí¼ ëíë¥¼ ìì¼ë¡ ëë ì ìì´ì. ì ê° í  ì ìë ê²ë¤ì´ ìê°ë³´ë¤ í¨ì¬ ë§ëë¼ê³ ì."',
+    's4.sp2': 'ë°ìí¬, 51ì¸', 's4.sd2': '9ë¶',
+    's4.tag3': 'ëíì â ë¹ë¨ë§ë§ë³ì¦',
+    's4.st3': '3íëì ë³µíí´ì ììì¼ë¡ ì¡¸ìíìµëë¤',
+    's4.se3': '"AIê° ê°ìì íì ë´ì©ì ì¤ìê°ì¼ë¡ íì¤í¸ë¡ ë³íí´ì¤ì. ìì§í ì§ì¤ë ¥ì´ ë ì¢ìì¡ì´ì. ì´ì  ëª¨ë  ê±¸ ë¤ì ì ìì¼ëê¹ì."',
+    's4.sp3': 'ì´ì¤í, 24ì¸', 's4.sd3': '15ë¶',
+    's4.more': 'ë§¤ì ì ì¸í°ë·°ê° ì¶ê°ë©ëë¤.',
+    's4.all': 'ì ì²´ ì¤í ë¦¬ ë³´ê¸° &nbsp;â',
+    'cta.title': 'ì²«ê±¸ì, í¼ì ë´ëì§ ììë ë©ëë¤',
+    'cta.body': 'ë·í¨ë ë¬´ë£ ì²´íë¶í° ììíì¸ì. ì ë¬¸ ìë´ì¬ê° ê¸°ê¸° ì¬ì©ë²ê³¼ ì´ì© ê°ë¥í ë³µì§ ì§ì íë¡ê·¸ë¨ì í¨ê» ìë´í´ ëë¦½ëë¤.',
+    'cta.btn1': 'ë¬´ë£ ì²´í ì ì²­', 'cta.btn2': 'ì ë¬¸ê° ìë´',
+    'ft.desc': 'íì²ì  ìê°ì¥ì ì¸ê³¼ ê°ì¡±ì ìí íë«í¼ â ì²«ë ë¶í° ë°©í¥ì ì°¾ì ì ìëë¡ ëìµëë¤. Dot Inc. ì ê³µ.',
+    'ft.h1': 'ê°ì´ë', 'ft.h2': 'ê¸°ì ', 'ft.h3': 'ì¤í ë¦¬',
+    'ft.g1': 'ê¸´ê¸ ëì', 'ft.g2': 'ë¨ê³ë³ ê°ì´ë', 'ft.g3': 'ë³µì§ &amp; íí', 'ft.g4': 'ì¼í° ì°¾ê¸°',
+    'ft.t1': 'ì¤ë§í¸í° ì ê·¼ì±', 'ft.t2': 'ë·í¨ë ìê°', 'ft.t3': 'ì²´í ì ì²­', 'ft.t4': 'ë í &amp; ì§ìê¸',
+    'ft.s1': 'ì§ì¥ì¸ ì´ì¼ê¸°', 'ft.s2': 'íì ì´ì¼ê¸°', 'ft.s3': 'ê°ì¡± ì´ì¼ê¸°', 'ft.s4': 'ë´ ì´ì¼ê¸° ëëê¸°',
+    'ft.copy': 'Â© 2026 ì²« 100ì¼ Â· Dot Inc. All rights reserved.',
+    'ft.crisis': 'ìê¸° ìë´: <strong>1393</strong> &nbsp;Â·&nbsp; ë³µì§ ìë´: <strong>129</strong>',
     // Support section
-    'nav.l5': '지원 제도',
-    's5.label': '보조기기 지원 제도', 's5.title': '지원금, 어떻게 받나요?',
-    's5.desc': '처음 신청하는 분도 이해할 수 있도록 국가별 절차와 지원금액을 한눈에 정리했습니다.',
-    's5.tab.kr': '🇰🇷 한국', 's5.tab.us': '🇺🇸 미국',
-    's5.kr.tip.title': '💡 핵심 원칙',
-    's5.kr.tip.body': '장애 등록이 먼저입니다. 등록 후 복지카드를 받아야 대부분의 지원을 신청할 수 있어요. 진단 후 주민센터 방문까지 보통 2~3개월 걸리니 빠를수록 좋습니다.',
-    's5.kr.flow.title': 'STEP BY STEP — 처음 신청하는 순서',
-    's5.kr.s1': '안과 진단서', 's5.kr.s1s': '안과 방문, 장애 진단서 발급 요청',
-    's5.kr.s2': '주민센터 신청', 's5.kr.s2s': '진단서 지참, 장애 등록 신청',
-    's5.kr.s3': '국민연금 심사', 's5.kr.s3s': '2~3개월 소요',
-    's5.kr.s4': '복지카드 수령', 's5.kr.s4s': '장애등급 확정',
-    's5.kr.s5': '보조기기 신청', 's5.kr.s5s': '주민센터 또는 건강보험공단',
-    's5.kr.s6': '기기 수령', 's5.kr.s6s': '심사 후 교부 또는 급여 지급',
-    's5.kr.prog.title': '주요 지원 프로그램',
-    's5.kr.p1.org': '보건복지부', 's5.kr.p1.name': '장애인 보조기기 교부사업',
-    's5.kr.p1.who': '국민기초생활수급자 · 차상위계층 시각장애인',
-    's5.kr.p1.unit': '기준금액 지원 (수급자) / 80% (차상위)',
-    's5.kr.p2.org': '국민건강보험공단', 's5.kr.p2.name': '건강보험 보조기기 급여',
-    's5.kr.p2.who': '장애 등록 시각장애인 (의사 처방 필요)',
-    's5.kr.p2.unit': '건강보험 부담 (본인 20%)',
-    's5.kr.p3.org': '한국장애인고용공단', 's5.kr.p3.name': '직업재활 보조공학기기 지원',
-    's5.kr.p3.who': '취업 희망 또는 재직 중인 시각장애인',
-    's5.kr.p3.unit': '취업 목적 보조기기 전액 지원',
-    's5.kr.p4.org': '한국장애인개발원', 's5.kr.p4.name': '보조기기 렌탈 서비스',
-    's5.kr.p4.who': '구매 부담 없이 먼저 체험하고 싶은 분',
-    's5.kr.p4.unit': '저렴한 월 렌탈료',
-    's5.kr.device.title': '품목별 기준금액 (보건복지부 기준)',
-    's5.kr.contact.title': '📞 바로 전화할 수 있는 곳',
-    's5.kr.contact.body': '<strong>129</strong> 보건복지상담센터 (24시간) — 장애 등록 절차, 보조기기 교부 전반 상담<br><strong>1588-1519</strong> 국민건강보험공단 — 건강보험 급여 보조기기 문의<br><strong>1544-0083</strong> 한국장애인고용공단 — 직업재활 보조기기 지원 문의',
+    'nav.l5': 'ì§ì ì ë',
+    's5.label': 'ë³´ì¡°ê¸°ê¸° ì§ì ì ë', 's5.title': 'ì§ìê¸, ì´ë»ê² ë°ëì?',
+    's5.desc': 'ì²ì ì ì²­íë ë¶ë ì´í´í  ì ìëë¡ êµ­ê°ë³ ì ì°¨ì ì§ìê¸ì¡ì íëì ì ë¦¬íìµëë¤.',
+    's5.tab.kr': 'ð°ð· íêµ­', 's5.tab.us': 'ðºð¸ ë¯¸êµ­',
+    's5.kr.tip.title': 'ð¡ íµì¬ ìì¹',
+    's5.kr.tip.body': 'ì¥ì  ë±ë¡ì´ ë¨¼ì ìëë¤. ë±ë¡ í ë³µì§ì¹´ëë¥¼ ë°ìì¼ ëë¶ë¶ì ì§ìì ì ì²­í  ì ìì´ì. ì§ë¨ í ì£¼ë¯¼ì¼í° ë°©ë¬¸ê¹ì§ ë³´íµ 2~3ê°ì ê±¸ë¦¬ë ë¹ ë¥¼ìë¡ ì¢ìµëë¤.',
+    's5.kr.flow.title': 'STEP BY STEP â ì²ì ì ì²­íë ìì',
+    's5.kr.s1': 'ìê³¼ ì§ë¨ì', 's5.kr.s1s': 'ìê³¼ ë°©ë¬¸, ì¥ì  ì§ë¨ì ë°ê¸ ìì²­',
+    's5.kr.s2': 'ì£¼ë¯¼ì¼í° ì ì²­', 's5.kr.s2s': 'ì§ë¨ì ì§ì°¸, ì¥ì  ë±ë¡ ì ì²­',
+    's5.kr.s3': 'êµ­ë¯¼ì°ê¸ ì¬ì¬', 's5.kr.s3s': '2~3ê°ì ìì',
+    's5.kr.s4': 'ë³µì§ì¹´ë ìë ¹', 's5.kr.s4s': 'ì¥ì ë±ê¸ íì ',
+    's5.kr.s5': 'ë³´ì¡°ê¸°ê¸° ì ì²­', 's5.kr.s5s': 'ì£¼ë¯¼ì¼í° ëë ê±´ê°ë³´íê³µë¨',
+    's5.kr.s6': 'ê¸°ê¸° ìë ¹', 's5.kr.s6s': 'ì¬ì¬ í êµë¶ ëë ê¸ì¬ ì§ê¸',
+    's5.kr.prog.title': 'ì£¼ì ì§ì íë¡ê·¸ë¨',
+    's5.kr.p1.org': 'ë³´ê±´ë³µì§ë¶', 's5.kr.p1.name': 'ì¥ì ì¸ ë³´ì¡°ê¸°ê¸° êµë¶ì¬ì',
+    's5.kr.p1.who': 'êµ­ë¯¼ê¸°ì´ìíìê¸ì Â· ì°¨ììê³ì¸µ ìê°ì¥ì ì¸',
+    's5.kr.p1.unit': 'ê¸°ì¤ê¸ì¡ ì§ì (ìê¸ì) / 80% (ì°¨ìì)',
+    's5.kr.p2.org': 'êµ­ë¯¼ê±´ê°ë³´íê³µë¨', 's5.kr.p2.name': 'ê±´ê°ë³´í ë³´ì¡°ê¸°ê¸° ê¸ì¬',
+    's5.kr.p2.who': 'ì¥ì  ë±ë¡ ìê°ì¥ì ì¸ (ìì¬ ì²ë°© íì)',
+    's5.kr.p2.unit': 'ê±´ê°ë³´í ë¶ë´ (ë³¸ì¸ 20%)',
+    's5.kr.p3.org': 'íêµ­ì¥ì ì¸ê³ ì©ê³µë¨', 's5.kr.p3.name': 'ì§ìì¬í ë³´ì¡°ê³µíê¸°ê¸° ì§ì',
+    's5.kr.p3.who': 'ì·¨ì í¬ë§ ëë ì¬ì§ ì¤ì¸ ìê°ì¥ì ì¸',
+    's5.kr.p3.unit': 'ì·¨ì ëª©ì  ë³´ì¡°ê¸°ê¸° ì ì¡ ì§ì',
+    's5.kr.p4.org': 'íêµ­ì¥ì ì¸ê°ë°ì', 's5.kr.p4.name': 'ë³´ì¡°ê¸°ê¸° ë í ìë¹ì¤',
+    's5.kr.p4.who': 'êµ¬ë§¤ ë¶ë´ ìì´ ë¨¼ì  ì²´ííê³  ì¶ì ë¶',
+    's5.kr.p4.unit': 'ì ë ´í ì ë íë£',
+    's5.kr.device.title': 'íëª©ë³ ê¸°ì¤ê¸ì¡ (ë³´ê±´ë³µì§ë¶ ê¸°ì¤)',
+    's5.kr.contact.title': 'ð ë°ë¡ ì íí  ì ìë ê³³',
+    's5.kr.contact.body': '<strong>129</strong> ë³´ê±´ë³µì§ìë´ì¼í° (24ìê°) â ì¥ì  ë±ë¡ ì ì°¨, ë³´ì¡°ê¸°ê¸° êµë¶ ì ë° ìë´<br><strong>1588-1519</strong> êµ­ë¯¼ê±´ê°ë³´íê³µë¨ â ê±´ê°ë³´í ê¸ì¬ ë³´ì¡°ê¸°ê¸° ë¬¸ì<br><strong>1544-0083</strong> íêµ­ì¥ì ì¸ê³ ì©ê³µë¨ â ì§ìì¬í ë³´ì¡°ê¸°ê¸° ì§ì ë¬¸ì',
     // Table headers KO
-    'tbl.device': '보조기기', 'tbl.amount': '기준금액', 'tbl.support': '수급자 지원', 'tbl.route': '신청처',
-    'dev.kr.1': '독서확대기 (CCTV형)', 'dev.kr.2': '점자정보단말기',
-    'dev.kr.3': '화면낭독소프트웨어', 'dev.kr.4': '점자프린터',
-    'dev.kr.5': '저시력 보조안경', 'dev.kr.6': '닷패드 (촉각 디스플레이)',
-    'route.center': '주민센터', 'route.nhis': '건강보험공단', 'route.dotpad': '<a href="#dotpad" style="color:var(--dark);text-decoration:underline">닷패드 체험</a>',
+    'tbl.device': 'ë³´ì¡°ê¸°ê¸°', 'tbl.amount': 'ê¸°ì¤ê¸ì¡', 'tbl.support': 'ìê¸ì ì§ì', 'tbl.route': 'ì ì²­ì²',
+    'dev.kr.1': 'ëìíëê¸° (CCTVí)', 'dev.kr.2': 'ì ìì ë³´ë¨ë§ê¸°',
+    'dev.kr.3': 'íë©´ë­ëìíí¸ì¨ì´', 'dev.kr.4': 'ì ìíë¦°í°',
+    'dev.kr.5': 'ì ìë ¥ ë³´ì¡°ìê²½', 'dev.kr.6': 'ë·í¨ë (ì´ê° ëì¤íë ì´)',
+    'route.center': 'ì£¼ë¯¼ì¼í°', 'route.nhis': 'ê±´ê°ë³´íê³µë¨', 'route.dotpad': '<a href="#dotpad" style="color:var(--dark);text-decoration:underline">ë·í¨ë ì²´í</a>',
     // Tags KO
-    'tag.free': '무료 신청', 'tag.community': '주민센터', 'tag.nhis': '건강보험공단',
-    'tag.prescription': '처방전 필요', 'tag.employment': '취업 연계', 'tag.kead': 'KEAD',
-    'tag.rental': '렌탈 가능', 'tag.kdit': '개발원',
+    'tag.free': 'ë¬´ë£ ì ì²­', 'tag.community': 'ì£¼ë¯¼ì¼í°', 'tag.nhis': 'ê±´ê°ë³´íê³µë¨',
+    'tag.prescription': 'ì²ë°©ì  íì', 'tag.employment': 'ì·¨ì ì°ê³', 'tag.kead': 'KEAD',
+    'tag.rental': 'ë í ê°ë¥', 'tag.kdit': 'ê°ë°ì',
     // US section KO labels
-    's5.us.tip.title': '💡 핵심 원칙 (미국)',
-    's5.us.tip.body': '미국은 단일 국가 프로그램이 없습니다. 주(State) 정부, 연방 정부, 비영리가 함께 지원합니다. 주 직업재활(VR) 기관과 AT 프로그램이 첫 번째 관문입니다 — 무료입니다.',
-    's5.us.flow.title': 'STEP BY STEP — 처음 신청하는 순서 (미국)',
-    's5.us.s1': '의사 진단서', 's5.us.s1s': '안과 전문의에게 의료 필요성 서류 발급',
-    's5.us.s2': 'VR 연락', 's5.us.s2s': '주 직업재활 기관 — 취업용 보조기기 무료',
-    's5.us.s3': '기기 체험', 's5.us.s3s': '주 AT 프로그램 — 무료 대여 및 시연',
-    's5.us.s4': 'Medicaid 확인', 's5.us.s4s': '소득 기반 — 보조기기 커버 가능',
-    's5.us.s5': 'SSI/SSDI 신청', 's5.us.s5s': 'ssa.gov — 장애 급여',
-    's5.us.prog.title': '주요 지원 프로그램 (미국)',
-    's5.us.p1.org': '주 정부', 's5.us.p1.name': '직업재활 (Vocational Rehabilitation)',
-    's5.us.p1.who': '취업을 원하는 시각장애인. 신청 무료.',
-    's5.us.p1.unit': '취업 관련 보조기기 비용의 최대 100% 지원',
-    's5.us.p2.org': 'AT Act — 전 주', 's5.us.p2.name': '주 보조공학 프로그램',
-    's5.us.p2.who': '모든 거주자. 소득 제한 없음. 기기 대여, 시연, 저금리 융자.',
-    's5.us.p2.unit': '기기 대여 무료 + 0~3% 융자 가능',
-    's5.us.p3.org': '연방 — 소득 기반', 's5.us.p3.name': 'Medicaid',
-    's5.us.p3.who': '저소득층. 주마다 다름 — 일부 주는 화면낭독기, CCTV 등 커버.',
-    's5.us.p3.unit': '주마다 다름 — 본인 부담 $0 가능',
-    's5.us.p4.org': '참전 용사 전용', 's5.us.p4.name': 'VA 시각 재활 서비스',
-    's5.us.p4.who': '시력 손상 미국 참전 용사. 전액 커버 및 대면 훈련 제공.',
-    's5.us.p4.unit': '100% 커버 + 대면 재활 훈련',
-    's5.us.device.title': '주요 보조기기 — 일반 가격 및 지원 현황',
-    's5.us.contact.title': '📞 처음 전화할 곳 (미국)',
-    's5.us.contact.body': '<strong>주 VR 기관 찾기:</strong> rsa.ed.gov/about/programs/vocational-rehabilitation<br><strong>주 AT 프로그램 찾기:</strong> AT3center.net/state-at-programs<br><strong>사회보장국 (SSI/SSDI):</strong> 1-800-772-1213 또는 ssa.gov<br><strong>참전 용사 (VA):</strong> 1-800-827-1000 또는 va.gov',
-    'tbl.device.en': '보조기기', 'tbl.retail': '소매가', 'tbl.coverage': '지원 가능 프로그램', 'tbl.source': '최적 경로',
-    'dev.us.1': '화면낭독소프트웨어 (JAWS)', 'dev.us.2': '독서확대기 (CCTV)',
-    'dev.us.3': '점자 디스플레이', 'dev.us.4': '음성 GPS / 내비게이션',
-    'dev.us.5': '스마트폰 접근성 설정', 'dev.us.6': '닷패드 (촉각 디스플레이)',
-    'tag.free.en': '무료', 'tag.employment.en': '취업 연계', 'tag.everyone': '모두 가능',
-    'tag.income': '소득 기반', 'tag.veteran': '참전 용사',
+    's5.us.tip.title': 'ð¡ íµì¬ ìì¹ (ë¯¸êµ­)',
+    's5.us.tip.body': 'ë¯¸êµ­ì ë¨ì¼ êµ­ê° íë¡ê·¸ë¨ì´ ììµëë¤. ì£¼(State) ì ë¶, ì°ë°© ì ë¶, ë¹ìë¦¬ê° í¨ê» ì§ìí©ëë¤. ì£¼ ì§ìì¬í(VR) ê¸°ê´ê³¼ AT íë¡ê·¸ë¨ì´ ì²« ë²ì§¸ ê´ë¬¸ìëë¤ â ë¬´ë£ìëë¤.',
+    's5.us.flow.title': 'STEP BY STEP â ì²ì ì ì²­íë ìì (ë¯¸êµ­)',
+    's5.us.s1': 'ìì¬ ì§ë¨ì', 's5.us.s1s': 'ìê³¼ ì ë¬¸ììê² ìë£ íìì± ìë¥ ë°ê¸',
+    's5.us.s2': 'VR ì°ë½', 's5.us.s2s': 'ì£¼ ì§ìì¬í ê¸°ê´ â ì·¨ìì© ë³´ì¡°ê¸°ê¸° ë¬´ë£',
+    's5.us.s3': 'ê¸°ê¸° ì²´í', 's5.us.s3s': 'ì£¼ AT íë¡ê·¸ë¨ â ë¬´ë£ ëì¬ ë° ìì°',
+    's5.us.s4': 'Medicaid íì¸', 's5.us.s4s': 'ìë ê¸°ë° â ë³´ì¡°ê¸°ê¸° ì»¤ë² ê°ë¥',
+    's5.us.s5': 'SSI/SSDI ì ì²­', 's5.us.s5s': 'ssa.gov â ì¥ì  ê¸ì¬',
+    's5.us.prog.title': 'ì£¼ì ì§ì íë¡ê·¸ë¨ (ë¯¸êµ­)',
+    's5.us.p1.org': 'ì£¼ ì ë¶', 's5.us.p1.name': 'ì§ìì¬í (Vocational Rehabilitation)',
+    's5.us.p1.who': 'ì·¨ìì ìíë ìê°ì¥ì ì¸. ì ì²­ ë¬´ë£.',
+    's5.us.p1.unit': 'ì·¨ì ê´ë ¨ ë³´ì¡°ê¸°ê¸° ë¹ì©ì ìµë 100% ì§ì',
+    's5.us.p2.org': 'AT Act â ì  ì£¼', 's5.us.p2.name': 'ì£¼ ë³´ì¡°ê³µí íë¡ê·¸ë¨',
+    's5.us.p2.who': 'ëª¨ë  ê±°ì£¼ì. ìë ì í ìì. ê¸°ê¸° ëì¬, ìì°, ì ê¸ë¦¬ ìµì.',
+    's5.us.p2.unit': 'ê¸°ê¸° ëì¬ ë¬´ë£ + 0~3% ìµì ê°ë¥',
+    's5.us.p3.org': 'ì°ë°© â ìë ê¸°ë°', 's5.us.p3.name': 'Medicaid',
+    's5.us.p3.who': 'ì ìëì¸µ. ì£¼ë§ë¤ ë¤ë¦ â ì¼ë¶ ì£¼ë íë©´ë­ëê¸°, CCTV ë± ì»¤ë².',
+    's5.us.p3.unit': 'ì£¼ë§ë¤ ë¤ë¦ â ë³¸ì¸ ë¶ë´ $0 ê°ë¥',
+    's5.us.p4.org': 'ì°¸ì  ì©ì¬ ì ì©', 's5.us.p4.name': 'VA ìê° ì¬í ìë¹ì¤',
+    's5.us.p4.who': 'ìë ¥ ìì ë¯¸êµ­ ì°¸ì  ì©ì¬. ì ì¡ ì»¤ë² ë° ëë©´ íë ¨ ì ê³µ.',
+    's5.us.p4.unit': '100% ì»¤ë² + ëë©´ ì¬í íë ¨',
+    's5.us.device.title': 'ì£¼ì ë³´ì¡°ê¸°ê¸° â ì¼ë° ê°ê²© ë° ì§ì íí©',
+    's5.us.contact.title': 'ð ì²ì ì íí  ê³³ (ë¯¸êµ­)',
+    's5.us.contact.body': '<strong>ì£¼ VR ê¸°ê´ ì°¾ê¸°:</strong> rsa.ed.gov/about/programs/vocational-rehabilitation<br><strong>ì£¼ AT íë¡ê·¸ë¨ ì°¾ê¸°:</strong> AT3center.net/state-at-programs<br><strong>ì¬íë³´ì¥êµ­ (SSI/SSDI):</strong> 1-800-772-1213 ëë ssa.gov<br><strong>ì°¸ì  ì©ì¬ (VA):</strong> 1-800-827-1000 ëë va.gov',
+    'tbl.device.en': 'ë³´ì¡°ê¸°ê¸°', 'tbl.retail': 'ìë§¤ê°', 'tbl.coverage': 'ì§ì ê°ë¥ íë¡ê·¸ë¨', 'tbl.source': 'ìµì  ê²½ë¡',
+    'dev.us.1': 'íë©´ë­ëìíí¸ì¨ì´ (JAWS)', 'dev.us.2': 'ëìíëê¸° (CCTV)',
+    'dev.us.3': 'ì ì ëì¤íë ì´', 'dev.us.4': 'ìì± GPS / ë´ë¹ê²ì´ì',
+    'dev.us.5': 'ì¤ë§í¸í° ì ê·¼ì± ì¤ì ', 'dev.us.6': 'ë·í¨ë (ì´ê° ëì¤íë ì´)',
+    'tag.free.en': 'ë¬´ë£', 'tag.employment.en': 'ì·¨ì ì°ê³', 'tag.everyone': 'ëª¨ë ê°ë¥',
+    'tag.income': 'ìë ê¸°ë°', 'tag.veteran': 'ì°¸ì  ì©ì¬',
   },
   en: {
     'skip': 'Skip to content',
@@ -1439,7 +1439,7 @@ const T = {
     'nav.cta': 'Request Trial',
     'hero.eyebrow': 'For people with acquired visual impairment &amp; their families',
     'hero.h1': 'Your sight has changed.<br><em>Your life doesn\'t have to stop.</em>',
-    'hero.sub': 'The First 100 Days is a guide for people who have recently lost their vision and the families who stand beside them. Start here — no experience required.',
+    'hero.sub': 'The First 100 Days is a guide for people who have recently lost their vision and the families who stand beside them. Start here â no experience required.',
     'hero.btn1': 'Where do I start?',
     'hero.btn2': 'View step-by-step guide',
     'hero.s1': 'Days covered in<br>this guide',
@@ -1458,56 +1458,56 @@ const T = {
     's1.c2.body': 'You don\'t need to wait for business hours. These lines are open now.',
     's1.h1': 'Crisis Counseling Line', 's1.h2': 'Health &amp; Welfare Helpline',
     's1.c3.title': 'First Response Manual',
-    's1.c3.body': 'A complete audio guide for the first 30 days — available in both audio and PDF format.',
-    's1.audio': 'First Response Manual — Audio Guide',
-    's1.pdf': 'Download PDF →',
+    's1.c3.body': 'A complete audio guide for the first 30 days â available in both audio and PDF format.',
+    's1.audio': 'First Response Manual â Audio Guide',
+    's1.pdf': 'Download PDF â',
     's1.c4.title': 'For family members',
     's1.say': 'Say this', 's1.avoid': 'Avoid this',
     's1.say1': '"Let\'s find a way through this together."',
     's1.say2': '"There\'s still so much you\'ll be able to do."',
     's1.say3': '"I\'m here. We\'ll figure it out one step at a time."',
-    's1.avoid1': '"How did this happen?" — blame-seeking adds to distress',
-    's1.avoid2': '"You\'ll be fine" — false reassurance undermines trust',
-    's1.avoid3': 'Silence — isolation is the most harmful response',
+    's1.avoid1': '"How did this happen?" â blame-seeking adds to distress',
+    's1.avoid2': '"You\'ll be fine" â false reassurance undermines trust',
+    's1.avoid3': 'Silence â isolation is the most harmful response',
     's2.label': 'Step-by-Step Guide', 's2.title': 'The First 100 Days',
-    's2.desc': 'We\'ve divided the journey into three stages. Read together — each entry has action items for both the person affected and their family.',
-    's2.p1': 'Stage One', 's2.d1': 'Day<br>1—7', 's2.t1': 'Psychological stability &amp; making the home safe',
-    's2.p2': 'Stage Two', 's2.d2': 'Day<br>8—30', 's2.t2': 'First steps with a smartphone &amp; beginning the paperwork',
-    's2.p3': 'Stage Three', 's2.d3': 'Day<br>31—100', 's2.t3': 'Exploring assistive technology &amp; preparing to re-engage with the world',
+    's2.desc': 'We\'ve divided the journey into three stages. Read together â each entry has action items for both the person affected and their family.',
+    's2.p1': 'Stage One', 's2.d1': 'Day<br>1â7', 's2.t1': 'Psychological stability &amp; making the home safe',
+    's2.p2': 'Stage Two', 's2.d2': 'Day<br>8â30', 's2.t2': 'First steps with a smartphone &amp; beginning the paperwork',
+    's2.p3': 'Stage Three', 's2.d3': 'Day<br>31â100', 's2.t3': 'Exploring assistive technology &amp; preparing to re-engage with the world',
     'who.self': 'For the person affected', 'who.family': 'For the family', 'who.together': 'Together',
-    's2.1.i1': 'Turn on VoiceOver (iOS) or TalkBack (Android) on your smartphone — audio tutorial available on this site',
+    's2.1.i1': 'Turn on VoiceOver (iOS) or TalkBack (Android) on your smartphone â audio tutorial available on this site',
     's2.1.i2': 'Remove hazards at home: sharp objects, dim corridors, uneven thresholds. Replace bulbs with even, bright lighting',
     's2.1.i3': 'Book an in-person consultation at the nearest visual impairment welfare center',
-    's2.1.i4': 'Begin the disability registration process — contact the community welfare center or hospital social work team',
+    's2.1.i4': 'Begin the disability registration process â contact the community welfare center or hospital social work team',
     's2.exp1': 'Full Stage One guide',
-    's2.body1': 'Emotional shock in the first week is normal. Prioritise physical safety and emotional presence over information overload. One conversation per day is enough. Rest is not giving up — it is preparing to rebuild.',
+    's2.body1': 'Emotional shock in the first week is normal. Prioritise physical safety and emotional presence over information overload. One conversation per day is enough. Rest is not giving up â it is preparing to rebuild.',
     's2.2.i1': 'Practice making calls, reading messages, and using messaging apps via screen reader',
     's2.2.i2': 'Submit the disability registration application at the community welfare office or hospital social work team',
     's2.2.i3': 'Register for a rehabilitation program consultation at the local welfare center',
-    's2.2.i4': 'Learn to use AI for reading text in photos and describing images — practical exercises included',
+    's2.2.i4': 'Learn to use AI for reading text in photos and describing images â practical exercises included',
     's2.exp2': 'Full Stage Two guide',
-    's2.body2': 'Stage Two is about rebuilding a sense of agency. Even small victories — sending a voice message, navigating to the kitchen unassisted — matter enormously. Celebrate them.',
+    's2.body2': 'Stage Two is about rebuilding a sense of agency. Even small victories â sending a voice message, navigating to the kitchen unassisted â matter enormously. Celebrate them.',
     's2.3.i1': 'Request a free trial of the Dot Pad and other assistive devices available through this guide',
     's2.3.i2': 'Apply for assistive device subsidies through the disability welfare center and national health insurance',
     's2.3.i3': 'Begin vocational rehabilitation consultation for employment or return-to-study planning',
-    's2.3.i4': 'Join a peer support group — connecting with others who share your experience is one of the most powerful steps',
+    's2.3.i4': 'Join a peer support group â connecting with others who share your experience is one of the most powerful steps',
     's2.exp3': 'Full Stage Three guide',
-    's2.body3': 'By Day 100, most people are surprised by how much they have learned and adapted. The goal is not to return to the life you had — it is to build a new one, with different tools and an expanded understanding of what you\'re capable of.',
+    's2.body3': 'By Day 100, most people are surprised by how much they have learned and adapted. The goal is not to return to the life you had â it is to build a new one, with different tools and an expanded understanding of what you\'re capable of.',
     's3.label': 'Assistive Technology',
     's3.title': 'Technology becomes<br>your new eyes',
-    's3.desc': 'You don\'t need to learn braille on day one. The tools in your hands and on your desk can restore enormous amounts of daily function — immediately.',
+    's3.desc': 'You don\'t need to learn braille on day one. The tools in your hands and on your desk can restore enormous amounts of daily function â immediately.',
     's3.t1': 'Smartphone Accessibility',
     's3.b1': 'VoiceOver and TalkBack are built into every iPhone and Android device. Audio tutorials guide you from zero to making calls, reading messages, and browsing the web.',
-    's3.l1': '▶ &nbsp;Start audio tutorial',
+    's3.l1': 'â¶ &nbsp;Start audio tutorial',
     's3.t2': 'AI as a Collaborator',
     's3.b2': 'Modern AI can read text in photographs, describe images and scenes, give turn-by-turn navigation, and read books aloud. We show you how to set this up in under ten minutes.',
-    's3.l2': 'View AI guide &nbsp;→',
+    's3.l2': 'View AI guide &nbsp;â',
     's3.t3': 'Touch the Visual World',
-    's3.b3': 'The Dot Pad translates photographs, maps, charts, and diagrams into tactile form — allowing you to feel the spatial information you used to see. No prior braille experience required.',
-    's3.l3': 'Learn about Dot Pad &nbsp;→',
+    's3.b3': 'The Dot Pad translates photographs, maps, charts, and diagrams into tactile form â allowing you to feel the spatial information you used to see. No prior braille experience required.',
+    's3.l3': 'Learn about Dot Pad &nbsp;â',
     'dp.tag': 'Featured Device',
-    'dp.title': 'Dot Pad —<br>Feel what you used to see',
-    'dp.body': 'The Dot Pad is not a braille display. It is a full tactile smart screen that converts any visual content — photographs, maps, graphs, floor plans — into a touchable surface in real time, using thousands of individually moving pins.',
+    'dp.title': 'Dot Pad â<br>Feel what you used to see',
+    'dp.body': 'The Dot Pad is not a braille display. It is a full tactile smart screen that converts any visual content â photographs, maps, graphs, floor plans â into a touchable surface in real time, using thousands of individually moving pins.',
     'dp.p1': 'Mirrors your smartphone screen as a tactile surface',
     'dp.p2': 'Explore subway maps, building layouts, and charts by touch',
     'dp.p3': 'No braille knowledge required to begin using it',
@@ -1520,44 +1520,44 @@ const T = {
     's4.title': '"How are people like me<br>living now?"',
     's4.desc': 'Hear directly from people who have navigated acquired visual impairment and rebuilt their lives. Audio interviews, in their own words.',
     's4.iv1': 'Interview 01', 's4.iv2': 'Interview 02', 's4.iv3': 'Interview 03',
-    's4.tag1': 'Software Engineer — Retinitis Pigmentosa',
+    's4.tag1': 'Software Engineer â Retinitis Pigmentosa',
     's4.st1': 'Two years after losing my vision, I returned to work as a developer',
-    's4.se1': '"At first I thought everything was over. Now I write code using a screen reader, attend meetings, and review pull requests. The tools changed — the work didn\'t."',
+    's4.se1': '"At first I thought everything was over. Now I write code using a screen reader, attend meetings, and review pull requests. The tools changed â the work didn\'t."',
     's4.sp1': 'Jae-won Kim, 34', 's4.sd1': '12 min',
-    's4.tag2': 'Home Caregiver — Glaucoma',
+    's4.tag2': 'Home Caregiver â Glaucoma',
     's4.st2': 'I cook alone and shop for groceries on my own',
     's4.se2': '"AI reads me the ingredients in the fridge. The Dot Pad lets me feel recipe diagrams. There are far more things I can do than I ever thought."',
     's4.sp2': 'So-hee Park, 51', 's4.sd2': '9 min',
-    's4.tag3': 'University Student — Diabetic Retinopathy',
+    's4.tag3': 'University Student â Diabetic Retinopathy',
     's4.st3': 'I returned to university in year three and graduated with honours',
     's4.se3': '"AI transcribes lectures and board notes in real time. Honestly, my concentration has improved. I hear everything now."',
     's4.sp3': 'Jun-hyuk Lee, 24', 's4.sd3': '15 min',
     's4.more': 'More interviews added monthly.',
-    's4.all': 'View all stories &nbsp;→',
+    's4.all': 'View all stories &nbsp;â',
     'cta.title': 'You don\'t have to take the first step alone',
-    'cta.body': 'Begin with a free Dot Pad trial. A specialist will guide you through the device and connect you with available welfare support programmes — no obligation required.',
+    'cta.body': 'Begin with a free Dot Pad trial. A specialist will guide you through the device and connect you with available welfare support programmes â no obligation required.',
     'cta.btn1': 'Request Free Trial', 'cta.btn2': 'Speak with a specialist',
-    'ft.desc': 'A platform for people with acquired visual impairment and their families — helping you find your footing from day one. Provided by Dot Inc.',
+    'ft.desc': 'A platform for people with acquired visual impairment and their families â helping you find your footing from day one. Provided by Dot Inc.',
     'ft.h1': 'Guide', 'ft.h2': 'Technology', 'ft.h3': 'Stories',
     'ft.g1': 'Immediate Help', 'ft.g2': 'Step-by-Step Guide', 'ft.g3': 'Welfare &amp; Benefits', 'ft.g4': 'Find a Center',
     'ft.t1': 'Smartphone Accessibility', 'ft.t2': 'About Dot Pad', 'ft.t3': 'Request a Trial', 'ft.t4': 'Rental &amp; Subsidies',
     'ft.s1': 'Working Professionals', 'ft.s2': 'Students', 'ft.s3': 'Families', 'ft.s4': 'Share Your Story',
-    'ft.copy': '© 2026 First 100 Days · Dot Inc. All rights reserved.',
-    'ft.crisis': 'Crisis line: <strong>1393</strong> &nbsp;·&nbsp; Welfare helpline: <strong>129</strong>',
+    'ft.copy': 'Â© 2026 First 100 Days Â· Dot Inc. All rights reserved.',
+    'ft.crisis': 'Crisis line: <strong>1393</strong> &nbsp;Â·&nbsp; Welfare helpline: <strong>129</strong>',
     // Support section EN
     'nav.l5': 'Support',
     's5.label': 'Assistive Device Funding', 's5.title': 'How to get support',
-    's5.desc': 'A clear overview of funding programs and application steps — designed for first-time applicants and their families.',
-    's5.tab.kr': '🇰🇷 South Korea', 's5.tab.us': '🇺🇸 United States',
-    's5.kr.tip.title': '💡 Key Principle',
-    's5.kr.tip.body': 'Disability registration comes first. Most programs require a registered disability card before you can apply for device support. The process takes 2–3 months, so start as soon as possible.',
-    's5.kr.flow.title': 'STEP BY STEP — First-time applicants (Korea)',
+    's5.desc': 'A clear overview of funding programs and application steps â designed for first-time applicants and their families.',
+    's5.tab.kr': 'ð°ð· South Korea', 's5.tab.us': 'ðºð¸ United States',
+    's5.kr.tip.title': 'ð¡ Key Principle',
+    's5.kr.tip.body': 'Disability registration comes first. Most programs require a registered disability card before you can apply for device support. The process takes 2â3 months, so start as soon as possible.',
+    's5.kr.flow.title': 'STEP BY STEP â First-time applicants (Korea)',
     's5.kr.s1': 'Eye exam', 's5.kr.s1s': 'Get a disability diagnosis letter from an ophthalmologist',
     's5.kr.s2': 'Register at community office', 's5.kr.s2s': 'Bring diagnosis letter to your local Jumin Center',
-    's5.kr.s3': 'NPS Review', 's5.kr.s3s': 'National Pension Service review — 2–3 months',
+    's5.kr.s3': 'NPS Review', 's5.kr.s3s': 'National Pension Service review â 2â3 months',
     's5.kr.s4': 'Receive disability card', 's5.kr.s4s': 'Disability grade confirmed',
     's5.kr.s5': 'Apply for AT device', 's5.kr.s5s': 'Jumin Center or National Health Insurance',
-    's5.kr.s6': 'Receive device', 's5.kr.s6s': 'After review — device issued or benefit paid',
+    's5.kr.s6': 'Receive device', 's5.kr.s6s': 'After review â device issued or benefit paid',
     's5.kr.prog.title': 'Key Support Programs',
     's5.kr.p1.org': 'Ministry of Health &amp; Welfare', 's5.kr.p1.name': 'Assistive Device Grant Program',
     's5.kr.p1.who': 'National Basic Livelihood recipients &amp; near-poverty households with visual impairment',
@@ -1572,8 +1572,8 @@ const T = {
     's5.kr.p4.who': 'Anyone who wants to try before committing to a purchase',
     's5.kr.p4.unit': 'low monthly rental fee',
     's5.kr.device.title': 'Device-by-Device Funding Amounts (Ministry of Health &amp; Welfare)',
-    's5.kr.contact.title': '📞 Who to call first',
-    's5.kr.contact.body': '<strong>129</strong> Health &amp; Welfare Helpline (24hr) — disability registration, AT grant inquiries<br><strong>1588-1519</strong> National Health Insurance — insurance-covered AT devices<br><strong>1544-0083</strong> Korea Employment Agency for the Disabled — employment AT support',
+    's5.kr.contact.title': 'ð Who to call first',
+    's5.kr.contact.body': '<strong>129</strong> Health &amp; Welfare Helpline (24hr) â disability registration, AT grant inquiries<br><strong>1588-1519</strong> National Health Insurance â insurance-covered AT devices<br><strong>1544-0083</strong> Korea Employment Agency for the Disabled â employment AT support',
     'tbl.device': 'Device', 'tbl.amount': 'Standard Price', 'tbl.support': 'Recipient Coverage', 'tbl.route': 'Apply At',
     'dev.kr.1': 'Desktop Video Magnifier (CCTV)', 'dev.kr.2': 'Braille Notetaker',
     'dev.kr.3': 'Screen Reading Software', 'dev.kr.4': 'Braille Printer',
@@ -1583,29 +1583,29 @@ const T = {
     'tag.free': 'Free to apply', 'tag.community': 'Community Office', 'tag.nhis': 'Health Insurance',
     'tag.prescription': 'Prescription needed', 'tag.employment': 'Employment', 'tag.kead': 'KEAD',
     'tag.rental': 'Rental available', 'tag.kdit': 'KDDI',
-    's5.us.tip.title': '💡 Key Principle',
-    's5.us.tip.body': 'There is no single national program — support comes from multiple sources (state, federal, nonprofit). Start with your state\'s Vocational Rehabilitation agency and AT program — they are free and available to everyone.',
-    's5.us.flow.title': 'STEP BY STEP — First-time applicants',
-    's5.us.s1': 'Get diagnosed', 's5.us.s1s': 'Eye doctor — get a prescription/letter of medical necessity',
-    's5.us.s2': 'Contact VR', 's5.us.s2s': 'State Vocational Rehabilitation agency — free AT for employment',
-    's5.us.s3': 'Try before buy', 's5.us.s3s': 'State AT program — free device loans &amp; demos',
-    's5.us.s4': 'Check Medicaid', 's5.us.s4s': 'Income-based — may cover AT devices',
-    's5.us.s5': 'Apply for SSI/SSDI', 's5.us.s5s': 'ssa.gov — disability benefits',
+    's5.us.tip.title': 'ð¡ Key Principle',
+    's5.us.tip.body': 'There is no single national program â support comes from multiple sources (state, federal, nonprofit). Start with your state\'s Vocational Rehabilitation agency and AT program â they are free and available to everyone.',
+    's5.us.flow.title': 'STEP BY STEP â First-time applicants',
+    's5.us.s1': 'Get diagnosed', 's5.us.s1s': 'Eye doctor â get a prescription/letter of medical necessity',
+    's5.us.s2': 'Contact VR', 's5.us.s2s': 'State Vocational Rehabilitation agency â free AT for employment',
+    's5.us.s3': 'Try before buy', 's5.us.s3s': 'State AT program â free device loans &amp; demos',
+    's5.us.s4': 'Check Medicaid', 's5.us.s4s': 'Income-based â may cover AT devices',
+    's5.us.s5': 'Apply for SSI/SSDI', 's5.us.s5s': 'ssa.gov â disability benefits',
     's5.us.prog.title': 'Key Support Programs',
     's5.us.p1.org': 'State Government', 's5.us.p1.name': 'Vocational Rehabilitation (VR)',
     's5.us.p1.who': 'Working-age adults with vision loss seeking employment. Free to apply.',
     's5.us.p1.unit': 'of AT cost for employment-related devices',
-    's5.us.p2.org': 'AT Act — Every State', 's5.us.p2.name': 'State Assistive Technology Program',
+    's5.us.p2.org': 'AT Act â Every State', 's5.us.p2.name': 'State Assistive Technology Program',
     's5.us.p2.who': 'All residents. No income requirement. Device loans, demos, and low-interest financing.',
-    's5.us.p2.unit': 'device loans + 0–3% financing available',
-    's5.us.p3.org': 'Federal — Income-Based', 's5.us.p3.name': 'Medicaid',
-    's5.us.p3.who': 'Low-income individuals. Coverage varies by state — some states cover screen readers, CCTVs, and more.',
-    's5.us.p3.unit': 'by state — can cover $0 out-of-pocket',
+    's5.us.p2.unit': 'device loans + 0â3% financing available',
+    's5.us.p3.org': 'Federal â Income-Based', 's5.us.p3.name': 'Medicaid',
+    's5.us.p3.who': 'Low-income individuals. Coverage varies by state â some states cover screen readers, CCTVs, and more.',
+    's5.us.p3.unit': 'by state â can cover $0 out-of-pocket',
     's5.us.p4.org': 'Veterans Only', 's5.us.p4.name': 'VA Blind Rehabilitation Service',
     's5.us.p4.who': 'U.S. military veterans with vision loss. Full AT coverage and in-person training provided.',
-    's5.us.p4.unit': 'covered — plus in-person rehab training',
-    's5.us.device.title': 'Common AT Devices — Typical Costs &amp; Coverage',
-    's5.us.contact.title': '📞 Where to call first',
+    's5.us.p4.unit': 'covered â plus in-person rehab training',
+    's5.us.device.title': 'Common AT Devices â Typical Costs &amp; Coverage',
+    's5.us.contact.title': 'ð Where to call first',
     's5.us.contact.body': '<strong>Find your state VR agency:</strong> rsa.ed.gov/about/programs/vocational-rehabilitation<br><strong>Find your state AT program:</strong> AT3center.net/state-at-programs<br><strong>Social Security (SSI/SSDI):</strong> 1-800-772-1213 or ssa.gov<br><strong>Veterans (VA):</strong> 1-800-827-1000 or va.gov',
     'tbl.device.en': 'Device', 'tbl.retail': 'Retail Price', 'tbl.coverage': 'Potential Coverage', 'tbl.source': 'Best Source',
     'dev.us.1': 'Screen Reader (JAWS)', 'dev.us.2': 'Video Magnifier (CCTV)',
@@ -1616,7 +1616,7 @@ const T = {
   }
 };
 
-// ── 언어 전환 함수 ──────────────────────────────────────────
+// ââ ì¸ì´ ì í í¨ì ââââââââââââââââââââââââââââââââââââââââââ
 let currentLang = localStorage.getItem('lang') || 'ko';
 
 function setLang(lang) {
@@ -1624,29 +1624,29 @@ function setLang(lang) {
   localStorage.setItem('lang', lang);
   document.documentElement.lang = lang;
 
-  // 텍스트 업데이트
+  // íì¤í¸ ìë°ì´í¸
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     const val = T[lang][key];
     if (val !== undefined) el.innerHTML = val;
   });
 
-  // 버튼 상태
+  // ë²í¼ ìí
   document.getElementById('btn-ko').classList.toggle('active', lang === 'ko');
   document.getElementById('btn-en').classList.toggle('active', lang === 'en');
   document.getElementById('btn-ko').setAttribute('aria-pressed', String(lang === 'ko'));
   document.getElementById('btn-en').setAttribute('aria-pressed', String(lang === 'en'));
 
-  // 페이지 타이틀
+  // íì´ì§ íì´í
   document.title = lang === 'ko'
-    ? '첫 100일 가이드 — 후천적 시각장애인을 위한 첫걸음'
-    : 'First 100 Days — A Guide for Acquired Visual Impairment';
+    ? 'ì²« 100ì¼ ê°ì´ë â íì²ì  ìê°ì¥ì ì¸ì ìí ì²«ê±¸ì'
+    : 'First 100 Days â A Guide for Acquired Visual Impairment';
 }
 
-// 초기 적용
+// ì´ê¸° ì ì©
 setLang(currentLang);
 
-// ── 국가 탭 전환 ────────────────────────────────────────────
+// ââ êµ­ê° í­ ì í ââââââââââââââââââââââââââââââââââââââââââââ
 function switchCountry(country) {
   document.querySelectorAll('.support-content').forEach(el => el.classList.remove('active'));
   document.querySelectorAll('.ctab').forEach(el => {
@@ -1658,32 +1658,32 @@ function switchCountry(country) {
   document.getElementById('ctab-' + country).setAttribute('aria-selected', 'true');
 }
 
-// ── 타임라인 아코디언 ───────────────────────────────────────
+// ââ íìë¼ì¸ ìì½ëì¸ âââââââââââââââââââââââââââââââââââââââ
 function expandRow(btn) {
   const body = btn.nextElementSibling;
   const icon = btn.querySelector('.t-expand-icon');
   const open = body.classList.toggle('open');
-  icon.textContent = open ? '−' : '+';
+  icon.textContent = open ? 'â' : '+';
   btn.setAttribute('aria-expanded', String(open));
 }
 
-// ── 오디오 속도 토글 ────────────────────────────────────────
+// ââ ì¤ëì¤ ìë í ê¸ ââââââââââââââââââââââââââââââââââââââââ
 function cycleSpeed(btn) {
-  const speeds = ['1×','1.25×','1.5×','2×','0.75×'];
+  const speeds = ['1Ã','1.25Ã','1.5Ã','2Ã','0.75Ã'];
   const i = speeds.indexOf(btn.textContent);
   btn.textContent = speeds[(i + 1) % speeds.length];
 }
 
-// ── 스토리 재생 토글 ────────────────────────────────────────
+// ââ ì¤í ë¦¬ ì¬ì í ê¸ ââââââââââââââââââââââââââââââââââââââââ
 document.querySelectorAll('.story-play-btn').forEach(btn => {
   btn.addEventListener('click', () => {
-    const playing = btn.textContent === '⏸';
-    document.querySelectorAll('.story-play-btn').forEach(b => b.textContent = '▶');
-    if (!playing) btn.textContent = '⏸';
+    const playing = btn.textContent === 'â¸';
+    document.querySelectorAll('.story-play-btn').forEach(b => b.textContent = 'â¶');
+    if (!playing) btn.textContent = 'â¸';
   });
 });
 
-// ── 네비 활성 표시 ──────────────────────────────────────────
+// ââ ë¤ë¹ íì± íì ââââââââââââââââââââââââââââââââââââââââââ
 const sections = document.querySelectorAll('section[id]');
 const navAs = document.querySelectorAll('.nav-links a');
 const onScroll = () => {
