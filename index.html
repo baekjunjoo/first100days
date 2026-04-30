@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>First 100 Days — A Guide for Acquired Visual Impairment</title>
+<meta name="description" content="A guide for people with acquired visual impairment and their families. Start here.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+  /* ── Reset ── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; font-size: 16px; }
+
+  /* ── Tokens ── */
+  :root {
+    --black:  #0A0A0A;
+    --dark:   #1A1A1A;
+    --mid:    #555555;
+    --light:  #999999;
+    --rule:   #E0E0E0;
+    --bg:     #FFFFFF;
+    --bg-off: #F7F7F7;
+    --ff: 'DM Sans', 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  body {
+    font-family: var(--ff);
+    color: var(--dark);
+    background: var(--bg);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── Accessibility ── */
+  .skip { position: absolute; top: -999px; left: 0; background: var(--black); color: #fff; padding: 8px 16px; font-size: 16px; text-decoration: none; z-index: 9999; }
+  .skip:focus { top: 0; }
+  :focus-visible { outline: 1px solid var(--black); outline-offset: 3px; }
+
+  /* ── Nav ── */
+  .nav {
+    position: sticky; top: 0; z-index: 100;
+    background: var(--bg);
+    border-bottom: 1px solid var(--rule);
+    padding: 0 48px;
+  }
+  .nav-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 60px;
+  }
+  .nav-logo {
+    font-size: 16px; font-weight: 600; letter-spacing: 0.14em;
+    color: var(--black); text-decoration: none; text-transform: uppercase;
+  }
+  .nav-meta { font-size: 14px; font-weight: 300; color: var(--light); letter-spacing: 0.06em; }
+  .nav-links { display: flex; gap: 36px; list-style: none; align-items: center; }
+  .nav-links a { font-size: 18px; font-weight: 300; color: var(--mid); text-decoration: none; letter-spacing: 0.04em; transition: color .15s; }
+  .nav-links a:hover { color: var(--black); }
+  .nav-cta {
+    font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--black); text-decoration: none;
+    border: 1px solid var(--black); padding: 8px 18px;
+    transition: background .15s, color .15s;
+  }
+  .nav-cta:hover { background: var(--black); color: #fff; }
+
+  /* ── Hero ── */
+  .hero {
+    padding: 120px 48px 100px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .hero-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: end; }
+  .hero-eyebrow {
+    font-size: 13px; font-weight: 400; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--light); margin-bottom: 32px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .hero-eyebrow::before { content: ''; display: block; width: 24px; height: 1px; background: var(--light); }
+  .hero-h1 {
+    font-size: clamp(42px, 4.5vw, 66px);
+    font-weight: 200;
+    line-height: 1.1;
+    color: var(--black);
+    letter-spacing: -0.02em;
+    margin-bottom: 36px;
+  }
+  .hero-h1 em { font-style: normal; font-weight: 500; }
+  .hero-sub { font-size: 18px; font-weight: 300; color: var(--mid); line-height: 1.8; max-width: 420px; margin-bottom: 48px; }
+  .hero-actions { display: flex; gap: 20px; align-items: center; }
+  .btn-solid {
+    font-size: 13px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
+    background: var(--black); color: #fff;
+    padding: 13px 28px; text-decoration: none; border: 1px solid var(--black);
+    transition: background .15s, color .15s; display: inline-block;
+  }
+  .btn-solid:hover { background: transparent; color: var(--black); }
+  .btn-ghost {
+    font-size: 13px; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--mid); text-decoration: none;
+    border-bottom: 1px solid var(--rule); padding-bottom: 2px;
+    transition: color .15s, border-color .15s;
+  }
+  .btn-ghost:hover { color: var(--black); border-color: var(--black); }
+
+  /* Hero right — stat block */
+  .hero-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid var(--rule); }
+  .hero-stat {
+    padding: 32px 28px;
+    border-right: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  .hero-stat:nth-child(2n) { border-right: none; }
+  .hero-stat:nth-last-child(-n+2) { border-bottom: none; }
+  .stat-num { font-size: 44px; font-weight: 200; color: var(--black); letter-spacing: -0.02em; line-height: 1; margin-bottom: 8px; }
+  .stat-label { font-size: 14px; font-weight: 300; color: var(--light); letter-spacing: 0.06em; line-height: 1.5; }
+
+  /* ── Section wrapper ── */
+  .section { padding: 88px 48px; border-bottom: 1px solid var(--rule); }
+  .section-inner { max-width: 1200px; margin: 0 auto; }
+  .section-header {
+    display: grid; grid-template-columns: 200px 1fr; gap: 80px;
+    margin-bottom: 64px; padding-bottom: 32px; border-bottom: 1px solid var(--rule);
+    align-items: start;
+  }
+  .section-label {
+    font-size: 13px; font-weight: 400; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--light); padding-top: 4px;
+  }
+  .section-right {}
+  .section-title {
+    font-size: clamp(30px, 3.2vw, 46px);
+    font-weight: 200; color: var(--black);
+    letter-spacing: -0.02em; line-height: 1.15;
+    margin-bottom: 16px;
+  }
+  .section-desc { font-size: 20px; font-weight: 300; color: var(--mid); line-height: 1.8; max-width: 520px; }
+
+  /* ── Section 1: Immediate ── */
+  .imm-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 1px solid var(--rule); }
+  .imm-cell {
+    padding: 40px 36px;
+    border-right: 1px solid var(--rule);
+  }
+  .imm-cell:last-child { border-right: none; }
+  .imm-cell + .imm-cell { }
+  .cell-index { font-size: 13px; font-weight: 300; color: var(--light); letter-spacing: 0.1em; margin-bottom: 28px; }
+  .cell-title { font-size: 20px; font-weight: 400; color: var(--black); margin-bottom: 16px; line-height: 1.35; }
+  .cell-body { font-size: 16px; font-weight: 300; color: var(--mid); line-height: 1.8; margin-bottom: 28px; }
+
+  /* Checklist */
+  .checklist { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .checklist li { display: flex; gap: 12px; font-size: 16px; font-weight: 300; color: var(--dark); line-height: 1.5; }
+  .checklist li::before { content: '—'; color: var(--light); flex-shrink: 0; }
+
+  /* Hotline numbers */
+  .hotline-list { display: flex; flex-direction: column; gap: 0; margin-top: 4px; }
+  .hotline-entry {
+    display: flex; align-items: baseline; justify-content: space-between;
+    padding: 16px 0; border-bottom: 1px solid var(--rule);
+  }
+  .hotline-entry:last-child { border-bottom: none; }
+  .h-num { font-size: 34px; font-weight: 200; color: var(--black); letter-spacing: -0.02em; }
+  .h-name { font-size: 14px; font-weight: 300; color: var(--light); letter-spacing: 0.06em; }
+
+  /* Audio player */
+  .audio-wrap {
+    border: 1px solid var(--rule);
+    padding: 20px 24px;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .a-play {
+    width: 36px; height: 36px; border: 1px solid var(--black);
+    background: none; cursor: pointer; display: flex; align-items: center; justify-content: center;
+    font-size: 18px; color: var(--black); flex-shrink: 0; transition: background .15s;
+  }
+  .a-play:hover { background: var(--black); color: #fff; }
+  .a-info { flex: 1; }
+  .a-title { font-size: 18px; font-weight: 400; color: var(--dark); margin-bottom: 8px; }
+  .a-bar { width: 100%; height: 1px; background: var(--rule); cursor: pointer; position: relative; }
+  .a-fill { width: 35%; height: 100%; background: var(--black); }
+  .a-time { font-size: 14px; font-weight: 300; color: var(--light); flex-shrink: 0; }
+  .a-speed {
+    font-size: 16px; font-weight: 500; letter-spacing: 0.06em;
+    border: 1px solid var(--rule); padding: 4px 8px;
+    cursor: pointer; background: none; color: var(--mid); flex-shrink: 0;
+    transition: border-color .15s;
+  }
+  .a-speed:hover { border-color: var(--black); color: var(--black); }
+
+  .link-arrow {
+    font-size: 18px; font-weight: 400; color: var(--dark);
+    text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
+    border-bottom: 1px solid var(--rule); padding-bottom: 2px;
+    transition: border-color .15s;
+  }
+  .link-arrow:hover { border-color: var(--black); }
+
+  /* ── Section 2: Journey / Timeline ── */
+  .timeline { display: flex; flex-direction: column; gap: 0; }
+  .t-row {
+    display: grid; grid-template-columns: 200px 1fr; gap: 80px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .t-row:last-child { border-bottom: none; }
+  .t-left {
+    padding: 40px 0;
+    border-right: 1px solid var(--rule);
+    padding-right: 40px;
+  }
+  .t-phase { font-size: 13px; font-weight: 300; color: var(--light); letter-spacing: 0.1em; margin-bottom: 6px; }
+  .t-days { font-size: 38px; font-weight: 200; color: var(--black); letter-spacing: -0.03em; line-height: 1; margin-bottom: 10px; }
+  .t-title { font-size: 16px; font-weight: 400; color: var(--dark); line-height: 1.4; }
+  .t-right { padding: 40px 0; }
+  .t-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px; }
+  .t-item { }
+  .t-who { font-size: 16px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--light); margin-bottom: 6px; }
+  .t-text { font-size: 16px; font-weight: 300; color: var(--dark); line-height: 1.7; }
+  .t-expand {
+    font-size: 13px; font-weight: 300; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--light); background: none; border: none; cursor: pointer;
+    display: flex; align-items: center; gap: 8px; padding: 0;
+    transition: color .15s;
+  }
+  .t-expand:hover { color: var(--black); }
+  .t-expand-icon { font-size: 20px; transition: transform .3s; }
+  .t-body { display: none; margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--rule); }
+  .t-body.open { display: block; }
+
+  /* ── Section 3: Technology ── */
+  .tech-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 1px solid var(--rule); margin-bottom: 64px; }
+  .tech-col {
+    padding: 40px 36px;
+    border-right: 1px solid var(--rule);
+  }
+  .tech-col:last-child { border-right: none; }
+  .tech-num { font-size: 13px; font-weight: 300; color: var(--light); margin-bottom: 32px; }
+  .tech-title { font-size: 20px; font-weight: 400; color: var(--black); margin-bottom: 14px; line-height: 1.3; }
+  .tech-body { font-size: 16px; font-weight: 300; color: var(--mid); line-height: 1.8; margin-bottom: 28px; }
+
+  /* Dot Pad feature — full-width editorial */
+  .dotpad-row {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+    border: 1px solid var(--rule);
+  }
+  .dotpad-left {
+    padding: 56px 52px;
+    border-right: 1px solid var(--rule);
+  }
+  .dotpad-tag {
+    font-size: 13px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--light); margin-bottom: 28px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .dotpad-tag::before { content: ''; display: block; width: 20px; height: 1px; background: var(--light); }
+  .dotpad-title { font-size: clamp(28px, 2.8vw, 40px); font-weight: 200; color: var(--black); letter-spacing: -0.02em; line-height: 1.2; margin-bottom: 20px; }
+  .dotpad-body { font-size: 20px; font-weight: 300; color: var(--mid); line-height: 1.85; margin-bottom: 32px; }
+  .dotpad-points { list-style: none; display: flex; flex-direction: column; gap: 14px; margin-bottom: 40px; }
+  .dotpad-points li { display: flex; gap: 16px; font-size: 16px; font-weight: 300; color: var(--dark); line-height: 1.6; }
+  .dotpad-points li::before { content: '01'; font-size: 13px; font-weight: 300; color: var(--light); flex-shrink: 0; margin-top: 3px; counter-increment: dp; }
+  .dotpad-points li:nth-child(2)::before { content: '02'; }
+  .dotpad-points li:nth-child(3)::before { content: '03'; }
+  .dotpad-points li:nth-child(4)::before { content: '04'; }
+  .dotpad-actions { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+
+  .dotpad-right {
+    padding: 56px 52px;
+    background: var(--bg-off);
+    display: flex; flex-direction: column; justify-content: space-between;
+  }
+  .dp-label { font-size: 13px; font-weight: 300; color: var(--light); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 40px; }
+  .dp-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; margin-bottom: 40px; }
+  .dp-dot { aspect-ratio: 1; background: var(--rule); transition: background .15s; }
+  .dp-dot.on { background: var(--black); }
+  .dp-caption { font-size: 18px; font-weight: 300; color: var(--mid); line-height: 1.7; }
+  .dp-stat-row { display: flex; gap: 40px; padding-top: 32px; border-top: 1px solid var(--rule); }
+  .dp-stat-num { font-size: 34px; font-weight: 200; color: var(--black); letter-spacing: -0.02em; }
+  .dp-stat-label { font-size: 13px; font-weight: 300; color: var(--light); letter-spacing: 0.06em; margin-top: 4px; }
+
+  /* ── Section 4: Stories ── */
+  .story-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 1px solid var(--rule); }
+  .story-card {
+    border-right: 1px solid var(--rule);
+    transition: background .15s;
+  }
+  .story-card:last-child { border-right: none; }
+  .story-card:hover { background: var(--bg-off); }
+  .story-img {
+    height: 180px; background: var(--bg-off);
+    border-bottom: 1px solid var(--rule);
+    display: flex; align-items: center; justify-content: center;
+    position: relative; overflow: hidden;
+  }
+  .story-img-placeholder {
+    font-size: 13px; font-weight: 300; letter-spacing: 0.1em; text-transform: uppercase; color: var(--light);
+  }
+  .story-play-btn {
+    position: absolute; bottom: 16px; right: 16px;
+    width: 36px; height: 36px;
+    border: 1px solid var(--dark); background: var(--bg);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; cursor: pointer; color: var(--dark);
+    transition: background .15s, color .15s;
+  }
+  .story-play-btn:hover { background: var(--black); color: #fff; border-color: var(--black); }
+  .story-body { padding: 32px 28px; }
+  .story-tag { font-size: 13px; font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase; color: var(--light); margin-bottom: 14px; }
+  .story-title { font-size: 18px; font-weight: 400; color: var(--black); line-height: 1.4; margin-bottom: 12px; }
+  .story-excerpt { font-size: 16px; font-weight: 300; color: var(--mid); line-height: 1.75; margin-bottom: 24px; }
+  .story-footer { display: flex; align-items: center; justify-content: space-between; padding-top: 20px; border-top: 1px solid var(--rule); }
+  .story-person { font-size: 18px; font-weight: 300; color: var(--dark); }
+  .story-dur { font-size: 14px; font-weight: 300; color: var(--light); letter-spacing: 0.06em; }
+
+  /* ── CTA row ── */
+  .cta-row {
+    padding: 88px 48px;
+    background: var(--black);
+    border-bottom: 1px solid var(--rule);
+  }
+  .cta-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+  .cta-title { font-size: clamp(34px, 3.6vw, 54px); font-weight: 200; color: #fff; letter-spacing: -0.02em; line-height: 1.15; }
+  .cta-right { }
+  .cta-body { font-size: 20px; font-weight: 300; color: rgba(255,255,255,0.55); line-height: 1.8; margin-bottom: 36px; }
+  .cta-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+  .btn-white {
+    font-size: 13px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
+    background: #fff; color: var(--black);
+    padding: 13px 28px; text-decoration: none; border: 1px solid #fff;
+    transition: background .15s, color .15s; display: inline-block;
+  }
+  .btn-white:hover { background: transparent; color: #fff; }
+  .btn-ghost-white {
+    font-size: 13px; font-weight: 300; letter-spacing: 0.08em; text-transform: uppercase;
+    color: rgba(255,255,255,0.5); text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 2px;
+    transition: color .15s, border-color .15s;
+  }
+  .btn-ghost-white:hover { color: #fff; border-color: #fff; }
+
+  /* ── Footer ── */
+  .footer { padding: 56px 48px 40px; border-top: 1px solid var(--rule); }
+  .footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px; margin-bottom: 48px; }
+  .footer-brand .f-logo { font-size: 16px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--black); margin-bottom: 16px; }
+  .footer-brand p { font-size: 18px; font-weight: 300; color: var(--light); line-height: 1.75; max-width: 260px; }
+  .footer-col h4 { font-size: 13px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--dark); margin-bottom: 20px; }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-col a { font-size: 18px; font-weight: 300; color: var(--light); text-decoration: none; transition: color .15s; }
+  .footer-col a:hover { color: var(--black); }
+  .footer-bottom {
+    max-width: 1200px; margin: 0 auto;
+    padding-top: 24px; border-top: 1px solid var(--rule);
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
+  }
+  .footer-bottom p { font-size: 13px; font-weight: 300; color: var(--light); letter-spacing: 0.04em; }
+  .footer-bottom strong { font-weight: 500; color: var(--dark); }
+
+  /* ── Language switcher ── */
+  .lang-switch {
+    display: flex; align-items: center; gap: 0;
+    margin-left: 24px; flex-shrink: 0;
+  }
+  .lang-btn {
+    font-size: 12px; font-weight: 400; letter-spacing: 0.1em;
+    background: none; border: none; cursor: pointer;
+    color: var(--light); padding: 4px 8px;
+    transition: color .15s; font-family: var(--ff);
+    text-transform: uppercase;
+  }
+  .lang-btn.active { color: var(--black); font-weight: 600; }
+  .lang-btn:hover { color: var(--dark); }
+  .lang-sep { font-size: 11px; color: var(--rule); user-select: none; }
+
+  /* ── Responsive ── */
+  @media (max-width: 960px) {
+    .nav { padding: 0 24px; }
+    .hero, .section, .cta-row, .footer { padding-left: 24px; padding-right: 24px; }
+    .hero-inner, .cta-inner { grid-template-columns: 1fr; gap: 48px; }
+    .section-header { grid-template-columns: 1fr; gap: 16px; }
+    .imm-grid, .tech-cols { grid-template-columns: 1fr 1fr; }
+    .imm-cell:nth-child(2), .tech-col:nth-child(2) { border-right: none; }
+    .imm-cell:nth-child(3), .tech-col:nth-child(3) { border-top: 1px solid var(--rule); grid-column: span 2; border-right: none; }
+    .t-row { grid-template-columns: 1fr; gap: 0; }
+    .t-left { border-right: none; border-bottom: 1px solid var(--rule); padding: 28px 0; }
+    .t-right { padding: 28px 0; }
+    .dotpad-row { grid-template-columns: 1fr; }
+    .dotpad-left { border-right: none; border-bottom: 1px solid var(--rule); }
+    .story-grid { grid-template-columns: 1fr 1fr; }
+    .story-card:nth-child(2) { border-right: none; }
+    .story-card:nth-child(3) { border-top: 1px solid var(--rule); border-right: 1px solid var(--rule); }
+    .footer-inner { grid-template-columns: 1fr 1fr; gap: 40px; }
+    .nav-links { display: none; }
+  }
+  @media (max-width: 600px) {
+    .imm-grid, .tech-cols, .story-grid { grid-template-columns: 1fr; }
+    .imm-cell, .tech-col, .story-card { border-right: none; border-bottom: 1px solid var(--rule); grid-column: auto; }
+    .hero-stats { grid-template-columns: 1fr 1fr; }
+    .t-grid { grid-template-columns: 1fr; }
+    .footer-inner { grid-template-columns: 1fr; }
+    .hero, .section, .cta-row, .footer { padding-left: 20px; padding-right: 20px; }
+    .hero { padding-top: 72px; padding-bottom: 72px; }
+    .section { padding-top: 64px; padding-bottom: 64px; }
+  }
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip" data-i18n="skip">본문 바로가기</a>
+
+<!-- ── Navigation ── -->
+<nav class="nav" role="navigation" aria-label="Primary navigation">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo" data-i18n="nav.logo">첫 100일</a>
+    <span class="nav-meta" data-i18n="nav.meta">후천적 시각장애인을 위한 안내 가이드</span>
+    <ul class="nav-links">
+      <li><a href="#immediate" data-i18n="nav.l1">지금 도움</a></li>
+      <li><a href="#journey" data-i18n="nav.l2">함께 걷는 길</a></li>
+      <li><a href="#technology" data-i18n="nav.l3">보조공학</a></li>
+      <li><a href="#stories" data-i18n="nav.l4">희망 스토리</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:16px">
+      <a href="#dotpad" class="nav-cta" data-i18n="nav.cta">체험 신청</a>
+      <div class="lang-switch" role="group" aria-label="언어 선택">
+        <button class="lang-btn active" id="btn-ko" onclick="setLang('ko')" aria-pressed="true">KO</button>
+        <span class="lang-sep">|</span>
+        <button class="lang-btn" id="btn-en" onclick="setLang('en')" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ── Hero ── -->
+<header class="hero" role="banner">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <p class="hero-eyebrow" data-i18n="hero.eyebrow">후천적 시각장애인과 가족을 위한 첫걸음 가이드</p>
+      <h1 class="hero-h1" data-i18n="hero.h1">당신의 시야가 바뀌었습니다.<br><em>하지만 삶이 멈출 필요는 없습니다.</em></h1>
+      <p class="hero-sub" data-i18n="hero.sub">첫 100일 가이드는 최근 시력을 잃은 분과 그 곁에 선 가족을 위한 안내 플랫폼입니다. 여기서 시작하세요.</p>
+      <div class="hero-actions">
+        <a href="#immediate" class="btn-solid" data-i18n="hero.btn1">어디서 시작해야 하나요?</a>
+        <a href="#journey" class="btn-ghost" data-i18n="hero.btn2">단계별 가이드 보기</a>
+      </div>
+    </div>
+    <div class="hero-stats" role="region" aria-label="Key facts">
+      <div class="hero-stat">
+        <div class="stat-num">100</div>
+        <div class="stat-label" data-i18n="hero.s1">이 가이드가<br>다루는 일수</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-num">3</div>
+        <div class="stat-label" data-i18n="hero.s2">실용 행동 항목이<br>있는 단계</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-num">10+</div>
+        <div class="stat-label" data-i18n="hero.s3">실제 회복<br>오디오 스토리</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-num">0</div>
+        <div class="stat-label" data-i18n="hero.s4">필요한<br>사전 경험</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ── Section 1: Immediate Help ── -->
+<section class="section" id="immediate" aria-labelledby="imm-title">
+  <div class="section-inner">
+    <div class="section-header">
+      <p class="section-label" data-i18n="s1.label">긴급 안내</p>
+      <div class="section-right">
+        <h2 class="section-title" id="imm-title" data-i18n="s1.title">지금 막막하신가요?</h2>
+        <p class="section-desc" data-i18n="s1.desc">진단을 막 받으셨다면, 여기서 시작하세요. 오늘 챙겨야 할 세 가지.</p>
+      </div>
+    </div>
+
+    <div class="imm-grid" role="list">
+
+      <div class="imm-cell" role="listitem">
+        <div class="cell-index">01</div>
+        <h3 class="cell-title" data-i18n="s1.c1.title">오늘 당장 해야 할 일 3가지</h3>
+        <p class="cell-body" data-i18n="s1.c1.body">진단 직후 24시간은 혼란스럽습니다. 가장 중요한 것들을 정리했습니다.</p>
+        <ul class="checklist">
+          <li data-i18n="s1.c1.l1">담당 의사에게 다음 진료 일정 확인하기</li>
+          <li data-i18n="s1.c1.l2">가족 중 주요 연락 담당자 1명 정하기</li>
+          <li data-i18n="s1.c1.l3">가까운 장애인복지관 상담 예약</li>
+        </ul>
+      </div>
+
+      <div class="imm-cell" role="listitem">
+        <div class="cell-index">02</div>
+        <h3 class="cell-title" data-i18n="s1.c2.title">24시간 연결됩니다</h3>
+        <p class="cell-body" data-i18n="s1.c2.body">업무 시간을 기다릴 필요가 없습니다. 지금 바로 연결됩니다.</p>
+        <div class="hotline-list">
+          <div class="hotline-entry">
+            <div class="h-num">1393</div>
+            <div class="h-name" data-i18n="s1.h1">위기 상담 전화</div>
+          </div>
+          <div class="hotline-entry">
+            <div class="h-num">129</div>
+            <div class="h-name" data-i18n="s1.h2">보건복지상담센터</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="imm-cell" role="listitem">
+        <div class="cell-index">03</div>
+        <h3 class="cell-title" data-i18n="s1.c3.title">초기 대응 매뉴얼</h3>
+        <p class="cell-body" data-i18n="s1.c3.body">처음 30일을 위한 오디오 가이드 — 오디오와 PDF로 제공됩니다.</p>
+        <div class="audio-wrap" role="region" style="margin-bottom:24px">
+          <button class="a-play" aria-label="재생" onclick="this.textContent=this.textContent==='▶'?'⏸':'▶'">▶</button>
+          <div class="a-info">
+            <div class="a-title" data-i18n="s1.audio">초기 대응 매뉴얼 — 오디오 가이드</div>
+            <div class="a-bar" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">
+              <div class="a-fill"></div>
+            </div>
+          </div>
+          <span class="a-time">4:12</span>
+          <button class="a-speed" onclick="cycleSpeed(this)">1×</button>
+        </div>
+        <a href="#" class="link-arrow" data-i18n="s1.pdf">PDF 다운로드 <span aria-hidden="true">→</span></a>
+      </div>
+
+    </div>
+
+    <!-- What to say / not to say -->
+    <div style="margin-top:0;border:1px solid var(--rule);border-top:none;display:grid;grid-template-columns:200px 1fr;gap:80px;padding:40px 36px">
+      <div>
+        <div class="cell-index" style="margin-bottom:0">04</div>
+        <h3 class="cell-title" style="margin-top:8px" data-i18n="s1.c4.title">가족 여러분께</h3>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px">
+        <div>
+          <p style="font-size:17px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--light);margin-bottom:16px" data-i18n="s1.say">이렇게 말하세요</p>
+          <ul class="checklist">
+            <li data-i18n="s1.say1">"같이 방법을 찾아보자."</li>
+            <li data-i18n="s1.say2">"아직 할 수 있는 게 정말 많아."</li>
+            <li data-i18n="s1.say3">"내가 여기 있어. 한 단계씩 같이 해결하자."</li>
+          </ul>
+        </div>
+        <div>
+          <p style="font-size:17px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--light);margin-bottom:16px" data-i18n="s1.avoid">피해야 할 말</p>
+          <ul class="checklist">
+            <li data-i18n="s1.avoid1">"왜 이렇게 됐어?" — 원인 추궁은 고통을 더합니다</li>
+            <li data-i18n="s1.avoid2">"괜찮아질 거야" — 근거 없는 위로는 신뢰를 무너뜨립니다</li>
+            <li data-i18n="s1.avoid3">침묵 — 고립이 가장 해로운 반응입니다</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── Section 2: The Journey ── -->
+<section class="section" id="journey" aria-labelledby="journey-title" style="background:var(--bg-off)">
+  <div class="section-inner">
+    <div class="section-header">
+      <p class="section-label" data-i18n="s2.label">단계별 가이드</p>
+      <div class="section-right">
+        <h2 class="section-title" id="journey-title" data-i18n="s2.title">첫 100일</h2>
+        <p class="section-desc" data-i18n="s2.desc">여정을 세 단계로 나눴습니다. 함께 읽어보세요 — 각 항목에는 당사자와 가족을 위한 행동 항목이 있습니다.</p>
+      </div>
+    </div>
+
+    <div class="timeline" role="list">
+
+      <div class="t-row" role="listitem">
+        <div class="t-left">
+          <div class="t-phase" data-i18n="s2.p1">1단계</div>
+          <div class="t-days" data-i18n="s2.d1">Day<br>1—7</div>
+          <div class="t-title" data-i18n="s2.t1">심리 안정 &amp; 안전한 집 만들기</div>
+        </div>
+        <div class="t-right">
+          <div class="t-grid">
+            <div class="t-item">
+              <div class="t-who" data-i18n="who.self">당사자</div>
+              <div class="t-text" data-i18n="s2.1.i1">스마트폰에서 VoiceOver(iOS) 또는 TalkBack(Android) 켜기 — 이 사이트에서 오디오 튜토리얼 제공</div>
+            </div>
+            <div class="t-item">
+              <div class="t-who" data-i18n="who.family">가족</div>
+              <div class="t-text" data-i18n="s2.1.i2">집 안 위험물 제거: 날카로운 물건, 어두운 복도, 문턱. 균일하고 밝은 조명으로 교체</div>
+            </div>
+            <div class="t-item">
+              <div class="t-who" data-i18n="who.together">함께</div>
+              <div class="t-text" data-i18n="s2.1.i3">가까운 시각장애인복지관 방문 상담 예약</div>
+            </div>
+            <div class="t-item">
+              <div class="t-who" data-i18n="who.family">가족</div>
+              <div class="t-text" data-i18n="s2.1.i4">장애 등록 절차 시작 — 주민센터 또는 병원 사회사업팀 연락</div>
+            </div>
+          </div>
+          <button class="t-expand" onclick="expandRow(this)" aria-expanded="false">
+            <span class="t-expand-icon">+</span> <span data-i18n="s2.exp1">1단계 전체 가이드</span>
+          </button>
+          <div class="t-body">
+            <p style="font-size:16px;font-weight:300;color:var(--mid);line-height:1.8" data-i18n="s2.body1">첫 주의 감정적 충격은 자연스러운 반응입니다. 정보 과부하보다 신체 안전과 감정적 동행을 우선하세요. 하루에 한 번의 대화로도 충분합니다. 쉬는 것은 포기가 아니라, 다시 일어설 준비입니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="t-row" role="listitem">
+        <div class="t-left">
+          <div class="t-phase" data-i18n="s2.p2">2단계</div>
+          <div class="t-days" data-i18n="s2.d2">Day<br>8—30</div>
+          <div class="t-title" data-i18n="s2.t2">스마트폰 첫걸음 &amp; 행정 절차 시작</div>
+        </div>
+        <div class="t-right">
+          <div class="t-grid">
+            <div class="t-item">
+              <div class="t-who" data-i18n="who.self">당사자</div>
+              <div class="t-text" data-i18n="s2.2.i1">스크린 리더로 전화 걸기, 문자 읽기, 메신저 앱 사용 연습</div>
+            </div>
+            <div class="t-item">
+              <div class="t-who" data-i18n="who.family">가족</div>
+              <div class="t-text" data-i18n="s2.2.i2">주민센터 또는 병원 사회사업팀에 장애 등록 신청서 제출</div>
+            </div>
+            <div class="t-item">
+              <div class="t-who" data-i18n="who.together">함께</div>
+              <div class="t-text" data-i18n="s2.2.i3">지역 복지관 재활 프로그램 등록 상담</div>
+            </div>
+            <div class="t-item">
+              <div class="t-who" data-i18n="who.self">당사자</div>
+              <div class="t-text" data-i18n="s2.2.i4">AI로 사진 속 텍스트 읽기, 이미지 묘사 받기 — 실습 포함</div>
+            </div>
+          </div>
+          <button class="t-expand" onclick="expandRow(this)" aria-expanded="false">
+            <span class="t-expand-icon">+</span> <span data-i18n="s2.exp2">2단계 전체 가이드</span>
+          </button>
+          <div class="t-body">
+            <p style="font-size:16px;font-weight:300;color:var(--mid);line-height:1.8" data-i18n="s2.body2">2단계는 주도성을 되찾는 과정입니다. 음성 메시지 보내기, 혼자 부엌 가기 같은 작은 성취도 굉장히 중요합니다. 함께 축하하세요.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="t-row" role="listitem">
+        <div class="t-left">
+          <div class="t-phase" data-i18n="s2.p3">3단계</div>
+          <div class="t-days" data-i18n="s2.d3">Day<br>31—100</div>
+          <div class="t-title" data-i18n="s2.t3">보조공학 탐색 &amp; 사회 복귀 준비</div>
+        </div>
+        <div class="t-right">
+          <div class="t-grid">
+            <div class="t-item">
+              <div class="t-who" data-i18n="who.self">당사자</div>
+              <div class="t-text" data-i18n="s2.3.i1">이 가이드를 통해 닷패드 및 기타 보조기기 무료 체험 신청</div>
+            </div>
+            <div class="t-item">
+              <div class="t-who" data-i18n="who.family">가족</div>
+              <div class="t-text" data-i18n="s2.3.i2">장애인복지관 및 국민건강보험을 통한 보조기기 지원금 신청</div>
+            </div>
+            <div class="t-item">
+              <div class="t-who" data-i18n="who.together">함께</div>
+              <div class="t-text" data-i18n="s2.3.i3">취업 또는 복학을 위한 직업재활 상담 시작</div>
+            </div>
+            <div class="t-item">
+              <div class="t-who" data-i18n="who.self">당사자</div>
+              <div class="t-text" data-i18n="s2.3.i4">자조모임 참여 — 같은 경험을 가진 사람들과의 연결이 가장 강력한 한 걸음</div>
+            </div>
+          </div>
+          <button class="t-expand" onclick="expandRow(this)" aria-expanded="false">
+            <span class="t-expand-icon">+</span> <span data-i18n="s2.exp3">3단계 전체 가이드</span>
+          </button>
+          <div class="t-body">
+            <p style="font-size:16px;font-weight:300;color:var(--mid);line-height:1.8" data-i18n="s2.body3">100일째가 되면, 대부분의 분들이 자신이 얼마나 많이 배우고 적응했는지 놀라게 됩니다. 목표는 예전의 삶으로 돌아가는 것이 아닙니다 — 새로운 도구와 함께, 더 넓어진 가능성으로 새 삶을 만드는 것입니다.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Section 3: Technology ── -->
+<section class="section" id="technology" aria-labelledby="tech-title">
+  <div class="section-inner">
+    <div class="section-header">
+      <p class="section-label" data-i18n="s3.label">보조공학</p>
+      <div class="section-right">
+        <h2 class="section-title" id="tech-title" data-i18n="s3.title">기술이 새로운<br>눈이 됩니다</h2>
+        <p class="section-desc" data-i18n="s3.desc">첫날부터 점자를 배울 필요는 없습니다. 손에 있는 도구들이 일상 기능의 대부분을 즉시 회복시켜 줄 수 있습니다.</p>
+      </div>
+    </div>
+
+    <div class="tech-cols">
+      <div class="tech-col">
+        <div class="tech-num">01</div>
+        <h3 class="tech-title" data-i18n="s3.t1">스마트폰 접근성</h3>
+        <p class="tech-body" data-i18n="s3.b1">VoiceOver와 TalkBack은 모든 아이폰과 안드로이드 기기에 기본 탑재되어 있습니다. 오디오 튜토리얼이 처음부터 전화, 문자, 웹 브라우징까지 안내합니다.</p>
+        <button class="link-arrow" style="background:none;border-top:none;border-left:none;border-right:none;cursor:pointer;font-family:inherit" data-i18n="s3.l1">▶ &nbsp;오디오 튜토리얼 시작</button>
+      </div>
+      <div class="tech-col">
+        <div class="tech-num">02</div>
+        <h3 class="tech-title" data-i18n="s3.t2">AI 협업자</h3>
+        <p class="tech-body" data-i18n="s3.b2">현대 AI는 사진의 텍스트를 읽고, 이미지와 장면을 묘사하고, 길 안내를 제공하고, 책을 소리로 읽어줍니다. 10분 안에 설정하는 방법을 알려드립니다.</p>
+        <a href="#" class="link-arrow" data-i18n="s3.l2">AI 가이드 보기 &nbsp;→</a>
+      </div>
+      <div class="tech-col">
+        <div class="tech-num">03</div>
+        <h3 class="tech-title" data-i18n="s3.t3">시각 세계를 손으로 만지다</h3>
+        <p class="tech-body" data-i18n="s3.b3">닷패드는 사진, 지도, 차트, 도표를 촉각 형태로 변환합니다. 보이던 공간 정보를 느낄 수 있게 해줍니다. 점자 지식이 없어도 시작할 수 있습니다.</p>
+        <a href="#dotpad" class="link-arrow" data-i18n="s3.l3">닷패드 알아보기 &nbsp;→</a>
+      </div>
+    </div>
+
+    <!-- Dot Pad feature -->
+    <div class="dotpad-row" id="dotpad" role="article" aria-labelledby="dp-title">
+      <div class="dotpad-left">
+        <p class="dotpad-tag" data-i18n="dp.tag">추천 보조기기</p>
+        <h3 class="dotpad-title" id="dp-title" data-i18n="dp.title">닷패드 —<br>보이던 것을 다시 느끼다</h3>
+        <p class="dotpad-body" data-i18n="dp.body">닷패드는 점자 디스플레이가 아닙니다. 사진, 지도, 그래프, 도면 등 모든 시각 콘텐츠를 수천 개의 개별 이동 핀을 사용해 실시간으로 만질 수 있는 표면으로 변환하는 완전한 촉각 스마트 스크린입니다.</p>
+        <ul class="dotpad-points">
+          <li data-i18n="dp.p1">스마트폰 화면을 촉각 표면으로 미러링</li>
+          <li data-i18n="dp.p2">지하철 노선도·건물 배치도·차트를 손으로 탐색</li>
+          <li data-i18n="dp.p3">점자 지식 없이도 바로 사용 가능</li>
+          <li data-i18n="dp.p4">정부 보조금 프로그램으로 이용 가능</li>
+        </ul>
+        <div class="dotpad-actions">
+          <a href="#" class="btn-solid" data-i18n="dp.btn1">무료 체험 신청</a>
+          <a href="#" class="btn-ghost" data-i18n="dp.btn2">렌탈 &amp; 지원금 정보</a>
+        </div>
+      </div>
+      <div class="dotpad-right">
+        <p class="dp-label" data-i18n="dp.sim">촉각 디스플레이 시뮬레이션</p>
+        <div class="dp-grid" role="img" aria-label="닷패드 핀 그리드 시뮬레이션">
+          <div class="dp-dot on"></div><div class="dp-dot"></div><div class="dp-dot on"></div><div class="dp-dot on"></div><div class="dp-dot"></div>
+          <div class="dp-dot"></div><div class="dp-dot on"></div><div class="dp-dot"></div><div class="dp-dot on"></div><div class="dp-dot on"></div>
+          <div class="dp-dot on"></div><div class="dp-dot on"></div><div class="dp-dot"></div><div class="dp-dot"></div><div class="dp-dot on"></div>
+          <div class="dp-dot"></div><div class="dp-dot on"></div><div class="dp-dot on"></div><div class="dp-dot on"></div><div class="dp-dot"></div>
+          <div class="dp-dot on"></div><div class="dp-dot"></div><div class="dp-dot on"></div><div class="dp-dot"></div><div class="dp-dot on"></div>
+        </div>
+        <p class="dp-caption" data-i18n="dp.caption">각 핀이 독립적으로 올라가거나 내려가며, 이미지·지도·도표를 손끝으로 읽을 수 있는 물리적 표면으로 렌더링합니다.</p>
+        <div class="dp-stat-row">
+          <div>
+            <div class="dp-stat-num">2,400</div>
+            <div class="dp-stat-label" data-i18n="dp.sl1">촉각 핀</div>
+          </div>
+          <div>
+            <div class="dp-stat-num" data-i18n="dp.sn2">실시간</div>
+            <div class="dp-stat-label" data-i18n="dp.sl2">렌더링 속도</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── Section 4: Stories ── -->
+<section class="section" id="stories" aria-labelledby="stories-title" style="background:var(--bg-off)">
+  <div class="section-inner">
+    <div class="section-header">
+      <p class="section-label" data-i18n="s4.label">희망 스토리</p>
+      <div class="section-right">
+        <h2 class="section-title" id="stories-title" data-i18n="s4.title">"나처럼 된 사람들이<br>지금 어떻게 살고 있나요?"</h2>
+        <p class="section-desc" data-i18n="s4.desc">후천적 시각장애를 헤쳐나가고 삶을 다시 세운 분들의 이야기를 직접 들어보세요. 그들의 목소리로 전하는 오디오 인터뷰.</p>
+      </div>
+    </div>
+
+    <div class="story-grid" role="list">
+
+      <article class="story-card" role="listitem">
+        <div class="story-img" aria-hidden="true">
+          <span class="story-img-placeholder" data-i18n="s4.iv1">인터뷰 01</span>
+          <button class="story-play-btn" aria-label="재생 — 김재원 인터뷰">▶</button>
+        </div>
+        <div class="story-body">
+          <p class="story-tag" data-i18n="s4.tag1">소프트웨어 엔지니어 — 망막색소변성증</p>
+          <h3 class="story-title" data-i18n="s4.st1">시력을 잃은 지 2년 후, 개발자로 복직했습니다</h3>
+          <p class="story-excerpt" data-i18n="s4.se1">"처음에는 모든 게 끝난 줄 알았어요. 지금은 스크린 리더로 코드를 짜고, 회의에 참석하고, 풀 리퀘스트를 리뷰합니다. 도구가 바뀌었을 뿐, 일은 바뀌지 않았어요."</p>
+          <div class="story-footer">
+            <span class="story-person" data-i18n="s4.sp1">김재원, 34세</span>
+            <span class="story-dur" data-i18n="s4.sd1">12분</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="story-card" role="listitem">
+        <div class="story-img" aria-hidden="true">
+          <span class="story-img-placeholder" data-i18n="s4.iv2">인터뷰 02</span>
+          <button class="story-play-btn" aria-label="재생 — 박소희 인터뷰">▶</button>
+        </div>
+        <div class="story-body">
+          <p class="story-tag" data-i18n="s4.tag2">전업주부 — 녹내장</p>
+          <h3 class="story-title" data-i18n="s4.st2">혼자 요리하고, 혼자 장을 봅니다</h3>
+          <p class="story-excerpt" data-i18n="s4.se2">"AI가 냉장고 재료를 읽어줘요. 닷패드로 레시피 도표를 손으로 느낄 수 있어요. 제가 할 수 있는 것들이 생각보다 훨씬 많더라고요."</p>
+          <div class="story-footer">
+            <span class="story-person" data-i18n="s4.sp2">박소희, 51세</span>
+            <span class="story-dur" data-i18n="s4.sd2">9분</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="story-card" role="listitem">
+        <div class="story-img" aria-hidden="true">
+          <span class="story-img-placeholder" data-i18n="s4.iv3">인터뷰 03</span>
+          <button class="story-play-btn" aria-label="재생 — 이준혁 인터뷰">▶</button>
+        </div>
+        <div class="story-body">
+          <p class="story-tag" data-i18n="s4.tag3">대학생 — 당뇨망막병증</p>
+          <h3 class="story-title" data-i18n="s4.st3">3학년에 복학해서 수석으로 졸업했습니다</h3>
+          <p class="story-excerpt" data-i18n="s4.se3">"AI가 강의와 판서 내용을 실시간으로 텍스트로 변환해줘요. 솔직히 집중력이 더 좋아졌어요. 이제 모든 걸 들을 수 있으니까요."</p>
+          <div class="story-footer">
+            <span class="story-person" data-i18n="s4.sp3">이준혁, 24세</span>
+            <span class="story-dur" data-i18n="s4.sd3">15분</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <div style="margin-top:40px;padding-top:32px;border-top:1px solid var(--rule);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px">
+      <p style="font-size:16px;font-weight:300;color:var(--mid)" data-i18n="s4.more">매월 새 인터뷰가 추가됩니다.</p>
+      <a href="#" class="link-arrow" data-i18n="s4.all">전체 스토리 보기 &nbsp;→</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="cta-row" aria-labelledby="cta-title">
+  <div class="cta-inner">
+    <h2 class="cta-title" id="cta-title" data-i18n="cta.title">첫걸음, 혼자 내딛지 않아도 됩니다</h2>
+    <div class="cta-right">
+      <p class="cta-body" data-i18n="cta.body">닷패드 무료 체험부터 시작하세요. 전문 상담사가 기기 사용법과 이용 가능한 복지 지원 프로그램을 함께 안내해 드립니다.</p>
+      <div class="cta-btns">
+        <a href="#" class="btn-white" data-i18n="cta.btn1">무료 체험 신청</a>
+        <a href="#" class="btn-ghost-white" data-i18n="cta.btn2">전문가 상담</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ── Footer ── -->
+<footer class="footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="f-logo" data-i18n="nav.logo">첫 100일</div>
+      <p data-i18n="ft.desc">후천적 시각장애인과 가족을 위한 플랫폼 — 첫날부터 방향을 찾을 수 있도록 돕습니다. Dot Inc. 제공.</p>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="ft.h1">가이드</h4>
+      <ul>
+        <li><a href="#immediate" data-i18n="ft.g1">긴급 도움</a></li>
+        <li><a href="#journey" data-i18n="ft.g2">단계별 가이드</a></li>
+        <li><a href="#" data-i18n="ft.g3">복지 &amp; 혜택</a></li>
+        <li><a href="#" data-i18n="ft.g4">센터 찾기</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="ft.h2">기술</h4>
+      <ul>
+        <li><a href="#" data-i18n="ft.t1">스마트폰 접근성</a></li>
+        <li><a href="#dotpad" data-i18n="ft.t2">닷패드 소개</a></li>
+        <li><a href="#" data-i18n="ft.t3">체험 신청</a></li>
+        <li><a href="#" data-i18n="ft.t4">렌탈 &amp; 지원금</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="ft.h3">스토리</h4>
+      <ul>
+        <li><a href="#" data-i18n="ft.s1">직장인 이야기</a></li>
+        <li><a href="#" data-i18n="ft.s2">학생 이야기</a></li>
+        <li><a href="#" data-i18n="ft.s3">가족 이야기</a></li>
+        <li><a href="#" data-i18n="ft.s4">내 이야기 나누기</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p data-i18n="ft.copy">© 2026 첫 100일 · Dot Inc. All rights reserved.</p>
+    <p data-i18n="ft.crisis">위기 상담: <strong>1393</strong> &nbsp;·&nbsp; 복지 상담: <strong>129</strong></p>
+  </div>
+</footer>
+
+<script>
+// ── 번역 딕셔너리 ──────────────────────────────────────────
+const T = {
+  ko: {
+    'skip': '본문 바로가기',
+    'nav.logo': '첫 100일',
+    'nav.meta': '후천적 시각장애인을 위한 안내 가이드',
+    'nav.l1': '지금 도움', 'nav.l2': '함께 걷는 길',
+    'nav.l3': '보조공학', 'nav.l4': '희망 스토리',
+    'nav.cta': '체험 신청',
+    'hero.eyebrow': '후천적 시각장애인과 가족을 위한 첫걸음 가이드',
+    'hero.h1': '당신의 시야가 바뀌었습니다.<br><em>하지만 삶이 멈출 필요는 없습니다.</em>',
+    'hero.sub': '첫 100일 가이드는 최근 시력을 잃은 분과 그 곁에 선 가족을 위한 안내 플랫폼입니다. 여기서 시작하세요.',
+    'hero.btn1': '어디서 시작해야 하나요?',
+    'hero.btn2': '단계별 가이드 보기',
+    'hero.s1': '이 가이드가<br>다루는 일수',
+    'hero.s2': '실용 행동 항목이<br>있는 단계',
+    'hero.s3': '실제 회복<br>오디오 스토리',
+    'hero.s4': '필요한<br>사전 경험',
+    's1.label': '긴급 안내',
+    's1.title': '지금 막막하신가요?',
+    's1.desc': '진단을 막 받으셨다면, 여기서 시작하세요. 오늘 챙겨야 할 세 가지.',
+    's1.c1.title': '오늘 당장 해야 할 일 3가지',
+    's1.c1.body': '진단 직후 24시간은 혼란스럽습니다. 가장 중요한 것들을 정리했습니다.',
+    's1.c1.l1': '담당 의사에게 다음 진료 일정 확인하기',
+    's1.c1.l2': '가족 중 주요 연락 담당자 1명 정하기',
+    's1.c1.l3': '가까운 장애인복지관 상담 예약',
+    's1.c2.title': '24시간 연결됩니다',
+    's1.c2.body': '업무 시간을 기다릴 필요가 없습니다. 지금 바로 연결됩니다.',
+    's1.h1': '위기 상담 전화', 's1.h2': '보건복지상담센터',
+    's1.c3.title': '초기 대응 매뉴얼',
+    's1.c3.body': '처음 30일을 위한 오디오 가이드 — 오디오와 PDF로 제공됩니다.',
+    's1.audio': '초기 대응 매뉴얼 — 오디오 가이드',
+    's1.pdf': 'PDF 다운로드 →',
+    's1.c4.title': '가족 여러분께',
+    's1.say': '이렇게 말하세요', 's1.avoid': '피해야 할 말',
+    's1.say1': '"같이 방법을 찾아보자."',
+    's1.say2': '"아직 할 수 있는 게 정말 많아."',
+    's1.say3': '"내가 여기 있어. 한 단계씩 같이 해결하자."',
+    's1.avoid1': '"왜 이렇게 됐어?" — 원인 추궁은 고통을 더합니다',
+    's1.avoid2': '"괜찮아질 거야" — 근거 없는 위로는 신뢰를 무너뜨립니다',
+    's1.avoid3': '침묵 — 고립이 가장 해로운 반응입니다',
+    's2.label': '단계별 가이드', 's2.title': '첫 100일',
+    's2.desc': '여정을 세 단계로 나눴습니다. 함께 읽어보세요 — 각 항목에는 당사자와 가족을 위한 행동 항목이 있습니다.',
+    's2.p1': '1단계', 's2.d1': 'Day<br>1—7', 's2.t1': '심리 안정 &amp; 안전한 집 만들기',
+    's2.p2': '2단계', 's2.d2': 'Day<br>8—30', 's2.t2': '스마트폰 첫걸음 &amp; 행정 절차 시작',
+    's2.p3': '3단계', 's2.d3': 'Day<br>31—100', 's2.t3': '보조공학 탐색 &amp; 사회 복귀 준비',
+    'who.self': '당사자', 'who.family': '가족', 'who.together': '함께',
+    's2.1.i1': '스마트폰에서 VoiceOver(iOS) 또는 TalkBack(Android) 켜기 — 이 사이트에서 오디오 튜토리얼 제공',
+    's2.1.i2': '집 안 위험물 제거: 날카로운 물건, 어두운 복도, 문턱. 균일하고 밝은 조명으로 교체',
+    's2.1.i3': '가까운 시각장애인복지관 방문 상담 예약',
+    's2.1.i4': '장애 등록 절차 시작 — 주민센터 또는 병원 사회사업팀 연락',
+    's2.exp1': '1단계 전체 가이드',
+    's2.body1': '첫 주의 감정적 충격은 자연스러운 반응입니다. 정보 과부하보다 신체 안전과 감정적 동행을 우선하세요. 하루에 한 번의 대화로도 충분합니다. 쉬는 것은 포기가 아니라, 다시 일어설 준비입니다.',
+    's2.2.i1': '스크린 리더로 전화 걸기, 문자 읽기, 메신저 앱 사용 연습',
+    's2.2.i2': '주민센터 또는 병원 사회사업팀에 장애 등록 신청서 제출',
+    's2.2.i3': '지역 복지관 재활 프로그램 등록 상담',
+    's2.2.i4': 'AI로 사진 속 텍스트 읽기, 이미지 묘사 받기 — 실습 포함',
+    's2.exp2': '2단계 전체 가이드',
+    's2.body2': '2단계는 주도성을 되찾는 과정입니다. 음성 메시지 보내기, 혼자 부엌 가기 같은 작은 성취도 굉장히 중요합니다. 함께 축하하세요.',
+    's2.3.i1': '이 가이드를 통해 닷패드 및 기타 보조기기 무료 체험 신청',
+    's2.3.i2': '장애인복지관 및 국민건강보험을 통한 보조기기 지원금 신청',
+    's2.3.i3': '취업 또는 복학을 위한 직업재활 상담 시작',
+    's2.3.i4': '자조모임 참여 — 같은 경험을 가진 사람들과의 연결이 가장 강력한 한 걸음',
+    's2.exp3': '3단계 전체 가이드',
+    's2.body3': '100일째가 되면, 대부분의 분들이 자신이 얼마나 많이 배우고 적응했는지 놀라게 됩니다. 목표는 예전의 삶으로 돌아가는 것이 아닙니다 — 새로운 도구와 함께, 더 넓어진 가능성으로 새 삶을 만드는 것입니다.',
+    's3.label': '보조공학',
+    's3.title': '기술이 새로운<br>눈이 됩니다',
+    's3.desc': '첫날부터 점자를 배울 필요는 없습니다. 손에 있는 도구들이 일상 기능의 대부분을 즉시 회복시켜 줄 수 있습니다.',
+    's3.t1': '스마트폰 접근성',
+    's3.b1': 'VoiceOver와 TalkBack은 모든 아이폰과 안드로이드 기기에 기본 탑재되어 있습니다. 오디오 튜토리얼이 처음부터 전화, 문자, 웹 브라우징까지 안내합니다.',
+    's3.l1': '▶ &nbsp;오디오 튜토리얼 시작',
+    's3.t2': 'AI 협업자',
+    's3.b2': '현대 AI는 사진의 텍스트를 읽고, 이미지와 장면을 묘사하고, 길 안내를 제공하고, 책을 소리로 읽어줍니다. 10분 안에 설정하는 방법을 알려드립니다.',
+    's3.l2': 'AI 가이드 보기 &nbsp;→',
+    's3.t3': '시각 세계를 손으로 만지다',
+    's3.b3': '닷패드는 사진, 지도, 차트, 도표를 촉각 형태로 변환합니다. 보이던 공간 정보를 느낄 수 있게 해줍니다. 점자 지식이 없어도 시작할 수 있습니다.',
+    's3.l3': '닷패드 알아보기 &nbsp;→',
+    'dp.tag': '추천 보조기기',
+    'dp.title': '닷패드 —<br>보이던 것을 다시 느끼다',
+    'dp.body': '닷패드는 점자 디스플레이가 아닙니다. 사진, 지도, 그래프, 도면 등 모든 시각 콘텐츠를 수천 개의 개별 이동 핀을 사용해 실시간으로 만질 수 있는 표면으로 변환하는 완전한 촉각 스마트 스크린입니다.',
+    'dp.p1': '스마트폰 화면을 촉각 표면으로 미러링',
+    'dp.p2': '지하철 노선도·건물 배치도·차트를 손으로 탐색',
+    'dp.p3': '점자 지식 없이도 바로 사용 가능',
+    'dp.p4': '정부 보조금 프로그램으로 이용 가능',
+    'dp.btn1': '무료 체험 신청', 'dp.btn2': '렌탈 &amp; 지원금 정보',
+    'dp.sim': '촉각 디스플레이 시뮬레이션',
+    'dp.caption': '각 핀이 독립적으로 올라가거나 내려가며, 이미지·지도·도표를 손끝으로 읽을 수 있는 물리적 표면으로 렌더링합니다.',
+    'dp.sl1': '촉각 핀', 'dp.sn2': '실시간', 'dp.sl2': '렌더링 속도',
+    's4.label': '희망 스토리',
+    's4.title': '"나처럼 된 사람들이<br>지금 어떻게 살고 있나요?"',
+    's4.desc': '후천적 시각장애를 헤쳐나가고 삶을 다시 세운 분들의 이야기를 직접 들어보세요. 그들의 목소리로 전하는 오디오 인터뷰.',
+    's4.iv1': '인터뷰 01', 's4.iv2': '인터뷰 02', 's4.iv3': '인터뷰 03',
+    's4.tag1': '소프트웨어 엔지니어 — 망막색소변성증',
+    's4.st1': '시력을 잃은 지 2년 후, 개발자로 복직했습니다',
+    's4.se1': '"처음에는 모든 게 끝난 줄 알았어요. 지금은 스크린 리더로 코드를 짜고, 회의에 참석하고, 풀 리퀘스트를 리뷰합니다. 도구가 바뀌었을 뿐, 일은 바뀌지 않았어요."',
+    's4.sp1': '김재원, 34세', 's4.sd1': '12분',
+    's4.tag2': '전업주부 — 녹내장',
+    's4.st2': '혼자 요리하고, 혼자 장을 봅니다',
+    's4.se2': '"AI가 냉장고 재료를 읽어줘요. 닷패드로 레시피 도표를 손으로 느낄 수 있어요. 제가 할 수 있는 것들이 생각보다 훨씬 많더라고요."',
+    's4.sp2': '박소희, 51세', 's4.sd2': '9분',
+    's4.tag3': '대학생 — 당뇨망막병증',
+    's4.st3': '3학년에 복학해서 수석으로 졸업했습니다',
+    's4.se3': '"AI가 강의와 판서 내용을 실시간으로 텍스트로 변환해줘요. 솔직히 집중력이 더 좋아졌어요. 이제 모든 걸 들을 수 있으니까요."',
+    's4.sp3': '이준혁, 24세', 's4.sd3': '15분',
+    's4.more': '매월 새 인터뷰가 추가됩니다.',
+    's4.all': '전체 스토리 보기 &nbsp;→',
+    'cta.title': '첫걸음, 혼자 내딛지 않아도 됩니다',
+    'cta.body': '닷패드 무료 체험부터 시작하세요. 전문 상담사가 기기 사용법과 이용 가능한 복지 지원 프로그램을 함께 안내해 드립니다.',
+    'cta.btn1': '무료 체험 신청', 'cta.btn2': '전문가 상담',
+    'ft.desc': '후천적 시각장애인과 가족을 위한 플랫폼 — 첫날부터 방향을 찾을 수 있도록 돕습니다. Dot Inc. 제공.',
+    'ft.h1': '가이드', 'ft.h2': '기술', 'ft.h3': '스토리',
+    'ft.g1': '긴급 도움', 'ft.g2': '단계별 가이드', 'ft.g3': '복지 &amp; 혜택', 'ft.g4': '센터 찾기',
+    'ft.t1': '스마트폰 접근성', 'ft.t2': '닷패드 소개', 'ft.t3': '체험 신청', 'ft.t4': '렌탈 &amp; 지원금',
+    'ft.s1': '직장인 이야기', 'ft.s2': '학생 이야기', 'ft.s3': '가족 이야기', 'ft.s4': '내 이야기 나누기',
+    'ft.copy': '© 2026 첫 100일 · Dot Inc. All rights reserved.',
+    'ft.crisis': '위기 상담: <strong>1393</strong> &nbsp;·&nbsp; 복지 상담: <strong>129</strong>',
+  },
+  en: {
+    'skip': 'Skip to content',
+    'nav.logo': 'First 100 Days',
+    'nav.meta': 'A Guide for Acquired Visual Impairment',
+    'nav.l1': 'Immediate Help', 'nav.l2': 'The Journey',
+    'nav.l3': 'Technology', 'nav.l4': 'Stories',
+    'nav.cta': 'Request Trial',
+    'hero.eyebrow': 'For people with acquired visual impairment &amp; their families',
+    'hero.h1': 'Your sight has changed.<br><em>Your life doesn\'t have to stop.</em>',
+    'hero.sub': 'The First 100 Days is a guide for people who have recently lost their vision and the families who stand beside them. Start here — no experience required.',
+    'hero.btn1': 'Where do I start?',
+    'hero.btn2': 'View step-by-step guide',
+    'hero.s1': 'Days covered in<br>this guide',
+    'hero.s2': 'Stages with practical<br>action items',
+    'hero.s3': 'Real-life recovery<br>audio stories',
+    'hero.s4': 'Prior experience<br>required',
+    's1.label': 'Immediate Help',
+    's1.title': 'Feeling overwhelmed right now?',
+    's1.desc': 'If you or someone you love just received a diagnosis, this is where to begin. Three things to address today.',
+    's1.c1.title': 'Three things to do today',
+    's1.c1.body': 'After a diagnosis, the first 24 hours feel chaotic. Here\'s what matters most.',
+    's1.c1.l1': 'Confirm your next appointment with the treating physician',
+    's1.c1.l2': 'Designate one family member as the primary contact person',
+    's1.c1.l3': 'Schedule a consultation with your local disability welfare center',
+    's1.c2.title': 'Available 24 hours',
+    's1.c2.body': 'You don\'t need to wait for business hours. These lines are open now.',
+    's1.h1': 'Crisis Counseling Line', 's1.h2': 'Health &amp; Welfare Helpline',
+    's1.c3.title': 'First Response Manual',
+    's1.c3.body': 'A complete audio guide for the first 30 days — available in both audio and PDF format.',
+    's1.audio': 'First Response Manual — Audio Guide',
+    's1.pdf': 'Download PDF →',
+    's1.c4.title': 'For family members',
+    's1.say': 'Say this', 's1.avoid': 'Avoid this',
+    's1.say1': '"Let\'s find a way through this together."',
+    's1.say2': '"There\'s still so much you\'ll be able to do."',
+    's1.say3': '"I\'m here. We\'ll figure it out one step at a time."',
+    's1.avoid1': '"How did this happen?" — blame-seeking adds to distress',
+    's1.avoid2': '"You\'ll be fine" — false reassurance undermines trust',
+    's1.avoid3': 'Silence — isolation is the most harmful response',
+    's2.label': 'Step-by-Step Guide', 's2.title': 'The First 100 Days',
+    's2.desc': 'We\'ve divided the journey into three stages. Read together — each entry has action items for both the person affected and their family.',
+    's2.p1': 'Stage One', 's2.d1': 'Day<br>1—7', 's2.t1': 'Psychological stability &amp; making the home safe',
+    's2.p2': 'Stage Two', 's2.d2': 'Day<br>8—30', 's2.t2': 'First steps with a smartphone &amp; beginning the paperwork',
+    's2.p3': 'Stage Three', 's2.d3': 'Day<br>31—100', 's2.t3': 'Exploring assistive technology &amp; preparing to re-engage with the world',
+    'who.self': 'For the person affected', 'who.family': 'For the family', 'who.together': 'Together',
+    's2.1.i1': 'Turn on VoiceOver (iOS) or TalkBack (Android) on your smartphone — audio tutorial available on this site',
+    's2.1.i2': 'Remove hazards at home: sharp objects, dim corridors, uneven thresholds. Replace bulbs with even, bright lighting',
+    's2.1.i3': 'Book an in-person consultation at the nearest visual impairment welfare center',
+    's2.1.i4': 'Begin the disability registration process — contact the community welfare center or hospital social work team',
+    's2.exp1': 'Full Stage One guide',
+    's2.body1': 'Emotional shock in the first week is normal. Prioritise physical safety and emotional presence over information overload. One conversation per day is enough. Rest is not giving up — it is preparing to rebuild.',
+    's2.2.i1': 'Practice making calls, reading messages, and using messaging apps via screen reader',
+    's2.2.i2': 'Submit the disability registration application at the community welfare office or hospital social work team',
+    's2.2.i3': 'Register for a rehabilitation program consultation at the local welfare center',
+    's2.2.i4': 'Learn to use AI for reading text in photos and describing images — practical exercises included',
+    's2.exp2': 'Full Stage Two guide',
+    's2.body2': 'Stage Two is about rebuilding a sense of agency. Even small victories — sending a voice message, navigating to the kitchen unassisted — matter enormously. Celebrate them.',
+    's2.3.i1': 'Request a free trial of the Dot Pad and other assistive devices available through this guide',
+    's2.3.i2': 'Apply for assistive device subsidies through the disability welfare center and national health insurance',
+    's2.3.i3': 'Begin vocational rehabilitation consultation for employment or return-to-study planning',
+    's2.3.i4': 'Join a peer support group — connecting with others who share your experience is one of the most powerful steps',
+    's2.exp3': 'Full Stage Three guide',
+    's2.body3': 'By Day 100, most people are surprised by how much they have learned and adapted. The goal is not to return to the life you had — it is to build a new one, with different tools and an expanded understanding of what you\'re capable of.',
+    's3.label': 'Assistive Technology',
+    's3.title': 'Technology becomes<br>your new eyes',
+    's3.desc': 'You don\'t need to learn braille on day one. The tools in your hands and on your desk can restore enormous amounts of daily function — immediately.',
+    's3.t1': 'Smartphone Accessibility',
+    's3.b1': 'VoiceOver and TalkBack are built into every iPhone and Android device. Audio tutorials guide you from zero to making calls, reading messages, and browsing the web.',
+    's3.l1': '▶ &nbsp;Start audio tutorial',
+    's3.t2': 'AI as a Collaborator',
+    's3.b2': 'Modern AI can read text in photographs, describe images and scenes, give turn-by-turn navigation, and read books aloud. We show you how to set this up in under ten minutes.',
+    's3.l2': 'View AI guide &nbsp;→',
+    's3.t3': 'Touch the Visual World',
+    's3.b3': 'The Dot Pad translates photographs, maps, charts, and diagrams into tactile form — allowing you to feel the spatial information you used to see. No prior braille experience required.',
+    's3.l3': 'Learn about Dot Pad &nbsp;→',
+    'dp.tag': 'Featured Device',
+    'dp.title': 'Dot Pad —<br>Feel what you used to see',
+    'dp.body': 'The Dot Pad is not a braille display. It is a full tactile smart screen that converts any visual content — photographs, maps, graphs, floor plans — into a touchable surface in real time, using thousands of individually moving pins.',
+    'dp.p1': 'Mirrors your smartphone screen as a tactile surface',
+    'dp.p2': 'Explore subway maps, building layouts, and charts by touch',
+    'dp.p3': 'No braille knowledge required to begin using it',
+    'dp.p4': 'Available through government subsidy programs',
+    'dp.btn1': 'Request Free Trial', 'dp.btn2': 'Rental &amp; subsidy info',
+    'dp.sim': 'Tactile Display Simulation',
+    'dp.caption': 'Each pin rises or falls independently, rendering images, maps, and diagrams as a physical surface your fingertips can read.',
+    'dp.sl1': 'Tactile pins', 'dp.sn2': 'Real-time', 'dp.sl2': 'Rendering speed',
+    's4.label': 'Recovery Stories',
+    's4.title': '"How are people like me<br>living now?"',
+    's4.desc': 'Hear directly from people who have navigated acquired visual impairment and rebuilt their lives. Audio interviews, in their own words.',
+    's4.iv1': 'Interview 01', 's4.iv2': 'Interview 02', 's4.iv3': 'Interview 03',
+    's4.tag1': 'Software Engineer — Retinitis Pigmentosa',
+    's4.st1': 'Two years after losing my vision, I returned to work as a developer',
+    's4.se1': '"At first I thought everything was over. Now I write code using a screen reader, attend meetings, and review pull requests. The tools changed — the work didn\'t."',
+    's4.sp1': 'Jae-won Kim, 34', 's4.sd1': '12 min',
+    's4.tag2': 'Home Caregiver — Glaucoma',
+    's4.st2': 'I cook alone and shop for groceries on my own',
+    's4.se2': '"AI reads me the ingredients in the fridge. The Dot Pad lets me feel recipe diagrams. There are far more things I can do than I ever thought."',
+    's4.sp2': 'So-hee Park, 51', 's4.sd2': '9 min',
+    's4.tag3': 'University Student — Diabetic Retinopathy',
+    's4.st3': 'I returned to university in year three and graduated with honours',
+    's4.se3': '"AI transcribes lectures and board notes in real time. Honestly, my concentration has improved. I hear everything now."',
+    's4.sp3': 'Jun-hyuk Lee, 24', 's4.sd3': '15 min',
+    's4.more': 'More interviews added monthly.',
+    's4.all': 'View all stories &nbsp;→',
+    'cta.title': 'You don\'t have to take the first step alone',
+    'cta.body': 'Begin with a free Dot Pad trial. A specialist will guide you through the device and connect you with available welfare support programmes — no obligation required.',
+    'cta.btn1': 'Request Free Trial', 'cta.btn2': 'Speak with a specialist',
+    'ft.desc': 'A platform for people with acquired visual impairment and their families — helping you find your footing from day one. Provided by Dot Inc.',
+    'ft.h1': 'Guide', 'ft.h2': 'Technology', 'ft.h3': 'Stories',
+    'ft.g1': 'Immediate Help', 'ft.g2': 'Step-by-Step Guide', 'ft.g3': 'Welfare &amp; Benefits', 'ft.g4': 'Find a Center',
+    'ft.t1': 'Smartphone Accessibility', 'ft.t2': 'About Dot Pad', 'ft.t3': 'Request a Trial', 'ft.t4': 'Rental &amp; Subsidies',
+    'ft.s1': 'Working Professionals', 'ft.s2': 'Students', 'ft.s3': 'Families', 'ft.s4': 'Share Your Story',
+    'ft.copy': '© 2026 First 100 Days · Dot Inc. All rights reserved.',
+    'ft.crisis': 'Crisis line: <strong>1393</strong> &nbsp;·&nbsp; Welfare helpline: <strong>129</strong>',
+  }
+};
+
+// ── 언어 전환 함수 ──────────────────────────────────────────
+let currentLang = localStorage.getItem('lang') || 'ko';
+
+function setLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('lang', lang);
+  document.documentElement.lang = lang;
+
+  // 텍스트 업데이트
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    const val = T[lang][key];
+    if (val !== undefined) el.innerHTML = val;
+  });
+
+  // 버튼 상태
+  document.getElementById('btn-ko').classList.toggle('active', lang === 'ko');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-ko').setAttribute('aria-pressed', String(lang === 'ko'));
+  document.getElementById('btn-en').setAttribute('aria-pressed', String(lang === 'en'));
+
+  // 페이지 타이틀
+  document.title = lang === 'ko'
+    ? '첫 100일 가이드 — 후천적 시각장애인을 위한 첫걸음'
+    : 'First 100 Days — A Guide for Acquired Visual Impairment';
+}
+
+// 초기 적용
+setLang(currentLang);
+
+// ── 타임라인 아코디언 ───────────────────────────────────────
+function expandRow(btn) {
+  const body = btn.nextElementSibling;
+  const icon = btn.querySelector('.t-expand-icon');
+  const open = body.classList.toggle('open');
+  icon.textContent = open ? '−' : '+';
+  btn.setAttribute('aria-expanded', String(open));
+}
+
+// ── 오디오 속도 토글 ────────────────────────────────────────
+function cycleSpeed(btn) {
+  const speeds = ['1×','1.25×','1.5×','2×','0.75×'];
+  const i = speeds.indexOf(btn.textContent);
+  btn.textContent = speeds[(i + 1) % speeds.length];
+}
+
+// ── 스토리 재생 토글 ────────────────────────────────────────
+document.querySelectorAll('.story-play-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const playing = btn.textContent === '⏸';
+    document.querySelectorAll('.story-play-btn').forEach(b => b.textContent = '▶');
+    if (!playing) btn.textContent = '⏸';
+  });
+});
+
+// ── 네비 활성 표시 ──────────────────────────────────────────
+const sections = document.querySelectorAll('section[id]');
+const navAs = document.querySelectorAll('.nav-links a');
+const onScroll = () => {
+  let cur = '';
+  sections.forEach(s => { if (window.scrollY >= s.offsetTop - 80) cur = s.id; });
+  navAs.forEach(a => {
+    const active = a.getAttribute('href') === `#${cur}`;
+    a.style.color = active ? 'var(--black)' : '';
+    a.style.fontWeight = active ? '400' : '';
+  });
+};
+window.addEventListener('scroll', onScroll, { passive: true });
+</script>
+
+</body>
+</html>
